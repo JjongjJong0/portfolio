@@ -1,3 +1,10 @@
 @import "./style.scss";
 @import "./reset.scss";
 @import "./mixin.scss";
+
+.grid {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}

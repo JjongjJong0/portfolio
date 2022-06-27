@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+h2 {
+  font-size: 0;
+}
+
+h3 {
+  font-size: 1.125em;
+  color: #000;
+}
+
+h4 {
+  font-size: 1.1em;
+  font-weight: normal;
+}
+
+p {
+  font-size: 0.95em;
+  font-weight: 550;
+}
+
+strong {
+  font-size: 0.9em;
+}
+
+span {
+  font-size: 1.375em;
+}
+
+header,
+nav,
+main,
+article,
+aside,
+section,
+footer {
+  display: block;
+}
+
+.grid {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=index.css.map */
