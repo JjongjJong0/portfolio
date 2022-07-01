@@ -26,7 +26,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.125em;
+  font-size: 2em;
   color: #000;
 }
 
@@ -37,11 +37,11 @@ h4 {
 
 p {
   font-size: 0.95em;
-  font-weight: 550;
+  font-weight: 500;
 }
 
 strong {
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 span {
@@ -68,5 +68,189 @@ footer {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+
+.loader {
+  background-color: #ffcd5c;
+}
+
+.loader .grid {
+  text-align: center;
+}
+
+.loader .grid h1 img {
+  width: 40%;
+}
+
+header {
+  height: 65px;
+  font-family: "DK Leftover Crayon";
+  font-weight: bolder;
+  background-color: #feea98;
+}
+
+header .grid .logo {
+  float: left;
+  background-color: aqua;
+}
+
+header .grid .logo a img {
+  width: 90%;
+}
+
+header .grid .moblie-menu {
+  float: right;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  header .grid .moblie-menu {
+    display: none;
+  }
+}
+
+header .grid .moblie-menu span {
+  display: block;
+  width: 45px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ec1e24;
+  background: url(../images/hamburger_border.png);
+  background-size: cover;
+}
+
+header .grid .moblie-menu span:nth-child(2) {
+  margin: 10px 0 10px;
+}
+
+header .grid nav .gnb {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  header .grid nav .gnb {
+    display: block;
+    float: right;
+  }
+}
+
+header .grid nav .gnb li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 13px 20px;
+}
+
+header .grid nav .gnb li a {
+  font-size: 2em;
+  color: #ec1e24;
+}
+
+header .grid nav .gnb li a img {
+  width: 80%;
+}
+
+main #about {
+  font-family: "DK Leftover Crayon";
+  font-weight: bolder;
+  color: #ec1e24;
+}
+
+main #about .grid .polaroid-box {
+  margin: 10% 10% 5%;
+  -webkit-transform: scale(0.85, 0.85) rotate(5deg);
+          transform: scale(0.85, 0.85) rotate(5deg);
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+main #about .grid .polaroid-box::before {
+  position: absolute;
+  content: '';
+  z-index: -1;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+main #about .grid .polaroid-box:hover {
+  -webkit-transform: scale(1, 1) rotate(0deg);
+          transform: scale(1, 1) rotate(0deg);
+}
+
+main #about .grid .polaroid-box .polaroid {
+  padding: 1rem;
+  text-align: center;
+  background: #fff;
+  -webkit-box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+main #about .grid .polaroid-box .polaroid img {
+  width: 100%;
+  height: 350px;
+}
+
+main #about .grid .polaroid-box .polaroid .text {
+  padding-top: 15px;
+  font-size: 2.8rem;
+  line-height: 1.5em;
+  cursor: pointer;
+}
+
+main #about .grid .profile ul {
+  display: inline-block;
+  padding: 0 4%;
+  font-size: 2.3rem;
+  margin-right: 5px;
+  background-color: antiquewhite;
+}
+
+main #about .grid .profile ul:last-child {
+  margin-right: 0;
+  font-size: 2rem;
+  font-family: "Nanum Pen";
+  font-weight: normal;
+  line-height: 2.5rem;
+  color: #000;
+}
+
+main #web {
+  position: relative;
+}
+
+main #web .grid .project1 .red-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url(../images/red_box.png) center;
+  width: 100%;
+  height: 100%;
+}
+
+main #web .grid .project1 .yellow-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0 0 20px 20px;
+  background-color: #ffcd5c;
+  padding: 17%;
+}
+
+main #web .grid .project1 .yellow-box .pro1-text {
+  text-align: center;
+}
+
+main #web .grid .project1 .yellow-box .pro1-text h3 {
+  margin-bottom: 20px;
+}
+
+main #web .grid .project1 .yellow-box .pro1-text strong {
+  background: url(../images/red_border.png) no-repeat bottom;
+  background-size: 100%;
+}
+
+main #web .grid .project1 .yellow-box .pro1-text p {
+  margin: 20px 25px;
 }
 /*# sourceMappingURL=index.css.map */

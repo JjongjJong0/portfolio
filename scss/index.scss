@@ -7,4 +7,203 @@
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
+    padding: 0 15px;
 }
+
+.loader {
+    background-color: $background-color;
+    .grid {
+        text-align: center;
+        h1 {
+            img {
+                width: 40%;
+            }
+        }
+
+        p {
+
+        }
+    }
+}
+
+//header
+header {
+    height: 65px;
+    font : {
+        family: $font-crayon;
+        weight: bolder;
+    }
+    background-color: $menu-color;
+    .grid {
+        .logo {
+            float: left;
+            background-color: aqua;
+            a {
+                img {
+                    width: 90%;
+                }
+            }
+        }
+
+        .moblie-menu {
+            float: right;
+            padding: 8px 0;
+            cursor: pointer;
+            @include responsive(pc-screens) {
+                display: none;
+            }
+            span {
+                display: block;
+                width: 45px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: $red;
+                background: url(../images/hamburger_border.png);
+                background-size: cover;
+                &:nth-child(2) {
+                    margin: 10px 0 10px;
+                }
+            }
+        }
+
+        nav {
+            
+            .gnb {
+                display: none;
+                @include responsive(pc-screens) {
+                    display: block;
+                    float: right;
+                }
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 13px 20px;
+                    a {
+                        font-size: 2em;
+                        color: $red;
+                        img {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//main
+main {
+    #about {
+        font: {
+            family: $font-crayon;
+            weight: bolder;
+        }
+        color: $red;
+        .grid {
+            .polaroid-box {
+                margin: 10% 10% 5%;
+                transform: scale(0.85, 0.85) rotate(5deg);
+                transition: all 0.35s;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    z-index: -1;
+                    transition: all 0.35s;
+                }
+                &:hover {
+                    transform: scale(1, 1) rotate(0deg);
+                }
+                .polaroid {
+                    padding: 1rem;
+                    text-align: center;
+                    background: $white;
+                    box-shadow: 0 0.25rem 1rem rgba($color: $black, $alpha: 0.2);
+                    img {
+                        width: 100%;
+                        height: 350px;
+                    }
+                    .text {
+                        padding-top: 15px;
+                        font-size: 2.8rem;
+                        line-height: 1.5em;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .profile {
+                ul {
+                    display: inline-block;
+                    padding: 0 4%;
+                    font-size: 2.3rem;
+                    margin-right: 5px;
+                    background-color: antiquewhite;
+                    &:last-child {
+                        margin-right: 0;
+                        font: {
+                            size: 2rem;
+                            family: $font-main;
+                            weight: normal;
+                        }
+                        line-height: 2.5rem;
+                        color: $black;
+                    }
+                }
+            }
+
+            .modal {
+                .modalUp {
+
+                }
+            }
+        }
+    }
+
+    #web {
+        position: relative;
+        .grid {
+            .project1 {
+                .red-box {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background: url(../images/red_box.png) center;
+                    width: 100%;
+                    height: 100%;
+                    // margin: 20px;
+                }
+                .yellow-box {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    margin: 0 0 20px 20px;
+                    background-color: $background-color;
+                    padding: 17%;
+                    .pro1-img {
+
+                    }
+                    .pro1-text {
+                        text-align: center;
+                        h3 {
+                            margin-bottom: 20px;
+                        }
+                        strong {
+                            background: url(../images/red_border.png) no-repeat bottom;
+                            background-size: 100%;
+                        }
+                        p {
+                            margin: 20px 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+//footer
