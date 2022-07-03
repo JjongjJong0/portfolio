@@ -217,9 +217,10 @@ main #about .grid .profile ul:last-child {
 
 main #web {
   position: relative;
+  text-align: center;
 }
 
-main #web .grid .project1 .red-box {
+main #web .grid .project1 .red-box1 {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -228,7 +229,7 @@ main #web .grid .project1 .red-box {
   height: 100%;
 }
 
-main #web .grid .project1 .yellow-box {
+main #web .grid .project1 .yellow-box1 {
   position: absolute;
   top: 0;
   right: 0;
@@ -237,20 +238,48 @@ main #web .grid .project1 .yellow-box {
   padding: 17%;
 }
 
-main #web .grid .project1 .yellow-box .pro1-text {
-  text-align: center;
-}
-
-main #web .grid .project1 .yellow-box .pro1-text h3 {
+main #web .grid .project1 .yellow-box1 .pro1-text h3 {
   margin-bottom: 20px;
 }
 
-main #web .grid .project1 .yellow-box .pro1-text strong {
+main #web .grid .project1 .yellow-box1 .pro1-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
-main #web .grid .project1 .yellow-box .pro1-text p {
+main #web .grid .project1 .yellow-box1 .pro1-text p {
   margin: 20px 25px;
+}
+
+main #web .grid .project2 .pro2-box {
+  position: absolute;
+  top: 1000px;
+  padding: 17%;
+  background-color: #ffcd5c;
+}
+
+main #web .grid .project3 .pro3-box {
+  position: absolute;
+  top: 1000px;
+  padding: 17%;
+  background-color: #000;
+}
+
+main #web .grid .project4 .red-box2 {
+  position: absolute;
+  top: 2000px;
+  width: 100%;
+  height: 100%;
+  background-color: #ec1e24;
+}
+
+main #web .grid .project4 .yellow-box2 {
+  position: absolute;
+  top: 2000px;
+  background-color: #ffcd5c;
+}
+
+main #video {
+  text-align: center;
 }
 /*# sourceMappingURL=index.css.map */
