@@ -92,7 +92,6 @@ header {
 
 header .grid .logo {
   float: left;
-  background-color: aqua;
 }
 
 header .grid .logo a img {
@@ -139,7 +138,7 @@ header .grid nav .gnb {
 header .grid nav .gnb li {
   display: inline-block;
   vertical-align: middle;
-  padding: 13px 20px;
+  padding: 13px 15px;
 }
 
 header .grid nav .gnb li a {
@@ -157,15 +156,37 @@ main #about {
   color: #ed2024;
 }
 
-main #about .grid .polaroid-box {
-  margin: 10% 10% 5%;
+@media screen and (min-width: 1024px) {
+  main #about .grid .about-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 5%;
+  }
+}
+
+main #about .grid .about-flex .polaroid-box {
+  margin: 10% 8% 5%;
   -webkit-transform: scale(0.85, 0.85) rotate(5deg);
           transform: scale(0.85, 0.85) rotate(5deg);
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
 }
 
-main #about .grid .polaroid-box::before {
+@media screen and (min-width: 1024px) {
+  main #about .grid .about-flex .polaroid-box {
+    margin: 0;
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
+  }
+}
+
+main #about .grid .about-flex .polaroid-box::before {
   position: absolute;
   content: '';
   z-index: -1;
@@ -173,12 +194,12 @@ main #about .grid .polaroid-box::before {
   transition: all 0.35s;
 }
 
-main #about .grid .polaroid-box:hover {
+main #about .grid .about-flex .polaroid-box:hover {
   -webkit-transform: scale(1, 1) rotate(0deg);
           transform: scale(1, 1) rotate(0deg);
 }
 
-main #about .grid .polaroid-box .polaroid {
+main #about .grid .about-flex .polaroid-box .polaroid {
   padding: 1rem;
   text-align: center;
   background: #fff;
@@ -186,33 +207,96 @@ main #about .grid .polaroid-box .polaroid {
           box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-main #about .grid .polaroid-box .polaroid img {
+main #about .grid .about-flex .polaroid-box .polaroid img {
   width: 100%;
-  height: 350px;
+  height: 400px;
 }
 
-main #about .grid .polaroid-box .polaroid .text {
+main #about .grid .about-flex .polaroid-box .polaroid .text {
   padding-top: 15px;
-  font-size: 2.8rem;
-  line-height: 1.5em;
+  font-size: 3rem;
   cursor: pointer;
 }
 
-main #about .grid .profile ul {
-  display: inline-block;
-  padding: 0 4%;
-  font-size: 2.3rem;
-  margin-right: 5px;
-  background-color: antiquewhite;
+main #about .grid .about-flex .profile {
+  text-align: center;
 }
 
-main #about .grid .profile ul:last-child {
+@media screen and (min-width: 1024px) {
+  main #about .grid .about-flex .profile {
+    -webkit-box-flex: 60%;
+        -ms-flex: 60%;
+            flex: 60%;
+  }
+}
+
+main #about .grid .about-flex .profile ul {
+  display: inline-block;
+  font-size: 2.3rem;
+  line-height: 3.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  main #about .grid .about-flex .profile ul {
+    font-size: 2rem;
+  }
+}
+
+main #about .grid .about-flex .profile ul:last-child {
+  margin-left: 10%;
   margin-right: 0;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: "Nanum Pen";
   font-weight: normal;
-  line-height: 2.5rem;
   color: #000;
+}
+
+@media screen and (min-width: 1024px) {
+  main #about .grid .about-flex .profile ul:last-child {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+
+main #about .grid .about-flex .profile ul li {
+  text-align: left;
+}
+
+main #about .grid #modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+main #about .grid #modal .on {
+  display: block;
+}
+
+main #about .grid #modal .modalUp {
+  width: 500px;
+  height: 400px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url(../images/memo.png) no-repeat;
+  background-size: cover;
+}
+
+main #about .grid #modal .modalUp .closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+main #about .grid #modal .modalUp .closeBtn img {
+  width: 50px;
 }
 
 main #web {
@@ -220,42 +304,56 @@ main #web {
 }
 
 main #web .grid .project1 {
-  position: relative;
+  margin-top: 300px;
+  background: url(../images/pro1Background.png) no-repeat;
+  background-size: 100%;
 }
 
-main #web .grid .project1 .pro1-red {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: url(../images/red_box.png) center;
-  background-size: cover;
+main #web .grid .project1 .pro1-img {
+  padding: 15%;
 }
 
-main #web .grid .project1 .pro1-yellow {
-  margin: 0 0 30px 30px;
-  background-color: #fee655;
-  padding: 13%;
-}
-
-main #web .grid .project1 .pro1-yellow .pro1-text h3 {
+main #web .grid .project1 .pro1-img .pro1-text h3 {
   margin-bottom: 20px;
 }
 
-main #web .grid .project1 .pro1-yellow .pro1-text strong {
+main #web .grid .project1 .pro1-img .pro1-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
-main #web .grid .project1 .pro1-yellow .pro1-text p {
+main #web .grid .project1 .pro1-img .pro1-text p {
   margin: 20px 25px;
+}
+
+main #web .grid .project1 .pro1-img .pro1-text .view {
+  padding: 7%;
+  margin-right: 15px;
+  background: url(../images/red_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+main #web .grid .project1 .pro1-img .pro1-text .view a {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
+main #web .grid .project1 .pro1-img .pro1-text .process {
+  padding: 7%;
+  background: url(../images/yellow_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+main #web .grid .project1 .pro1-img .pro1-text .process a {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
 }
 
 main #web .grid .project2 .pro2-box {
   margin: 300px 0;
-  padding: 13%;
+  padding: 15%;
   background-color: #fee655;
 }
 
@@ -272,9 +370,33 @@ main #web .grid .project2 .pro2-box .pro2-text p {
   margin: 20px 25px;
 }
 
+main #web .grid .project2 .pro2-box .pro2-text .view {
+  padding: 7%;
+  margin-right: 15px;
+  background: url(../images/red_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+main #web .grid .project2 .pro2-box .pro2-text .view a {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
+main #web .grid .project2 .pro2-box .pro2-text .process {
+  padding: 7%;
+  background: url(../images/yellow_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+main #web .grid .project2 .pro2-box .pro2-text .process a {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
 main #web .grid .project3 .pro3-box {
-  padding: 13%;
-  border: 1px solid #000;
+  padding: 15%;
   background-color: #fff;
 }
 
@@ -291,31 +413,123 @@ main #web .grid .project3 .pro3-box .pro3-text p {
   margin: 20px 25px;
 }
 
+main #web .grid .project3 .pro3-box .pro3-text .view {
+  padding: 7%;
+  margin-right: 15px;
+  background: url(../images/red_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+main #web .grid .project3 .pro3-box .pro3-text .view a {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
+main #web .grid .project3 .pro3-box .pro3-text .process {
+  padding: 7%;
+  background: url(../images/yellow_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+main #web .grid .project3 .pro3-box .pro3-text .process a {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
 main #web .grid .project4 {
-  position: relative;
   margin: 300px 0;
 }
 
 main #web .grid .project4 .pro4-red {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  padding: 10px;
   z-index: -1;
   background-color: #ed2024;
 }
 
-main #web .grid .project4 .pro4-yellow {
-  margin: 10px;
-  padding: 13%;
+main #web .grid .project4 .pro4-red .pro4-yellow {
   background-color: #fee655;
 }
 
+main #web .grid .project4 .pro4-red .pro4-yellow .pro4-img {
+  padding: 13.5%;
+}
+
+main #web .grid .project4 .pro4-red .pro4-yellow .pro4-img .pro4-text h3 {
+  margin-bottom: 20px;
+}
+
+main #web .grid .project4 .pro4-red .pro4-yellow .pro4-img .pro4-text strong {
+  background: url(../images/red_border.png) no-repeat bottom;
+  background-size: 100%;
+}
+
+main #web .grid .project4 .pro4-red .pro4-yellow .pro4-img .pro4-text p {
+  margin: 20px 25px;
+}
+
+main #web .grid .project4 .pro4-red .pro4-yellow .pro4-img .pro4-text .view {
+  padding: 7%;
+  margin-right: 15px;
+  background: url(../images/red_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+main #web .grid .project4 .pro4-red .pro4-yellow .pro4-img .pro4-text .view a {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
+main #web .grid .project4 .pro4-red .pro4-yellow .pro4-img .pro4-text .process {
+  padding: 7%;
+  background: url(../images/yellow_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+main #web .grid .project4 .pro4-red .pro4-yellow .pro4-img .pro4-text .process a {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
 main #skills {
+  margin: 0 auto;
   background-color: #ffcd5c;
 }
 
 main #video {
   text-align: center;
+  margin: 300px 0 200px;
+}
+
+main #video .grid .video-red {
+  background-color: #ed2024;
+}
+
+main #video .grid .video-red .video-text {
+  padding: 16%;
+}
+
+main #video .grid .video-red .video-text h3 {
+  margin-bottom: 20px;
+}
+
+main #video .grid .video-red .video-text p {
+  margin: 20px 25px;
+}
+
+main #video .grid .video-red .video-text .view {
+  padding: 7%;
+  background: url(../images/red_btn.png) no-repeat center;
+  background-size: 100%;
+}
+
+main #video .grid .video-red .video-text .view a {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #fff;
 }
 
 footer {

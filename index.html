@@ -43,33 +43,34 @@
             <section id="about">
                 <div class="grid">
                     <h2>ABOUT ME</h2>
-                    <div class="polaroid-box">
-                        <div class="polaroid">
-                            <!-- <video autoplay loop><source src="./videos/아바타.mp4" type="video/mp4"></video> -->
-                            <img src="./images/me.gif" alt="">
-                            <div class="text">ABOUT ME</div><!--text-->
-                        </div><!--polaroid-->
-                    </div><!--polaroid-box-->
+                    <div class="about-flex">
+                        <div class="polaroid-box">
+                            <div class="polaroid">
+                                <img src="./images/me.gif" alt="">
+                                <div class="text">ABOUT ME</div><!--text-->
+                            </div><!--polaroid-->
+                        </div><!--polaroid-box-->
+                        
+                        <div class="profile">
+                            <ul>
+                                <li>name.</li>
+                                <li>birth.</li>
+                                <li>tel.</li>
+                                <li>email.</li>
+                                <li>language.</li>
+                            </ul>
+        
+                            <ul>
+                                <li>이슬</li>
+                                <li>1996.11.18</li>
+                                <li>010.6445.3759</li>
+                                <li>gksmf7073@outlook.kr</li>
+                                <li>Japanese</li>
+                            </ul>
+                        </div><!--profile-->
+                    </div><!--about-flex-->
                     
-                    <div class="profile">
-                        <ul>
-                            <li>name.</li>
-                            <li>birth.</li>
-                            <li>tel.</li>
-                            <li>email.</li>
-                            <li>language.</li>
-                        </ul>
-    
-                        <ul>
-                            <li>이슬</li>
-                            <li>1996.11.18</li>
-                            <li>010.6445.3759</li>
-                            <li>gksmf7073@outlook.kr</li>
-                            <li>Japanese</li>
-                        </ul>
-                    </div><!--profile-->
-    
-                    <div class="modal">
+                    <div id="modal">
                         <div class="modalUp">
                             <h3></h3>
                             <p></p>
@@ -83,9 +84,8 @@
                 <div class="grid">
                     <h2>web</h2>
                     <div class="project1">
-                        <div class="pro1-red"></div><!--red-box-->
-                        <div class="pro1-yellow">
-                            <div class="pro1-img"></div>
+                        <div class="pro1-img">
+                            
                             <div class="pro1-text">
                                 <h3>TITLE</h3>
                                 <strong>#반응형 #애니메이션 #모달창</strong>
@@ -96,10 +96,10 @@
                                     소개글 입니다. 소개글 입니다.
                                     소개글 입니다. 소개글 입니다.
                                 </p>
-                                <button><a href="#">VIEW SITE</a></button>
-                                <button><a href="#">PROCESS</a></button>
+                                <button class="view"><a href="#">VIEW SITE</a></button>
+                                <button class="process"><a href="#">PROCESS</a></button>
                             </div><!--pro1-text-->
-                        </div><!--yellow-box-->
+                        </div>
                     </div><!--project1-->
     
                     <div class="project2">
@@ -115,8 +115,8 @@
                                     소개글 입니다. 소개글 입니다.
                                     소개글 입니다. 소개글 입니다.
                                 </p>
-                                <button><a href="#">VIEW SITE</a></button>
-                                <button><a href="#">PROCESS</a></button>
+                                <button class="view"><a href="#">VIEW SITE</a></button>
+                                <button class="process"><a href="#">PROCESS</a></button>
                             </div><!--pro2-text-->
                         </div><!--pro2-box-->
                     </div><!--project2-->
@@ -134,55 +134,102 @@
                                     소개글 입니다. 소개글 입니다.
                                     소개글 입니다. 소개글 입니다.
                                 </p>
-                                <button><a href="#">VIEW SITE</a></button>
-                                <button><a href="#">PROCESS</a></button>
+                                <button class="view"><a href="#">VIEW SITE</a></button>
+                                <button class="process"><a href="#">PROCESS</a></button>
                             </div><!--pro3-text-->
                         </div><!--pro3-yellow-->
                     </div><!--project3-->
     
                     <div class="project4">
-                        <div class="pro4-red"></div><!--red-box-->
-                        <div class="pro4-yellow">
-                            <div class="pro4-img"></div>
-                            <div class="pro4-text">
-                                <h3>TITLE</h3>
-                                <strong>#반응형 #애니메이션 #모달창</strong>
-                                <p>소개글 입니다. 소개글 입니다.
-                                    소개글 입니다. 소개글 입니다.
-                                    소개글 입니다. 소개글 입니다.
-                                    소개글 입니다. 소개글 입니다.
-                                    소개글 입니다. 소개글 입니다.
-                                    소개글 입니다. 소개글 입니다.
-                                </p>
-                                <button><a href="#">VIEW SITE</a></button>
-                                <button><a href="#">PROCESS</a></button>
-                            </div><!--pro4-text-->
-                        </div>
+                        <div class="pro4-red">
+                            <div class="pro4-yellow">
+                                <div class="pro4-img">
+                                    <div class="pro4-text">
+                                        <h3>TITLE</h3>
+                                        <strong>#반응형 #애니메이션 #모달창</strong>
+                                        <p>소개글 입니다. 소개글 입니다.
+                                            소개글 입니다. 소개글 입니다.
+                                            소개글 입니다. 소개글 입니다.
+                                            소개글 입니다. 소개글 입니다.
+                                            소개글 입니다. 소개글 입니다.
+                                            소개글 입니다. 소개글 입니다.
+                                        </p>
+                                        <button class="view"><a href="#">VIEW SITE</a></button>
+                                        <button class="process"><a href="#">PROCESS</a></button>
+                                    </div><!--pro4-text-->
+                                </div><!--pro4-img-->
+                            </div><!--pro4-red-->
+                        </div><!--pro4-yellow-->
                     </div><!--project4-->
                 </div><!--grid-->
             </section><!--web-->
 
             <section id="skills">
                 <div class="grid">
+                    <h2>skills</h2>
+                    <div class="skill-box">
+                        <ul>
+                            <li class="html">
+                                <div class="skillLogo"><img src="./images/html_logo.png" alt=""></div>
+                                <div class="gaugeBar">
+                                    <div class="gaugeBorder">
+                                        <div class="gauge"></div>
+                                    </div>
+                                </div>
+                            </li>
 
+                            <li class="css">
 
+                            </li>
+
+                            <li class="sass">
+
+                            </li>
+
+                            <li class="jquery">
+
+                            </li>
+
+                            <li class="js">
+
+                            </li>
+
+                            <li class="ps">
+
+                            </li>
+
+                            <li class="ai">
+
+                            </li>
+
+                            <li class="pr">
+
+                            </li>
+
+                            <li class="ae">
+
+                            </li>
+                        </ul>
+                    </div><!--skill-box-->
                 </div><!--grid-->
             </section><!--skills-->
 
             <section id="video">
                 <div class="grid">
-                    <div class="video-img"></div>
-                    <div class="video-text">
-                        <h3>TITLE</h3>
-                        <p>소개글 입니다. 소개글 입니다.
-                            소개글 입니다. 소개글 입니다.
-                            소개글 입니다. 소개글 입니다.
-                            소개글 입니다. 소개글 입니다.
-                            소개글 입니다. 소개글 입니다.
-                            소개글 입니다. 소개글 입니다.
-                        </p>
-                        <button><a href="#">VIEW SITE</a></button>
-                    </div><!--video-text-->
+                    <div class="video-red">
+                        <div class="video-img"></div>
+                        <div class="video-text">
+                            <h3>TITLE</h3>
+                            <p>소개글 입니다. 소개글 입니다.
+                                소개글 입니다. 소개글 입니다.
+                                소개글 입니다. 소개글 입니다.
+                                소개글 입니다. 소개글 입니다.
+                                소개글 입니다. 소개글 입니다.
+                                소개글 입니다. 소개글 입니다.
+                            </p>
+                            <button class="view"><a href="#">VIEW SITE</a></button>
+                        </div><!--video-text-->
+                    </div>
                 </div><!--grid-->
             </section><!--video-->
         </main>
