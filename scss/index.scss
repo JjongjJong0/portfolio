@@ -164,20 +164,19 @@ main {
         .grid {
             .project1 {
                 position: relative;
-                .red-box1 {
+                .pro1-red {
                     position: absolute;
                     top: 30px;
                     right: 30px;
+                    width: 100%;
+                    height: 100%;
                     z-index: -1;
                     background: url(../images/red_box.png) center;
                     background-size: cover;
-                    width: 100%;
-                    height: 100%;
-
                 }
-                .yellow-box1 {
+                .pro1-yellow {
                     margin: 0 0 30px 30px;
-                    background-color: $background-color;
+                    background-color: $yellow;
                     padding: 13%;
                     .pro1-img {
 
@@ -198,48 +197,72 @@ main {
                 }
             }
 
-            // .project2 {
-            //     .pro2-box {
-            //         position: absolute;
-            //         top: 1000px;
-            //         width: 100%;
-            //         height: 100%;
-            //         background-color: $background-color;
-            //         .pro2-img img {
-            //             width: 100%;
-            //         }
-            //         .pro2-text {
-            //             position: absolute;
-            //             top: 50px;
-            //         }
-            //     }
-            // }
+            .project2 {
+                .pro2-box {
+                    margin: 300px 0;
+                    padding: 13%;
+                    background-color: $yellow;
+                    // .pro2-img img {
+                    //     width: 100%;
+                    // }
+                    .pro2-text {
+                        h3 {
+                            margin-bottom: 20px;
+                        }
+                        strong {
+                            background: url(../images/red_border.png) no-repeat bottom;
+                            background-size: 100%;
+                        }
+                        p {
+                            margin: 20px 25px;
+                        }
+                    }
+                }
+            }
 
-            // .project3 {
-            //     .pro3-box {
-            //         position: absolute;
-            //         top: 1000px;
-            //         padding: 17%;
-            //         background-color: #000;
-            //     }
-            // }
+            .project3 {
+                .pro3-box {
+                    padding: 13%;
+                    border: 1px solid #000;
+                    background-color: $white;
+                    .pro3-text {
+                        h3 {
+                            margin-bottom: 20px;
+                        }
+                        strong {
+                            background: url(../images/red_border.png) no-repeat bottom;
+                            background-size: 100%;
+                        }
+                        p {
+                            margin: 20px 25px;
+                        }
+                    }
+                }
+            }
 
-            // .project4 {
-            //     .red-box2 {
-            //         position: absolute;
-            //         top: 2000px;
-            //         width: 100%;
-            //         height: 100%;
-            //         background-color: $red;
-            //     }
-            //     .yellow-box2 {
-            //         position: absolute;
-            //         top: 2000px;
-            //         background-color: $background-color;
-            //     }
-            // }
+            .project4 {
+                position: relative;
+                margin: 300px 0;
+                .pro4-red {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    background-color: $red;
+                }
+                .pro4-yellow {
+                    margin: 10px;
+                    padding: 13%;
+                    background-color: $yellow;
+                }
+            }
         }
     }
+
+    #skills {
+        background-color: $background-color;
+    }
+
 
     #video {
         text-align: center;

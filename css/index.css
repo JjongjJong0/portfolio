@@ -116,7 +116,7 @@ header .grid .moblie-menu span {
   width: 45px;
   height: 10px;
   border-radius: 5px;
-  background-color: #ec1e24;
+  background-color: #ed2024;
   background: url(../images/hamburger_border.png);
   background-size: cover;
 }
@@ -144,7 +144,7 @@ header .grid nav .gnb li {
 
 header .grid nav .gnb li a {
   font-size: 2em;
-  color: #ec1e24;
+  color: #ed2024;
 }
 
 header .grid nav .gnb li a img {
@@ -154,7 +154,7 @@ header .grid nav .gnb li a img {
 main #about {
   font-family: "DK Leftover Crayon";
   font-weight: bolder;
-  color: #ec1e24;
+  color: #ed2024;
 }
 
 main #about .grid .polaroid-box {
@@ -223,34 +223,95 @@ main #web .grid .project1 {
   position: relative;
 }
 
-main #web .grid .project1 .red-box1 {
+main #web .grid .project1 .pro1-red {
   position: absolute;
   top: 30px;
   right: 30px;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   background: url(../images/red_box.png) center;
   background-size: cover;
-  width: 100%;
-  height: 100%;
 }
 
-main #web .grid .project1 .yellow-box1 {
+main #web .grid .project1 .pro1-yellow {
   margin: 0 0 30px 30px;
-  background-color: #ffcd5c;
+  background-color: #fee655;
   padding: 13%;
 }
 
-main #web .grid .project1 .yellow-box1 .pro1-text h3 {
+main #web .grid .project1 .pro1-yellow .pro1-text h3 {
   margin-bottom: 20px;
 }
 
-main #web .grid .project1 .yellow-box1 .pro1-text strong {
+main #web .grid .project1 .pro1-yellow .pro1-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
-main #web .grid .project1 .yellow-box1 .pro1-text p {
+main #web .grid .project1 .pro1-yellow .pro1-text p {
   margin: 20px 25px;
+}
+
+main #web .grid .project2 .pro2-box {
+  margin: 300px 0;
+  padding: 13%;
+  background-color: #fee655;
+}
+
+main #web .grid .project2 .pro2-box .pro2-text h3 {
+  margin-bottom: 20px;
+}
+
+main #web .grid .project2 .pro2-box .pro2-text strong {
+  background: url(../images/red_border.png) no-repeat bottom;
+  background-size: 100%;
+}
+
+main #web .grid .project2 .pro2-box .pro2-text p {
+  margin: 20px 25px;
+}
+
+main #web .grid .project3 .pro3-box {
+  padding: 13%;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+main #web .grid .project3 .pro3-box .pro3-text h3 {
+  margin-bottom: 20px;
+}
+
+main #web .grid .project3 .pro3-box .pro3-text strong {
+  background: url(../images/red_border.png) no-repeat bottom;
+  background-size: 100%;
+}
+
+main #web .grid .project3 .pro3-box .pro3-text p {
+  margin: 20px 25px;
+}
+
+main #web .grid .project4 {
+  position: relative;
+  margin: 300px 0;
+}
+
+main #web .grid .project4 .pro4-red {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #ed2024;
+}
+
+main #web .grid .project4 .pro4-yellow {
+  margin: 10px;
+  padding: 13%;
+  background-color: #fee655;
+}
+
+main #skills {
+  background-color: #ffcd5c;
 }
 
 main #video {
@@ -260,7 +321,7 @@ main #video {
 footer {
   height: 65px;
   text-align: center;
-  background-color: #ec1e24;
+  background-color: #ed2024;
 }
 
 footer .grid a img {
