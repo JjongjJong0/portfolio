@@ -29,6 +29,7 @@
 
 //header
 header {
+    position: relative;
     height: 65px;
     font : {
         family: $font-crayon;
@@ -67,21 +68,44 @@ header {
         }
 
         nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            z-index: 50;
+            @include responsive(pc-screens) {
+                width: auto;
+            }
             .gnb {
                 display: none;
+                width: 100%;
+                padding: 7% 0;
+                background-color: $menu-color;
                 @include responsive(pc-screens) {
                     display: block;
-                    float: right;
+                    padding: 0;
+                    background-color: transparent;
                 }
                 li {
-                    display: inline-block;
-                    vertical-align: middle;
-                    padding: 13px 15px;
+                    text-align: center;
+                    padding: 5%;
+                    @include responsive(pc-screens) {
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding: 13px 15px;
+                    }
+                    
                     a {
-                        font-size: 2em;
+                        font-size: 4rem;
                         color: $red;
+                        @include responsive(pc-screens) {
+                            font-size: 2em;
+                        }
+                        
                         img {
-                            width: 80%;
+                            @include responsive(pc-screens) {
+                                width: 80%;
+                            }
                         }
                     }
                 }
@@ -93,6 +117,9 @@ header {
 //main
 main {
     #about {
+        @include responsive(pc-screens) {
+            margin-top: 90px;
+        }
         font: {
             family: $font-crayon;
             weight: bolder;
@@ -102,9 +129,9 @@ main {
             .about-flex {
                 @include responsive(pc-screens) {
                     display: flex;
-                    align-items: center;
                     width: 100%;
-                    padding: 5%;
+                    justify-content: space-between;
+                    align-items: center;
                 }
                 .polaroid-box {
                     margin: 10% 8% 5%;
@@ -112,7 +139,7 @@ main {
                     transition: all 0.35s;
                     @include responsive(pc-screens) {
                         margin: 0;
-                        flex: 40%;
+                        width: 40%;
                     }
                     &::before {
                         position: absolute;
@@ -143,18 +170,22 @@ main {
                 .profile {
                     text-align: center;
                     @include responsive(pc-screens) {
-                        flex: 60%;
+                        width: 55%;
+                        height: 604px;
+                        padding: 110px 0;
+                        padding-left: 70px;
+                        background: url(../images/border.png) no-repeat left;
                     }
                     ul {
                         display: inline-block;
                         font-size: 2.3rem;
                         line-height: 3.5rem;
                         @include responsive(pc-screens) {
-                            font-size: 2rem;
+                            font-size: 2.7rem;
+                            line-height: 4.8rem;
                         }
                         &:last-child {
                             margin-left: 10%;
-                            margin-right: 0;
                             font: {
                                 size: 2.2rem;
                                 family: $font-main;
@@ -162,8 +193,7 @@ main {
                             }
                             color: $black;
                             @include responsive(pc-screens) {
-                                font-size: 1.8rem;
-                                line-height: 2.2rem;
+                                font-size: 2.2rem;
                             }
                         }
                         li {
@@ -173,35 +203,42 @@ main {
                 }
             }
             
-            #modal {
-                width: 100%;
-                height: 100%;
+            
+        }
+    }
+
+    #modal {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 100;
+        display: none;
+        .on {
+            display: block;
+        }
+        .modalUp {
+            margin: 0 auto;
+            width: 95%;
+            height: 40%;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: url(../images/memo.png) no-repeat;
+            background-size: cover;
+            @include responsive(pc-screens) {
+                width: 40%;
+                height: 50%;
+            }
+            .closeBtn {
                 position: absolute;
-                left: 0;
-                top: 0;
-                background: rgba(0, 0, 0, 0.6);
-                z-index: 100;
-                display: none;
-                .on {
-                    display: block;
-                }
-                .modalUp {
-                    width: 500px;
-                    height: 400px;
-                    position: fixed;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    background: url(../images/memo.png) no-repeat;
-                    background-size: cover;
-                    .closeBtn {
-                        position: absolute;
-                        top: 20px;
-                        right: 10px;
-                        img {
-                            width: 50px;
-                        }
-                    }
+                top: 20px;
+                right: 10px;
+                img {
+                    width: 50px;
                 }
             }
         }
@@ -211,21 +248,44 @@ main {
         text-align: center;
         .grid {
             .project1 {
+                width: 100%;
                 margin-top: 300px;
                 background: url(../images/pro1Background.png) no-repeat;
                 background-size: 100%;
-                .pro1-img {
-                    padding: 15%;
+                @include responsive(pc-screens) {
+                    width: 674px;
+                    height: 479px;
+                    margin-left: 30px;
+                    margin-top: 500px;
+                    background: url(../images/pro1_pc.png) no-repeat left top;
+                    background-size: 100%;
+                }
+                .pro1-box {
+                    padding: 12%;
+                    margin-left: 6%;
+                    @include responsive(pc-screens) {
+                        padding: 10%;
+                    }
                     .pro1-text {
+                        
                         h3 {
                             margin-bottom: 20px;
+                            @include responsive(pc-screens) {
+                                font-size: 2.5rem;
+                            }
                         }
                         strong {
                             background: url(../images/red_border.png) no-repeat bottom;
                             background-size: 100%;
+                            @include responsive(pc-screens) {
+                                font-size: 1.2rem;
+                            }
                         }
                         p {
                             margin: 20px 25px;
+                            @include responsive(pc-screens) {
+                                font-size: 1.1rem;
+                            }
                         }
                         .view {
                             padding: 7%;
@@ -261,19 +321,35 @@ main {
                     margin: 300px 0;
                     padding: 15%;
                     background-color: $yellow;
-                    // .pro2-img img {
-                    //     width: 100%;
-                    // }
+                    @include responsive(pc-screens) {
+                        width: 674px;
+                        height: 479px;
+                        margin-top: 500px;
+                        margin-left: 280px;
+                        padding: 30px 90px;
+                    }
                     .pro2-text {
+                        @include responsive(pc-screens) {
+                            margin-top: 55px;
+                        }
                         h3 {
                             margin-bottom: 20px;
+                            @include responsive(pc-screens) {
+                                font-size: 2.5rem;
+                            }
                         }
                         strong {
                             background: url(../images/red_border.png) no-repeat bottom;
                             background-size: 100%;
+                            @include responsive(pc-screens) {
+                                font-size: 1.2rem;
+                            }
                         }
                         p {
                             margin: 20px 25px;
+                            @include responsive(pc-screens) {
+                                font-size: 1.1rem;
+                            }
                         }
                         .view {
                             padding: 7%;
@@ -308,16 +384,35 @@ main {
                 .pro3-box {
                     padding: 15%;
                     background-color: $white;
+                    @include responsive(pc-screens) {
+                        width: 674px;
+                        height: 479px;
+                        margin-top: 500px;
+                        margin-left: 30px;
+                        padding: 30px 90px;
+                    }
                     .pro3-text {
+                        @include responsive(pc-screens) {
+                            margin-top: 55px;
+                        }
                         h3 {
                             margin-bottom: 20px;
+                            @include responsive(pc-screens) {
+                                font-size: 2.5rem;
+                            }
                         }
                         strong {
                             background: url(../images/red_border.png) no-repeat bottom;
                             background-size: 100%;
+                            @include responsive(pc-screens) {
+                                font-size: 1.2rem;
+                            }
                         }
                         p {
                             margin: 20px 25px;
+                            @include responsive(pc-screens) {
+                                font-size: 1.1rem;
+                            }
                         }
                         .view {
                             padding: 7%;
@@ -350,24 +445,43 @@ main {
 
             .project4 {
                 margin: 300px 0;
-                .pro4-red {
-                    padding: 10px;
-                    z-index: -1;
-                    background-color: $red;
-                    .pro4-yellow {
-                        background-color: $yellow;
-                        .pro4-img {
-                            padding: 13.5%;
+                .pro4-box {
+                    @include responsive(pc-screens) {
+                        width: 684px;
+                        height: 489px;
+                        margin-top: 500px;
+                        margin-left: 280px;
+                    }
+                    .pro4-red {
+                        padding: 10px;
+                        z-index: -1;
+                        background-color: $red;
+                        
+                        .pro4-yellow {
+                            background-color: $yellow;
                             .pro4-text {
+                                padding: 12.5%;
+                                @include responsive(pc-screens) {
+                                    padding: 70px 80px;
+                                }
                                 h3 {
                                     margin-bottom: 20px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 2.5rem;
+                                    }
                                 }
                                 strong {
                                     background: url(../images/red_border.png) no-repeat bottom;
                                     background-size: 100%;
+                                    @include responsive(pc-screens) {
+                                        font-size: 1.2rem;
+                                    }
                                 }
                                 p {
                                     margin: 20px 25px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 1.1rem;
+                                    }
                                 }
                                 .view {
                                     padding: 7%;
@@ -395,6 +509,7 @@ main {
                                     }
                                 }
                             }
+                            
                         }
                     }
                 }
@@ -406,9 +521,61 @@ main {
         margin: 0 auto;
         .grid {
             .skill-box {
+                display: flex;
+                width: 100%;
               ul {
-                .html {
-                    
+                width: 50%;
+                margin: 10% 0;
+                @include responsive(pc-screens) {
+                    margin: 50px 0;
+                }
+                &:last-child {
+                    margin-left: 5%;
+                    line-height: 2.4rem;
+                    @include responsive(pc-screens) {
+                        line-height: 3.2rem;
+                    }
+                }
+                li {
+                    display: flex;
+                    width: 100%;
+                    padding: 10% 0;
+                    @include responsive(pc-screens) {
+                        justify-content: space-around;
+                        padding: 25px 0;
+                    }
+                    .skill-logo {
+                        width: 37%;
+                        @include responsive(pc-screens) {
+                            width: 30%;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .gauge-box {
+                        width: 63%;
+                        margin-top: 4%;
+                        padding-left: 5%;
+                        line-height: 1rem;
+                        @include responsive(pc-screens) {
+                            // width: 50%;
+                        }
+                        .skill-text  {
+                            h3 {
+                                font-size: 1.3rem;
+                            }
+                        }
+                        .gaugeBorder {
+                            border: 5px solid $white;
+                            height: 30%;
+                            .gauge {
+                                width: 10%;
+                                height: 100%;
+                                background-color: $red;
+                            }
+                        }
+                    }
                 }
               }
             }
@@ -416,23 +583,37 @@ main {
         background-color: $background-color;
     }
 
-
     #video {
         text-align: center;
-        margin: 300px 0 200px;
+        margin: 300px 0 300px;
         .grid {
             .video-red {
+                padding: 16%;
                 background-color: $red;
+                @include responsive(pc-screens) {
+                    margin: 0 auto;
+                    width: 674px;
+                    height: 479px;
+                    padding: 30px 90px;
+                }
                 .video-img {
                    
                 }
                 .video-text {
-                    padding: 16%;
+                    @include responsive(pc-screens) {
+                        margin-top: 80px;
+                    }
                     h3 {
                         margin-bottom: 20px;
+                        @include responsive(pc-screens) {
+                            font-size: 2.5rem;
+                        }
                     }
                     p {
                         margin: 20px 25px;
+                        @include responsive(pc-screens) {
+                            font-size: 1.1rem;
+                        }
                     }
                     .view {
                         padding: 7%;
@@ -457,10 +638,16 @@ footer {
     height: 65px;
     text-align: center;
     background-color: $red;
+    @include responsive(pc-screens) {
+        height: 80px;
+    }
     .grid {
         a {
             img {
-                width: 100px;
+                width: 23%;
+                @include responsive(pc-screens) {
+                    width: 125px;
+                }
             }
         }
     }
