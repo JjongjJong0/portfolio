@@ -12,17 +12,21 @@
 }
 
 .loader {
+    height: 100vh;
+    text-align: center;
     background-color: $background-color;
     .grid {
-        text-align: center;
-        h1 {
-            img {
-                width: 40%;
+        .logo-box {
+            // transform: translate(-50%, -50%);
+            h1 {
+                img {
+                    width: 40%;
+                }
             }
-        }
-
-        p {
-
+    
+            p {
+    
+            }
         }
     }
 }

@@ -72,14 +72,12 @@ footer {
 }
 
 .loader {
+  height: 100vh;
+  text-align: center;
   background-color: #ffcd5c;
 }
 
-.loader .grid {
-  text-align: center;
-}
-
-.loader .grid h1 img {
+.loader .grid .logo-box h1 img {
   width: 40%;
 }
 
