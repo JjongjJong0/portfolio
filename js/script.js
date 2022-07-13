@@ -1,4 +1,24 @@
+// window.onbeforeunload = (function() { 
+//      $(".loader").show(); 
+// },3000);
+
+// $(window).load(function() {
+//      $(".loader").hide();
+// }, 3000);
+// $(window).load(function() {
+//      $(".loader").fadeOut();
+// }, 3000);
+
+
 $(window).ready(function() {
+     //loading
+     // $(window).load(function() {
+     //      (".background").css("width", 0);
+     //      (".background").css("opacity", 0);
+          
+     // });
+
+
      // 모바일(햄버거) 메뉴
      $(".mobileMenu").click(function() {
           $(this).toggleClass("open");

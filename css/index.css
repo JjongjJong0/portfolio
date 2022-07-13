@@ -71,29 +71,9 @@ footer {
   padding: 0 15px;
 }
 
-.loader .background {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: #ffcd5c;
-}
-
-.loader .grid .logoBox {
-  position: absolute;
-  top: 50vh;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.loader .grid .logoBox h1 img {
-  width: 100%;
-}
-
 header {
   position: relative;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -161,7 +141,7 @@ header .grid nav {
   top: 0;
   right: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 10;
 }
 
 @media screen and (min-width: 1024px) {
@@ -270,8 +250,77 @@ header .grid nav .gnbPc li a img {
   width: 60%;
 }
 
+.loader .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background-color: #ffcd5c;
+}
+
+.loader .grid .logoBox {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.loader .grid .logoBox h1 img {
+  width: 100%;
+}
+
+.loader .grid p {
+  position: absolute;
+  top: 32vh;
+  left: 53%;
+  font-size: 3.5rem;
+  color: #ed2024;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loader .grid p img {
+  width: 80%;
+}
+
 main #about {
   height: 100vh;
+  margin-top: 7vh;
   font-family: "DK Leftover Crayon";
   font-weight: bolder;
   color: #ed2024;
@@ -279,7 +328,7 @@ main #about {
 
 @media screen and (min-width: 1024px) {
   main #about {
-    margin-top: 90px;
+    margin-top: 20vh;
   }
 }
 
