@@ -12,14 +12,16 @@
 <body>
     <div class="wrap">
         <div class="loader">
-            <div class="background"></div>
-            <div class="grid">
-                <div class="logoBox">
-                    <h1>
-                        <img src="./images/loading_logo.svg" alt="logo">
-                    </h1>
-                    <!-- <p>portfolio</p> -->
+            <div class="background">
+                <div class="grid">
+                    <div class="logoBox">
+                        <h1>
+                            <img src="./images/loading_logo.svg" alt="logo">
+                        </h1>
+                        <!-- <p>portfolio</p> -->
+                    </div>
                 </div>
+
             </div>
         </div><!-- loader -->
 
@@ -29,19 +31,27 @@
                     <a href="./index.html"><img src="./images/logo_red.png" alt="logoRed"></a>
                 </div>
                 
-                <div class="moblie-menu">
+                <div class="mobileMenu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
                 
                 <nav>
-                    <ul class="gnb">
+                    <ul class="gnbMobile hide">
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#web">WEB</a></li>
                         <li><a href="#skills">SKILLS</a></li>
                         <li><a href="#video">VIDEO</a></li>
-                        <li><a href="https://github.com/JjongjJong0"><img src="./images/깃허브icon.png" alt="gitHurb"></a></li>
+                        <li><a href="https://github.com/JjongjJong0"><img src="./images/github_icon.png" alt="gitHurb"></a></li>
+                    </ul>
+
+                    <ul class="gnbPc">
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#web">WEB</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#video">VIDEO</a></li>
+                        <li><a href="https://github.com/JjongjJong0"><img src="./images/github_icon.png" alt="gitHurb"></a></li>
                     </ul>
                 </nav>
             </div><!--grid-->
@@ -54,10 +64,19 @@
                     <div class="about-flex">
                         <div class="polaroidBox">
                             <div class="polaroid">
-                                <img src="./images/me.gif" alt="avatar">
+                                <div class="avatar">
+                                    <img src="./images/me.gif" alt="avatar">
+                                </div><!--avatar-->
                                 <div class="textBox">
-                                   <a><img src="./images/flowers.png" alt="flowers">ABOUT ME</a>
-                                </div><!--text-->
+                                   <img src="./images/flowers.png" alt="flowers">
+                                   <strong>ABOUT ME</strong>
+                                </div><!--textBox-->
+                                <div class="txtWave">
+                                    <img src="./images/wave.png" alt="wave">
+                                </div>
+                                <div class="txtEmoji">
+                                    <img src="./images/text_emoji.png" alt="textEmoji">
+                                </div>
                             </div><!--polaroid-->
                         </div><!--polaroid-box-->
 
@@ -67,16 +86,19 @@
                             </div>
                             
                             <div class="yellowStar">
-                                <img src="./images/yellow_star.png" alt="purpletape">
+                                <img src="./images/yellow_star.png" alt="yellowStar">
                             </div>
                             <div class="redStar">
-                                <img src="./images/red_star.png" alt="purpletape">
+                                <img src="./images/red_star.png" alt="redStar">
                             </div>
                             <div class="purpleSpring">
-                                <img src="./images/purple_spring.png" alt="purpletape">
+                                <img src="./images/purple_spring.png" alt="purpleSpring">
                             </div>
                             <div class="yellowWave">
-                                <img src="./images/yellow_wave.png" alt="purpletape">
+                                <img src="./images/yellow_wave.png" alt="yellowWave">
+                            </div>
+                            <div class="purpleArrow">
+                                <img src="./images/purple_arrow.png" alt="purpleArrow">
                             </div>
                         </div>
                         
@@ -98,9 +120,9 @@
                             </ul>
                         </div><!--profile-->
                     </div><!--about-flex-->
-                    
                 </div><!--grid-->
             </section><!--about-->
+
             <div id="modal">
                 <div class="modalUp">
                     <h3></h3>

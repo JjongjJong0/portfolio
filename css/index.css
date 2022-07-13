@@ -80,27 +80,25 @@ footer {
 
 .loader .grid .logoBox {
   position: absolute;
-  top: 50%;
+  top: 50vh;
   left: 50%;
-  background-color: aqua;
-}
-
-.loader .grid .logoBox h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .loader .grid .logoBox h1 img {
-  width: 50%;
+  width: 100%;
 }
 
 header {
   position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 65px;
+  z-index: 100;
   font-family: "DK Leftover Crayon";
   font-weight: bolder;
   background-color: #feea98;
@@ -114,29 +112,47 @@ header .grid .logo a img {
   width: 90%;
 }
 
-header .grid .moblie-menu {
-  float: right;
-  padding: 8px 0;
+header .grid .mobileMenu {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  z-index: 100;
   cursor: pointer;
 }
 
+header .grid .mobileMenu.open span:first-child {
+  -webkit-transform: rotate(45deg) translate(15px, 12px);
+          transform: rotate(45deg) translate(15px, 12px);
+}
+
+header .grid .mobileMenu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+header .grid .mobileMenu.open span:last-child {
+  -webkit-transform: rotate(-45deg) translate(15px, -12px);
+          transform: rotate(-45deg) translate(15px, -12px);
+}
+
 @media screen and (min-width: 1024px) {
-  header .grid .moblie-menu {
+  header .grid .mobileMenu {
     display: none;
   }
 }
 
-header .grid .moblie-menu span {
+header .grid .mobileMenu span {
   display: block;
   width: 45px;
   height: 10px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
   border-radius: 5px;
   background-color: #ed2024;
   background: url(../images/hamburger_border.png);
   background-size: cover;
 }
 
-header .grid .moblie-menu span:nth-child(2) {
+header .grid .mobileMenu span:nth-child(2) {
   margin: 10px 0 10px;
 }
 
@@ -154,49 +170,104 @@ header .grid nav {
   }
 }
 
-header .grid nav .gnb {
-  display: none;
+header .grid nav .gnbMobile {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100vh;
   padding: 7% 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   background-color: #feea98;
 }
 
 @media screen and (min-width: 1024px) {
-  header .grid nav .gnb {
-    display: block;
-    padding: 0;
-    background-color: transparent;
+  header .grid nav .gnbMobile {
+    display: none;
   }
 }
 
-header .grid nav .gnb li {
+header .grid nav .gnbMobile.show {
+  left: 0%;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header .grid nav .gnbMobile.hide {
+  left: 100%;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+header .grid nav .gnbMobile .menuClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+header .grid nav .gnbMobile li {
   text-align: center;
   padding: 5%;
 }
 
-@media screen and (min-width: 1024px) {
-  header .grid nav .gnb li {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 13px 15px;
-  }
-}
-
-header .grid nav .gnb li a {
+header .grid nav .gnbMobile li a {
   font-size: 4rem;
   color: #ed2024;
 }
 
-@media screen and (min-width: 1024px) {
-  header .grid nav .gnb li a {
-    font-size: 2em;
-  }
+header .grid nav .gnbMobile li a img {
+  width: 100%;
+}
+
+header .grid nav .gnbPc {
+  display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  header .grid nav .gnb li a img {
-    width: 80%;
+  header .grid nav .gnbPc {
+    display: block;
   }
+}
+
+header .grid nav .gnbPc li {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 13px 15px;
+}
+
+header .grid nav .gnbPc li a {
+  font-size: 2em;
+  color: #ed2024;
+}
+
+header .grid nav .gnbPc li a img {
+  width: 60%;
 }
 
 main #about {
@@ -256,30 +327,50 @@ main #about .grid .about-flex .polaroidBox:hover {
 }
 
 main #about .grid .about-flex .polaroidBox .polaroid {
+  position: relative;
   padding: 1rem;
   background: #fff;
   -webkit-box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-main #about .grid .about-flex .polaroidBox .polaroid img {
+main #about .grid .about-flex .polaroidBox .polaroid .avatar img {
   width: 100%;
   height: 400px;
 }
 
 main #about .grid .about-flex .polaroidBox .polaroid .textBox {
   margin-left: 5%;
-  font-size: 3rem;
   cursor: pointer;
-}
-
-main #about .grid .about-flex .polaroidBox .polaroid .textBox a {
-  color: #ed2024;
 }
 
 main #about .grid .about-flex .polaroidBox .polaroid .textBox img {
   width: 25%;
-  height: 55%;
+}
+
+main #about .grid .about-flex .polaroidBox .polaroid .textBox strong {
+  color: #ed2024;
+  font-size: 3.2rem;
+}
+
+main #about .grid .about-flex .polaroidBox .polaroid .txtWave {
+  position: absolute;
+  right: 21%;
+  bottom: 1.5%;
+}
+
+main #about .grid .about-flex .polaroidBox .polaroid .txtWave img {
+  width: 100%;
+}
+
+main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
+  position: absolute;
+  right: 15%;
+  bottom: 12%;
+}
+
+main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji img {
+  width: 100%;
 }
 
 main #about .grid .about-flex .emoji img {
@@ -288,7 +379,7 @@ main #about .grid .about-flex .emoji img {
 
 main #about .grid .about-flex .emoji .tape {
   position: absolute;
-  top: 2.5%;
+  top: 3%;
   left: 47%;
 }
 
@@ -301,21 +392,37 @@ main #about .grid .about-flex .emoji .tape {
 
 @media screen and (min-width: 1024px) {
   main #about .grid .about-flex .emoji .tape {
-    top: 2%;
-    left: 16%;
+    top: 25px;
+    left: 200px;
   }
 }
 
 main #about .grid .about-flex .emoji .yellowStar {
   position: absolute;
-  top: 3%;
-  right: 0;
+  top: 5%;
+  right: 2%;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  main #about .grid .about-flex .emoji .yellowStar {
+    top: 80px;
+    right: 170px;
+  }
 }
 
 main #about .grid .about-flex .emoji .redStar {
   position: absolute;
   top: 25%;
   left: 4%;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  main #about .grid .about-flex .emoji .redStar {
+    top: 150px;
+    left: 0;
+  }
 }
 
 main #about .grid .about-flex .emoji .purpleSpring {
@@ -328,6 +435,33 @@ main #about .grid .about-flex .emoji .yellowWave {
   position: absolute;
   top: 55%;
   left: 5%;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  main #about .grid .about-flex .emoji .yellowWave {
+    top: 480px;
+    left: 0;
+  }
+  main #about .grid .about-flex .emoji .yellowWave img {
+    width: 65%;
+  }
+}
+
+main #about .grid .about-flex .emoji .purpleArrow {
+  position: absolute;
+  top: 59%;
+  right: 10%;
+}
+
+@media screen and (min-width: 1024px) {
+  main #about .grid .about-flex .emoji .purpleArrow {
+    top: 505px;
+    left: 200px;
+  }
+  main #about .grid .about-flex .emoji .purpleArrow img {
+    width: 25%;
+  }
 }
 
 main #about .grid .about-flex .profile {
@@ -376,17 +510,17 @@ main #about .grid .about-flex .profile ul li {
 }
 
 main #modal {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
   z-index: 100;
-  display: none;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-main #modal .on {
+main #modal.on {
   display: block;
 }
 
@@ -414,6 +548,7 @@ main #modal .modalUp .closeBtn {
   position: absolute;
   top: 20px;
   right: 10px;
+  cursor: pointer;
 }
 
 main #modal .modalUp .closeBtn img {
@@ -426,7 +561,8 @@ main #web {
 
 main #web .grid .project1 {
   width: 100%;
-  margin-top: 300px;
+  height: 100vh;
+  margin-top: 50vh;
   background: url(../images/pro1Background.png) no-repeat;
   background-size: 100%;
 }
@@ -443,7 +579,7 @@ main #web .grid .project1 {
 }
 
 main #web .grid .project1 .pro1-box {
-  padding: 12%;
+  padding: 13%;
   margin-left: 6%;
 }
 
@@ -507,6 +643,12 @@ main #web .grid .project1 .pro1-box .pro1-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
+}
+
+main #web .grid .project2 {
+  width: 100%;
+  height: 100vh;
+  margin-top: 50vh;
 }
 
 main #web .grid .project2 .pro2-box {
@@ -587,6 +729,12 @@ main #web .grid .project2 .pro2-box .pro2-text .process a {
   color: #fff;
 }
 
+main #web .grid .project3 {
+  width: 100%;
+  height: 100vh;
+  margin-top: 50vh;
+}
+
 main #web .grid .project3 .pro3-box {
   padding: 15%;
   background-color: #fff;
@@ -665,7 +813,9 @@ main #web .grid .project3 .pro3-box .pro3-text .process a {
 }
 
 main #web .grid .project4 {
-  margin: 300px 0;
+  width: 100%;
+  height: 100vh;
+  margin-top: 50vh;
 }
 
 @media screen and (min-width: 1024px) {
@@ -754,6 +904,8 @@ main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process a
 }
 
 main #skills {
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
   background-color: #ffcd5c;
 }
@@ -840,8 +992,10 @@ main #skills .grid .skill-box ul li .gauge-box .gaugeBorder .gauge {
 }
 
 main #video {
+  width: 100%;
+  height: 100vh;
   text-align: center;
-  margin: 300px 0 300px;
+  margin-top: 50vh;
 }
 
 main #video .grid .video-red {
@@ -897,7 +1051,7 @@ main #video .grid .video-red .video-text .view a {
 }
 
 footer {
-  height: 65px;
+  height: 75px;
   text-align: center;
   background-color: #ed2024;
 }

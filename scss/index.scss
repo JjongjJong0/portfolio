@@ -22,15 +22,12 @@
     .grid {
         .logoBox {
             position: absolute;
-            top: 50%;
+            top: 50vh;
             left: 50%;
-            // z-index: 10;
-            background-color: aqua;
+            transform: translate(-50%, -50%);
             h1 {
-                display: flex;
-                align-items: center;
                 img {
-                    width: 50%;
+                    width: 100%;
                 }
             }
         }
@@ -40,7 +37,12 @@
 //header
 header {
     position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 65px;
+    z-index: 100;
     font : {
         family: $font-crayon;
         weight: bolder;
@@ -56,10 +58,22 @@ header {
             }
         }
 
-        .moblie-menu {
-            float: right;
-            padding: 8px 0;
+        .mobileMenu {
+            position: absolute;
+            right: 15px;
+            top: 8px;
+            z-index: 100;
             cursor: pointer;
+            &.open span:first-child {
+                transform: rotate(45deg) translate(15px, 12px);
+            }
+    
+            &.open span:nth-child(2) {
+                opacity: 0;
+            }
+            &.open span:last-child {
+                transform: rotate(-45deg) translate(15px, -12px);
+            }
             @include responsive(pc-screens) {
                 display: none;
             }
@@ -67,6 +81,7 @@ header {
                 display: block;
                 width: 45px;
                 height: 10px;
+                transition: all 0.25s;
                 border-radius: 5px;
                 background-color: $red;
                 background: url(../images/hamburger_border.png);
@@ -86,36 +101,75 @@ header {
             @include responsive(pc-screens) {
                 width: auto;
             }
-            .gnb {
-                display: none;
+            
+            .gnbMobile {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
+                height: 100vh;
                 padding: 7% 0;
+                transition: 0.5s;
                 background-color: $menu-color;
                 @include responsive(pc-screens) {
-                    display: block;
-                    padding: 0;
-                    background-color: transparent;
+                    display: none;
+                }
+
+                &.show {
+                    left: 0%;
+                    opacity: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                }
+                &.hide {
+                    left: 100%;
+                    opacity: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                }
+
+                .menuClose {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
                 }
                 li {
                     text-align: center;
                     padding: 5%;
-                    @include responsive(pc-screens) {
-                        display: inline-block;
-                        vertical-align: middle;
-                        padding: 13px 15px;
-                    }
+                    
                     
                     a {
                         font-size: 4rem;
                         color: $red;
-                        @include responsive(pc-screens) {
-                            font-size: 2em;
-                        }
-                        
                         img {
-                            @include responsive(pc-screens) {
-                                width: 80%;
-                            }
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .gnbPc {
+                display: none;
+                @include responsive(pc-screens) {
+                    display: block;
+                }
+
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding: 13px 15px;
+
+                    a{
+                        font-size: 2em;
+                        color: $red;
+
+                        img{
+                            width: 60%;
                         }
                     }
                 }
@@ -163,24 +217,42 @@ main {
                         transform: scale(1, 1) rotate(0deg);
                     }
                     .polaroid {
+                        position: relative;
                         padding: 1rem;
-                        // text-align: center;
                         background: $white;
                         box-shadow: 0 0.25rem 1rem rgba($color: $black, $alpha: 0.2);
-                        img {
-                            width: 100%;
-                            height: 400px;
+                        .avatar {
+                            img {
+                                width: 100%;
+                                height: 400px;
+                            }
                         }
                         .textBox {
                             margin-left: 5%;
-                            font-size: 3rem;
                             cursor: pointer;
-                            a {
-                                color: $red;
-                            }
                             img {
                                 width: 25%;
-                                height: 55%;
+                            }
+                            strong {
+                                color: $red;
+                                font-size: 3.2rem;
+                            }
+                        }
+
+                        .txtWave {
+                            position: absolute;
+                            right: 21%;                            
+                            bottom: 1.5%;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .txtEmoji {
+                            position: absolute;
+                            right: 15%;
+                            bottom: 12%;
+                            img {
+                                width: 100%;
                             }
                         }
                     }
@@ -192,28 +264,38 @@ main {
                     }
                     .tape {
                         position: absolute;
-                        top: 2.5%;
+                        top: 3%;
                         left: 47%;
                         @include responsive(tablet-screens) {
                             top: 3%;
                             left: 50%;
                         }
                         @include responsive(pc-screens) {
-                            top: 2%;
-                            left: 16%;
+                            top: 25px;
+                            left: 200px;
                         }
                     }
 
                     .yellowStar {
                         position: absolute;
-                        top: 3%;
-                        right: 0;
+                        top: 5%;
+                        right: 2%;
+                        z-index: -1;
+                        @include responsive(pc-screens) {
+                            top: 80px;
+                            right: 170px;
+                        }
                     }
 
                     .redStar {
                         position: absolute;
                         top: 25%;
                         left: 4%;
+                        z-index: -1;
+                        @include responsive(pc-screens) {
+                            top: 150px;
+                            left: 0;
+                        }
                     }
 
                     .purpleSpring {
@@ -226,11 +308,30 @@ main {
                         position: absolute;
                         top: 55%;
                         left: 5%;
+                        z-index: -1;
+                        @include responsive(pc-screens) {
+                            top: 480px;
+                            left: 0;
+                            img {
+                                width: 65%;
+                            }
+                        }
+                    }
+
+                    .purpleArrow {
+                        position: absolute;
+                        top: 59%;
+                        right: 10%;
+                        @include responsive(pc-screens) {
+                            top: 505px;
+                            left: 200px;
+                            img {
+                                width: 25%;
+                            }
+                        }
                     }
                 }
-
                 
-    
                 .profile {
                     text-align: center;
                     @include responsive(pc-screens) {
@@ -272,15 +373,13 @@ main {
     }
 
     #modal {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 100;
         display: none;
-        .on {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.6);
+        &.on {
             display: block;
         }
         .modalUp {
@@ -301,6 +400,7 @@ main {
                 position: absolute;
                 top: 20px;
                 right: 10px;
+                cursor: pointer;
                 img {
                     width: 50px;
                 }
@@ -313,7 +413,8 @@ main {
         .grid {
             .project1 {
                 width: 100%;
-                margin-top: 300px;
+                height: 100vh;
+                margin-top: 50vh;
                 background: url(../images/pro1Background.png) no-repeat;
                 background-size: 100%;
                 @include responsive(pc-screens) {
@@ -325,7 +426,7 @@ main {
                     background-size: 100%;
                 }
                 .pro1-box {
-                    padding: 12%;
+                    padding: 13%;
                     margin-left: 6%;
                     @include responsive(pc-screens) {
                         padding: 10%;
@@ -381,6 +482,9 @@ main {
             }
 
             .project2 {
+                width: 100%;
+                height: 100vh;
+                margin-top: 50vh;
                 .pro2-box {
                     margin: 300px 0;
                     padding: 15%;
@@ -445,6 +549,9 @@ main {
             }
 
             .project3 {
+                width: 100%;
+                height: 100vh;
+                margin-top: 50vh;
                 .pro3-box {
                     padding: 15%;
                     background-color: $white;
@@ -508,7 +615,9 @@ main {
             }
 
             .project4 {
-                margin: 300px 0;
+                width: 100%;
+                height: 100vh;
+                margin-top: 50vh;
                 .pro4-box {
                     @include responsive(pc-screens) {
                         width: 684px;
@@ -582,6 +691,8 @@ main {
     }
 
     #skills {
+        width: 100%;
+        height: 100vh;
         margin: 0 auto;
         .grid {
             .skill-box {
@@ -648,8 +759,11 @@ main {
     }
 
     #video {
+        width: 100%;
+        height: 100vh;
         text-align: center;
-        margin: 300px 0 300px;
+        margin-top: 50vh;
+        // transform: translateY(-50%);
         .grid {
             .video-red {
                 padding: 16%;
@@ -699,7 +813,7 @@ main {
 
 //footer
 footer {
-    height: 65px;
+    height: 75px;
     text-align: center;
     background-color: $red;
     @include responsive(pc-screens) {
