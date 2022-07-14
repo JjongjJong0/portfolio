@@ -416,11 +416,17 @@
                 height: 400px;
                 z-index: -10;
                 background-color: aqua;
+                @include responsive(pc-screens) {
+                    top: -10%;
+                    left: -10%;
+                    width: 750px;
+                    height: 750px;
+                }
                 img {
                     width: 300px;
                     animation: circle 200s linear infinite;
                     @include responsive(pc-screens) {
-                        width: 750px;
+                        width: 700px;
                     }
                 }
             }
@@ -435,12 +441,17 @@
                 padding: 5%;
                 z-index: -10;
                 background-color: aqua;
+                @include responsive(pc-screens) {
+                    width: 700px;
+                    height: 1000px;
+                }
                 img {
                     width: 500px;
                     height: 500px;
-                    animation: circle 2s linear infinite;
+                    animation: circle 190s linear infinite;
                     @include responsive(pc-screens) {
-                        width: 750px;
+                        width: 800px;
+                        height: 800px;
                     }
                 }
             }
@@ -457,7 +468,7 @@
                 background-color: aqua;
                 img {
                     width: 80%;
-                    animation: circle 2s linear infinite;
+                    animation: circle 200s linear infinite;
                     @include responsive(pc-screens) {
                         width: 750px;
                     }
@@ -476,7 +487,7 @@
                 background-color: aqua;
                 img {
                     width: 500px;
-                    animation: circle 2s linear infinite;
+                    animation: circle 250s linear infinite;
                     @include responsive(pc-screens) {
                         width: 750px;
                     }
@@ -495,7 +506,7 @@
                 background-color: aqua;
                 img {
                     width: 300px;
-                    animation: circle 2s linear infinite;
+                    animation: circle 210s linear infinite;
                     @include responsive(pc-screens) {
                         width: 750px;
                     }
@@ -515,7 +526,7 @@
                 background-color: aqua;
                 img {
                     width: 80%;
-                    animation: circle 2s linear infinite;
+                    animation: circle 230s linear infinite;
                     @include responsive(pc-screens) {
                         width: 750px;
                     }
@@ -534,7 +545,7 @@
                 background-color: aqua;
                 img {
                     width: 80%;
-                    animation: circle 2s linear infinite;
+                    animation: circle 200s linear infinite;
                     @include responsive(pc-screens) {
                         width: 750px;
                     }
@@ -544,16 +555,16 @@
             .squareImg8 {
                 position: absolute;
                 overflow: hidden;
-                top: 550%;
-                left: 0;
-                width: 100%;
+                top: 810%;
+                left: -100px;
+                width: 400px;
                 height: 600px;
                 padding-top: 20%;
                 z-index: -10;
                 background-color: aqua;
                 img {
-                    width: 80%;
-                    animation: circle 2s linear infinite;
+                    width: 400px;
+                    animation: circle 210s linear infinite;
                     @include responsive(pc-screens) {
                         width: 750px;
                     }
@@ -563,16 +574,17 @@
             .squareImg9 {
                 position: absolute;
                 overflow: hidden;
-                top: 550%;
-                left: 0;
+                top: 880%;
+                right: 0;
                 width: 100%;
                 height: 600px;
-                padding-top: 20%;
+                padding-top: 15%;
+                padding-left: 20%;
                 z-index: -10;
                 background-color: aqua;
                 img {
-                    width: 80%;
-                    animation: circle 2s linear infinite;
+                    width: 100%;
+                    animation: circle 200s linear infinite;
                     @include responsive(pc-screens) {
                         width: 750px;
                     }

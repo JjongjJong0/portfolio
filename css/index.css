@@ -575,6 +575,15 @@ footer {
   background-color: aqua;
 }
 
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg1 {
+    top: -10%;
+    left: -10%;
+    width: 750px;
+    height: 750px;
+  }
+}
+
 .wrap main .square .squareImg1 img {
   width: 300px;
   -webkit-animation: circle 200s linear infinite;
@@ -583,7 +592,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
   .wrap main .square .squareImg1 img {
-    width: 750px;
+    width: 700px;
   }
 }
 
@@ -599,16 +608,24 @@ footer {
   background-color: aqua;
 }
 
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg2 {
+    width: 700px;
+    height: 1000px;
+  }
+}
+
 .wrap main .square .squareImg2 img {
   width: 500px;
   height: 500px;
-  -webkit-animation: circle 2s linear infinite;
-          animation: circle 2s linear infinite;
+  -webkit-animation: circle 190s linear infinite;
+          animation: circle 190s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
   .wrap main .square .squareImg2 img {
-    width: 750px;
+    width: 800px;
+    height: 800px;
   }
 }
 
@@ -626,8 +643,8 @@ footer {
 
 .wrap main .square .squareImg3 img {
   width: 80%;
-  -webkit-animation: circle 2s linear infinite;
-          animation: circle 2s linear infinite;
+  -webkit-animation: circle 200s linear infinite;
+          animation: circle 200s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
@@ -650,8 +667,8 @@ footer {
 
 .wrap main .square .squareImg4 img {
   width: 500px;
-  -webkit-animation: circle 2s linear infinite;
-          animation: circle 2s linear infinite;
+  -webkit-animation: circle 250s linear infinite;
+          animation: circle 250s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
@@ -674,8 +691,8 @@ footer {
 
 .wrap main .square .squareImg5 img {
   width: 300px;
-  -webkit-animation: circle 2s linear infinite;
-          animation: circle 2s linear infinite;
+  -webkit-animation: circle 210s linear infinite;
+          animation: circle 210s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
@@ -699,8 +716,8 @@ footer {
 
 .wrap main .square .squareImg6 img {
   width: 80%;
-  -webkit-animation: circle 2s linear infinite;
-          animation: circle 2s linear infinite;
+  -webkit-animation: circle 230s linear infinite;
+          animation: circle 230s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
@@ -723,8 +740,8 @@ footer {
 
 .wrap main .square .squareImg7 img {
   width: 80%;
-  -webkit-animation: circle 2s linear infinite;
-          animation: circle 2s linear infinite;
+  -webkit-animation: circle 200s linear infinite;
+          animation: circle 200s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
@@ -736,9 +753,9 @@ footer {
 .wrap main .square .squareImg8 {
   position: absolute;
   overflow: hidden;
-  top: 550%;
-  left: 0;
-  width: 100%;
+  top: 810%;
+  left: -100px;
+  width: 400px;
   height: 600px;
   padding-top: 20%;
   z-index: -10;
@@ -746,9 +763,9 @@ footer {
 }
 
 .wrap main .square .squareImg8 img {
-  width: 80%;
-  -webkit-animation: circle 2s linear infinite;
-          animation: circle 2s linear infinite;
+  width: 400px;
+  -webkit-animation: circle 210s linear infinite;
+          animation: circle 210s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
@@ -760,19 +777,20 @@ footer {
 .wrap main .square .squareImg9 {
   position: absolute;
   overflow: hidden;
-  top: 550%;
-  left: 0;
+  top: 880%;
+  right: 0;
   width: 100%;
   height: 600px;
-  padding-top: 20%;
+  padding-top: 15%;
+  padding-left: 20%;
   z-index: -10;
   background-color: aqua;
 }
 
 .wrap main .square .squareImg9 img {
-  width: 80%;
-  -webkit-animation: circle 2s linear infinite;
-          animation: circle 2s linear infinite;
+  width: 100%;
+  -webkit-animation: circle 200s linear infinite;
+          animation: circle 200s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
