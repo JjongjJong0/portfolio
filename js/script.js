@@ -3,21 +3,21 @@
 // },3000);
 
 // $(window).load(function() {
-//      $(".loader").hide();
-// }, 3000);
-// $(window).load(function() {
-//      $(".loader").fadeOut();
-// }, 3000);
-
-
-$(window).ready(function() {
-     //loading
-     // $(window).load(function() {
-     //      (".background").css("width", 0);
-     //      (".background").css("opacity", 0);
-          
-     // });
-
+     //      $(".loader").fadeOut();
+     // }, 3000);
+     
+     
+     $(window).ready(function() {
+          //loading
+          // $(window).load(function() {
+               //      (".background").css("width", 0);
+               //      (".background").css("opacity", 0);
+               
+               // });
+               
+     // setInterval(function() {
+     //      $(".loader").fadeOut();
+     // }, 3000);
 
      // 모바일(햄버거) 메뉴
      $(".mobileMenu").click(function() {
@@ -42,4 +42,5 @@ $(window).ready(function() {
     $("#modal > .modalUp > .closeBtn").click(function() {
           $("#modal").removeClass("on");
      });
+     
 })

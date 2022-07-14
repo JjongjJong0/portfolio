@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -71,7 +72,11 @@ footer {
   padding: 0 15px;
 }
 
-header {
+.wrap {
+  overflow: hidden;
+}
+
+.wrap header {
   position: relative;
   position: fixed;
   top: 0;
@@ -84,15 +89,15 @@ header {
   background-color: #feea98;
 }
 
-header .grid .logo {
+.wrap header .grid .logo {
   float: left;
 }
 
-header .grid .logo a img {
+.wrap header .grid .logo a img {
   width: 90%;
 }
 
-header .grid .mobileMenu {
+.wrap header .grid .mobileMenu {
   position: absolute;
   right: 15px;
   top: 8px;
@@ -100,27 +105,27 @@ header .grid .mobileMenu {
   cursor: pointer;
 }
 
-header .grid .mobileMenu.open span:first-child {
+.wrap header .grid .mobileMenu.open span:first-child {
   -webkit-transform: rotate(45deg) translate(15px, 12px);
           transform: rotate(45deg) translate(15px, 12px);
 }
 
-header .grid .mobileMenu.open span:nth-child(2) {
+.wrap header .grid .mobileMenu.open span:nth-child(2) {
   opacity: 0;
 }
 
-header .grid .mobileMenu.open span:last-child {
+.wrap header .grid .mobileMenu.open span:last-child {
   -webkit-transform: rotate(-45deg) translate(15px, -12px);
           transform: rotate(-45deg) translate(15px, -12px);
 }
 
 @media screen and (min-width: 1024px) {
-  header .grid .mobileMenu {
+  .wrap header .grid .mobileMenu {
     display: none;
   }
 }
 
-header .grid .mobileMenu span {
+.wrap header .grid .mobileMenu span {
   display: block;
   width: 45px;
   height: 10px;
@@ -132,11 +137,11 @@ header .grid .mobileMenu span {
   background-size: cover;
 }
 
-header .grid .mobileMenu span:nth-child(2) {
+.wrap header .grid .mobileMenu span:nth-child(2) {
   margin: 10px 0 10px;
 }
 
-header .grid nav {
+.wrap header .grid nav {
   position: absolute;
   top: 0;
   right: 0;
@@ -145,12 +150,12 @@ header .grid nav {
 }
 
 @media screen and (min-width: 1024px) {
-  header .grid nav {
+  .wrap header .grid nav {
     width: auto;
   }
 }
 
-header .grid nav .gnbMobile {
+.wrap header .grid nav .gnbMobile {
   display: block;
   position: absolute;
   top: 0;
@@ -164,12 +169,12 @@ header .grid nav .gnbMobile {
 }
 
 @media screen and (min-width: 1024px) {
-  header .grid nav .gnbMobile {
+  .wrap header .grid nav .gnbMobile {
     display: none;
   }
 }
 
-header .grid nav .gnbMobile.show {
+.wrap header .grid nav .gnbMobile.show {
   left: 0%;
   opacity: 1;
   display: -webkit-box;
@@ -187,7 +192,7 @@ header .grid nav .gnbMobile.show {
           justify-content: space-evenly;
 }
 
-header .grid nav .gnbMobile.hide {
+.wrap header .grid nav .gnbMobile.hide {
   left: 100%;
   opacity: 0;
   display: -webkit-box;
@@ -205,52 +210,56 @@ header .grid nav .gnbMobile.hide {
           justify-content: space-evenly;
 }
 
-header .grid nav .gnbMobile .menuClose {
+.wrap header .grid nav .gnbMobile .menuClose {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-header .grid nav .gnbMobile li {
+.wrap header .grid nav .gnbMobile li {
   text-align: center;
   padding: 5%;
 }
 
-header .grid nav .gnbMobile li a {
+.wrap header .grid nav .gnbMobile li a {
   font-size: 4rem;
   color: #ed2024;
 }
 
-header .grid nav .gnbMobile li a img {
+.wrap header .grid nav .gnbMobile li a img {
   width: 100%;
 }
 
-header .grid nav .gnbPc {
+.wrap header .grid nav .gnbPc {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  header .grid nav .gnbPc {
+  .wrap header .grid nav .gnbPc {
     display: block;
   }
 }
 
-header .grid nav .gnbPc li {
+.wrap header .grid nav .gnbPc li {
   display: inline-block;
   vertical-align: middle;
   padding: 13px 15px;
 }
 
-header .grid nav .gnbPc li a {
+.wrap header .grid nav .gnbPc li a {
   font-size: 2em;
   color: #ed2024;
 }
 
-header .grid nav .gnbPc li a img {
+.wrap header .grid nav .gnbPc li a img {
   width: 60%;
 }
 
-.loader .background {
+.wrap .loader {
+  display: none;
+}
+
+.wrap .loader .background {
   position: absolute;
   top: 0;
   left: 0;
@@ -262,7 +271,7 @@ header .grid nav .gnbPc li a img {
   background-color: #ffcd5c;
 }
 
-.loader .grid .logoBox {
+.wrap .loader .grid .logoBox {
   position: absolute;
   top: 50vh;
   left: 50%;
@@ -270,55 +279,52 @@ header .grid nav .gnbPc li a img {
           transform: translate(-50%, -50%);
 }
 
-.loader .grid .logoBox h1 img {
+.wrap .loader .grid .logoBox h1 img {
   width: 100%;
 }
 
-.loader .grid p {
+.wrap .loader .grid .rotate {
   position: absolute;
-  top: 32vh;
-  left: 53%;
+  top: 35vh;
+  left: 45%;
   font-size: 3.5rem;
-  color: #ed2024;
-  -webkit-animation-name: rotate;
-          animation-name: rotate;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
 }
 
 @-webkit-keyframes rotate {
-  0% {
+  from {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
 
 @keyframes rotate {
-  0% {
+  from {
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  100% {
+  to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
 
-.loader .grid p img {
-  width: 80%;
+.wrap .loader .grid .rotate .circleText img {
+  width: 100%;
 }
 
-main #about {
+.wrap main #about {
   height: 100vh;
   margin-top: 7vh;
   font-family: "DK Leftover Crayon";
@@ -327,13 +333,13 @@ main #about {
 }
 
 @media screen and (min-width: 1024px) {
-  main #about {
+  .wrap main #about {
     margin-top: 20vh;
   }
 }
 
 @media screen and (min-width: 768px) {
-  main #about .grid .about-flex {
+  .wrap main #about .grid .about-flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -347,7 +353,7 @@ main #about {
   }
 }
 
-main #about .grid .about-flex .polaroidBox {
+.wrap main #about .grid .about-flex .polaroidBox {
   margin: 10% 8% 5%;
   -webkit-transform: scale(0.85, 0.85) rotate(5deg);
           transform: scale(0.85, 0.85) rotate(5deg);
@@ -356,13 +362,13 @@ main #about .grid .about-flex .polaroidBox {
 }
 
 @media screen and (min-width: 1024px) {
-  main #about .grid .about-flex .polaroidBox {
+  .wrap main #about .grid .about-flex .polaroidBox {
     margin: 0;
     width: 40%;
   }
 }
 
-main #about .grid .about-flex .polaroidBox::before {
+.wrap main #about .grid .about-flex .polaroidBox::before {
   position: absolute;
   content: '';
   z-index: -1;
@@ -370,12 +376,12 @@ main #about .grid .about-flex .polaroidBox::before {
   transition: all 0.35s;
 }
 
-main #about .grid .about-flex .polaroidBox:hover {
+.wrap main #about .grid .about-flex .polaroidBox:hover {
   -webkit-transform: scale(1, 1) rotate(0deg);
           transform: scale(1, 1) rotate(0deg);
 }
 
-main #about .grid .about-flex .polaroidBox .polaroid {
+.wrap main #about .grid .about-flex .polaroidBox .polaroid {
   position: relative;
   padding: 1rem;
   background: #fff;
@@ -383,70 +389,70 @@ main #about .grid .about-flex .polaroidBox .polaroid {
           box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-main #about .grid .about-flex .polaroidBox .polaroid .avatar img {
+.wrap main #about .grid .about-flex .polaroidBox .polaroid .avatar img {
   width: 100%;
   height: 400px;
 }
 
-main #about .grid .about-flex .polaroidBox .polaroid .textBox {
+.wrap main #about .grid .about-flex .polaroidBox .polaroid .textBox {
   margin-left: 5%;
   cursor: pointer;
 }
 
-main #about .grid .about-flex .polaroidBox .polaroid .textBox img {
+.wrap main #about .grid .about-flex .polaroidBox .polaroid .textBox img {
   width: 25%;
 }
 
-main #about .grid .about-flex .polaroidBox .polaroid .textBox strong {
+.wrap main #about .grid .about-flex .polaroidBox .polaroid .textBox strong {
   color: #ed2024;
   font-size: 3.2rem;
 }
 
-main #about .grid .about-flex .polaroidBox .polaroid .txtWave {
+.wrap main #about .grid .about-flex .polaroidBox .polaroid .txtWave {
   position: absolute;
   right: 21%;
   bottom: 1.5%;
 }
 
-main #about .grid .about-flex .polaroidBox .polaroid .txtWave img {
+.wrap main #about .grid .about-flex .polaroidBox .polaroid .txtWave img {
   width: 100%;
 }
 
-main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
+.wrap main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
   position: absolute;
   right: 15%;
   bottom: 12%;
 }
 
-main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji img {
+.wrap main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji img {
   width: 100%;
 }
 
-main #about .grid .about-flex .emoji img {
+.wrap main #about .grid .about-flex .emoji img {
   width: 80%;
 }
 
-main #about .grid .about-flex .emoji .tape {
+.wrap main #about .grid .about-flex .emoji .tape {
   position: absolute;
   top: 3%;
   left: 47%;
 }
 
 @media screen and (min-width: 768px) {
-  main #about .grid .about-flex .emoji .tape {
+  .wrap main #about .grid .about-flex .emoji .tape {
     top: 3%;
     left: 50%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  main #about .grid .about-flex .emoji .tape {
+  .wrap main #about .grid .about-flex .emoji .tape {
     top: 25px;
     left: 200px;
   }
 }
 
-main #about .grid .about-flex .emoji .yellowStar {
+.wrap main #about .grid .about-flex .emoji .yellowStar {
   position: absolute;
   top: 5%;
   right: 2%;
@@ -454,13 +460,13 @@ main #about .grid .about-flex .emoji .yellowStar {
 }
 
 @media screen and (min-width: 1024px) {
-  main #about .grid .about-flex .emoji .yellowStar {
+  .wrap main #about .grid .about-flex .emoji .yellowStar {
     top: 80px;
     right: 170px;
   }
 }
 
-main #about .grid .about-flex .emoji .redStar {
+.wrap main #about .grid .about-flex .emoji .redStar {
   position: absolute;
   top: 25%;
   left: 4%;
@@ -468,19 +474,19 @@ main #about .grid .about-flex .emoji .redStar {
 }
 
 @media screen and (min-width: 1024px) {
-  main #about .grid .about-flex .emoji .redStar {
+  .wrap main #about .grid .about-flex .emoji .redStar {
     top: 150px;
     left: 0;
   }
 }
 
-main #about .grid .about-flex .emoji .purpleSpring {
+.wrap main #about .grid .about-flex .emoji .purpleSpring {
   position: absolute;
   top: 30%;
   right: 0;
 }
 
-main #about .grid .about-flex .emoji .yellowWave {
+.wrap main #about .grid .about-flex .emoji .yellowWave {
   position: absolute;
   top: 55%;
   left: 5%;
@@ -488,37 +494,37 @@ main #about .grid .about-flex .emoji .yellowWave {
 }
 
 @media screen and (min-width: 1024px) {
-  main #about .grid .about-flex .emoji .yellowWave {
+  .wrap main #about .grid .about-flex .emoji .yellowWave {
     top: 480px;
     left: 0;
   }
-  main #about .grid .about-flex .emoji .yellowWave img {
+  .wrap main #about .grid .about-flex .emoji .yellowWave img {
     width: 65%;
   }
 }
 
-main #about .grid .about-flex .emoji .purpleArrow {
+.wrap main #about .grid .about-flex .emoji .purpleArrow {
   position: absolute;
   top: 59%;
   right: 10%;
 }
 
 @media screen and (min-width: 1024px) {
-  main #about .grid .about-flex .emoji .purpleArrow {
+  .wrap main #about .grid .about-flex .emoji .purpleArrow {
     top: 505px;
     left: 200px;
   }
-  main #about .grid .about-flex .emoji .purpleArrow img {
+  .wrap main #about .grid .about-flex .emoji .purpleArrow img {
     width: 25%;
   }
 }
 
-main #about .grid .about-flex .profile {
+.wrap main #about .grid .about-flex .profile {
   text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
-  main #about .grid .about-flex .profile {
+  .wrap main #about .grid .about-flex .profile {
     width: 55%;
     height: 604px;
     padding: 110px 0;
@@ -527,20 +533,20 @@ main #about .grid .about-flex .profile {
   }
 }
 
-main #about .grid .about-flex .profile ul {
+.wrap main #about .grid .about-flex .profile ul {
   display: inline-block;
   font-size: 2.3rem;
   line-height: 3.5rem;
 }
 
 @media screen and (min-width: 1024px) {
-  main #about .grid .about-flex .profile ul {
+  .wrap main #about .grid .about-flex .profile ul {
     font-size: 2.7rem;
     line-height: 4.8rem;
   }
 }
 
-main #about .grid .about-flex .profile ul:last-child {
+.wrap main #about .grid .about-flex .profile ul:last-child {
   margin-left: 10%;
   font-size: 2.2rem;
   font-family: "Nanum Pen";
@@ -549,16 +555,257 @@ main #about .grid .about-flex .profile ul:last-child {
 }
 
 @media screen and (min-width: 1024px) {
-  main #about .grid .about-flex .profile ul:last-child {
+  .wrap main #about .grid .about-flex .profile ul:last-child {
     font-size: 2.2rem;
   }
 }
 
-main #about .grid .about-flex .profile ul li {
+.wrap main #about .grid .about-flex .profile ul li {
   text-align: left;
 }
 
-main #modal {
+.wrap main .square .squareImg1 {
+  position: absolute;
+  overflow: hidden;
+  top: -5%;
+  left: -5%;
+  width: 350px;
+  height: 400px;
+  z-index: -10;
+  background-color: aqua;
+}
+
+.wrap main .square .squareImg1 img {
+  width: 300px;
+  -webkit-animation: circle 200s linear infinite;
+          animation: circle 200s linear infinite;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg1 img {
+    width: 750px;
+  }
+}
+
+.wrap main .square .squareImg2 {
+  position: absolute;
+  overflow: hidden;
+  top: 60%;
+  right: 0;
+  width: 300px;
+  height: 550px;
+  padding: 5%;
+  z-index: -10;
+  background-color: aqua;
+}
+
+.wrap main .square .squareImg2 img {
+  width: 500px;
+  height: 500px;
+  -webkit-animation: circle 2s linear infinite;
+          animation: circle 2s linear infinite;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg2 img {
+    width: 750px;
+  }
+}
+
+.wrap main .square .squareImg3 {
+  position: absolute;
+  overflow: hidden;
+  top: 135%;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  padding-top: 20%;
+  z-index: -10;
+  background-color: aqua;
+}
+
+.wrap main .square .squareImg3 img {
+  width: 80%;
+  -webkit-animation: circle 2s linear infinite;
+          animation: circle 2s linear infinite;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg3 img {
+    width: 750px;
+  }
+}
+
+.wrap main .square .squareImg4 {
+  position: absolute;
+  overflow: hidden;
+  top: 210%;
+  left: -50%;
+  width: 600px;
+  height: 800px;
+  padding-top: 15%;
+  z-index: -10;
+  background-color: aqua;
+}
+
+.wrap main .square .squareImg4 img {
+  width: 500px;
+  -webkit-animation: circle 2s linear infinite;
+          animation: circle 2s linear infinite;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg4 img {
+    width: 750px;
+  }
+}
+
+.wrap main .square .squareImg5 {
+  position: absolute;
+  overflow: hidden;
+  top: 280%;
+  right: 0;
+  width: 300px;
+  height: 600px;
+  padding: 20%;
+  z-index: -10;
+  background-color: aqua;
+}
+
+.wrap main .square .squareImg5 img {
+  width: 300px;
+  -webkit-animation: circle 2s linear infinite;
+          animation: circle 2s linear infinite;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg5 img {
+    width: 750px;
+  }
+}
+
+.wrap main .square .squareImg6 {
+  position: absolute;
+  overflow: hidden;
+  top: 360%;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  padding-top: 20%;
+  padding-left: 5%;
+  z-index: -10;
+  background-color: aqua;
+}
+
+.wrap main .square .squareImg6 img {
+  width: 80%;
+  -webkit-animation: circle 2s linear infinite;
+          animation: circle 2s linear infinite;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg6 img {
+    width: 750px;
+  }
+}
+
+.wrap main .square .squareImg7 {
+  position: absolute;
+  overflow: hidden;
+  top: 490%;
+  left: -15%;
+  width: 100%;
+  height: 600px;
+  padding-top: 20%;
+  z-index: -10;
+  background-color: aqua;
+}
+
+.wrap main .square .squareImg7 img {
+  width: 80%;
+  -webkit-animation: circle 2s linear infinite;
+          animation: circle 2s linear infinite;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg7 img {
+    width: 750px;
+  }
+}
+
+.wrap main .square .squareImg8 {
+  position: absolute;
+  overflow: hidden;
+  top: 550%;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  padding-top: 20%;
+  z-index: -10;
+  background-color: aqua;
+}
+
+.wrap main .square .squareImg8 img {
+  width: 80%;
+  -webkit-animation: circle 2s linear infinite;
+          animation: circle 2s linear infinite;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg8 img {
+    width: 750px;
+  }
+}
+
+.wrap main .square .squareImg9 {
+  position: absolute;
+  overflow: hidden;
+  top: 550%;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  padding-top: 20%;
+  z-index: -10;
+  background-color: aqua;
+}
+
+.wrap main .square .squareImg9 img {
+  width: 80%;
+  -webkit-animation: circle 2s linear infinite;
+          animation: circle 2s linear infinite;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap main .square .squareImg9 img {
+    width: 750px;
+  }
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    /*요소들이 360도 돌게 함*/
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    /*요소들이 360도 돌게 함*/
+  }
+}
+
+.wrap main #modal {
   display: none;
   position: fixed;
   top: 0;
@@ -569,11 +816,11 @@ main #modal {
   background: rgba(0, 0, 0, 0.6);
 }
 
-main #modal.on {
+.wrap main #modal.on {
   display: block;
 }
 
-main #modal .modalUp {
+.wrap main #modal .modalUp {
   margin: 0 auto;
   width: 95%;
   height: 40%;
@@ -587,28 +834,28 @@ main #modal .modalUp {
 }
 
 @media screen and (min-width: 1024px) {
-  main #modal .modalUp {
+  .wrap main #modal .modalUp {
     width: 40%;
     height: 50%;
   }
 }
 
-main #modal .modalUp .closeBtn {
+.wrap main #modal .modalUp .closeBtn {
   position: absolute;
   top: 20px;
   right: 10px;
   cursor: pointer;
 }
 
-main #modal .modalUp .closeBtn img {
+.wrap main #modal .modalUp .closeBtn img {
   width: 50px;
 }
 
-main #web {
+.wrap main #web {
   text-align: center;
 }
 
-main #web .grid .project1 {
+.wrap main #web .grid .project1 {
   width: 100%;
   height: 100vh;
   margin-top: 50vh;
@@ -617,7 +864,7 @@ main #web .grid .project1 {
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project1 {
+  .wrap main #web .grid .project1 {
     width: 674px;
     height: 479px;
     margin-left: 30px;
@@ -627,87 +874,87 @@ main #web .grid .project1 {
   }
 }
 
-main #web .grid .project1 .pro1-box {
+.wrap main #web .grid .project1 .pro1-box {
   padding: 13%;
   margin-left: 6%;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project1 .pro1-box {
+  .wrap main #web .grid .project1 .pro1-box {
     padding: 10%;
   }
 }
 
-main #web .grid .project1 .pro1-box .pro1-text h3 {
+.wrap main #web .grid .project1 .pro1-box .pro1-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project1 .pro1-box .pro1-text h3 {
+  .wrap main #web .grid .project1 .pro1-box .pro1-text h3 {
     font-size: 2.5rem;
   }
 }
 
-main #web .grid .project1 .pro1-box .pro1-text strong {
+.wrap main #web .grid .project1 .pro1-box .pro1-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project1 .pro1-box .pro1-text strong {
+  .wrap main #web .grid .project1 .pro1-box .pro1-text strong {
     font-size: 1.2rem;
   }
 }
 
-main #web .grid .project1 .pro1-box .pro1-text p {
+.wrap main #web .grid .project1 .pro1-box .pro1-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project1 .pro1-box .pro1-text p {
+  .wrap main #web .grid .project1 .pro1-box .pro1-text p {
     font-size: 1.1rem;
   }
 }
 
-main #web .grid .project1 .pro1-box .pro1-text .view {
+.wrap main #web .grid .project1 .pro1-box .pro1-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-main #web .grid .project1 .pro1-box .pro1-text .view a {
+.wrap main #web .grid .project1 .pro1-box .pro1-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-main #web .grid .project1 .pro1-box .pro1-text .process {
+.wrap main #web .grid .project1 .pro1-box .pro1-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-main #web .grid .project1 .pro1-box .pro1-text .process a {
+.wrap main #web .grid .project1 .pro1-box .pro1-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-main #web .grid .project2 {
+.wrap main #web .grid .project2 {
   width: 100%;
   height: 100vh;
   margin-top: 50vh;
 }
 
-main #web .grid .project2 .pro2-box {
+.wrap main #web .grid .project2 .pro2-box {
   margin: 300px 0;
   padding: 15%;
   background-color: #ffe554;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project2 .pro2-box {
+  .wrap main #web .grid .project2 .pro2-box {
     width: 674px;
     height: 479px;
     margin-top: 500px;
@@ -717,80 +964,80 @@ main #web .grid .project2 .pro2-box {
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project2 .pro2-box .pro2-text {
+  .wrap main #web .grid .project2 .pro2-box .pro2-text {
     margin-top: 55px;
   }
 }
 
-main #web .grid .project2 .pro2-box .pro2-text h3 {
+.wrap main #web .grid .project2 .pro2-box .pro2-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project2 .pro2-box .pro2-text h3 {
+  .wrap main #web .grid .project2 .pro2-box .pro2-text h3 {
     font-size: 2.5rem;
   }
 }
 
-main #web .grid .project2 .pro2-box .pro2-text strong {
+.wrap main #web .grid .project2 .pro2-box .pro2-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project2 .pro2-box .pro2-text strong {
+  .wrap main #web .grid .project2 .pro2-box .pro2-text strong {
     font-size: 1.2rem;
   }
 }
 
-main #web .grid .project2 .pro2-box .pro2-text p {
+.wrap main #web .grid .project2 .pro2-box .pro2-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project2 .pro2-box .pro2-text p {
+  .wrap main #web .grid .project2 .pro2-box .pro2-text p {
     font-size: 1.1rem;
   }
 }
 
-main #web .grid .project2 .pro2-box .pro2-text .view {
+.wrap main #web .grid .project2 .pro2-box .pro2-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-main #web .grid .project2 .pro2-box .pro2-text .view a {
+.wrap main #web .grid .project2 .pro2-box .pro2-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-main #web .grid .project2 .pro2-box .pro2-text .process {
+.wrap main #web .grid .project2 .pro2-box .pro2-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-main #web .grid .project2 .pro2-box .pro2-text .process a {
+.wrap main #web .grid .project2 .pro2-box .pro2-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-main #web .grid .project3 {
+.wrap main #web .grid .project3 {
   width: 100%;
   height: 100vh;
   margin-top: 50vh;
 }
 
-main #web .grid .project3 .pro3-box {
+.wrap main #web .grid .project3 .pro3-box {
   padding: 15%;
   background-color: #fff;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project3 .pro3-box {
+  .wrap main #web .grid .project3 .pro3-box {
     width: 674px;
     height: 479px;
     margin-top: 500px;
@@ -800,75 +1047,75 @@ main #web .grid .project3 .pro3-box {
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project3 .pro3-box .pro3-text {
+  .wrap main #web .grid .project3 .pro3-box .pro3-text {
     margin-top: 55px;
   }
 }
 
-main #web .grid .project3 .pro3-box .pro3-text h3 {
+.wrap main #web .grid .project3 .pro3-box .pro3-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project3 .pro3-box .pro3-text h3 {
+  .wrap main #web .grid .project3 .pro3-box .pro3-text h3 {
     font-size: 2.5rem;
   }
 }
 
-main #web .grid .project3 .pro3-box .pro3-text strong {
+.wrap main #web .grid .project3 .pro3-box .pro3-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project3 .pro3-box .pro3-text strong {
+  .wrap main #web .grid .project3 .pro3-box .pro3-text strong {
     font-size: 1.2rem;
   }
 }
 
-main #web .grid .project3 .pro3-box .pro3-text p {
+.wrap main #web .grid .project3 .pro3-box .pro3-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project3 .pro3-box .pro3-text p {
+  .wrap main #web .grid .project3 .pro3-box .pro3-text p {
     font-size: 1.1rem;
   }
 }
 
-main #web .grid .project3 .pro3-box .pro3-text .view {
+.wrap main #web .grid .project3 .pro3-box .pro3-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-main #web .grid .project3 .pro3-box .pro3-text .view a {
+.wrap main #web .grid .project3 .pro3-box .pro3-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-main #web .grid .project3 .pro3-box .pro3-text .process {
+.wrap main #web .grid .project3 .pro3-box .pro3-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-main #web .grid .project3 .pro3-box .pro3-text .process a {
+.wrap main #web .grid .project3 .pro3-box .pro3-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-main #web .grid .project4 {
+.wrap main #web .grid .project4 {
   width: 100%;
   height: 100vh;
   margin-top: 50vh;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project4 .pro4-box {
+  .wrap main #web .grid .project4 .pro4-box {
     width: 684px;
     height: 489px;
     margin-top: 500px;
@@ -876,119 +1123,119 @@ main #web .grid .project4 {
   }
 }
 
-main #web .grid .project4 .pro4-box .pro4-red {
+.wrap main #web .grid .project4 .pro4-box .pro4-red {
   padding: 10px;
   z-index: -1;
   background-color: #ed2024;
 }
 
-main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow {
+.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow {
   background-color: #ffe554;
 }
 
-main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text {
+.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text {
   padding: 12.5%;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text {
+  .wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text {
     padding: 70px 80px;
   }
 }
 
-main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text h3 {
+.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text h3 {
+  .wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text h3 {
     font-size: 2.5rem;
   }
 }
 
-main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text strong {
+.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text strong {
+  .wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text strong {
     font-size: 1.2rem;
   }
 }
 
-main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text p {
+.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text p {
+  .wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text p {
     font-size: 1.1rem;
   }
 }
 
-main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .view {
+.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .view a {
+.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process {
+.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process a {
+.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-main #skills {
+.wrap main #skills {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
   background-color: #ffcd5c;
 }
 
-main #skills .grid .skill-box {
+.wrap main #skills .grid .skill-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-main #skills .grid .skill-box ul {
+.wrap main #skills .grid .skill-box ul {
   width: 50%;
   margin: 10% 0;
 }
 
 @media screen and (min-width: 1024px) {
-  main #skills .grid .skill-box ul {
+  .wrap main #skills .grid .skill-box ul {
     margin: 50px 0;
   }
 }
 
-main #skills .grid .skill-box ul:last-child {
+.wrap main #skills .grid .skill-box ul:last-child {
   margin-left: 5%;
   line-height: 2.4rem;
 }
 
 @media screen and (min-width: 1024px) {
-  main #skills .grid .skill-box ul:last-child {
+  .wrap main #skills .grid .skill-box ul:last-child {
     line-height: 3.2rem;
   }
 }
 
-main #skills .grid .skill-box ul li {
+.wrap main #skills .grid .skill-box ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -997,63 +1244,63 @@ main #skills .grid .skill-box ul li {
 }
 
 @media screen and (min-width: 1024px) {
-  main #skills .grid .skill-box ul li {
+  .wrap main #skills .grid .skill-box ul li {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding: 25px 0;
   }
 }
 
-main #skills .grid .skill-box ul li .skill-logo {
+.wrap main #skills .grid .skill-box ul li .skill-logo {
   width: 37%;
 }
 
 @media screen and (min-width: 1024px) {
-  main #skills .grid .skill-box ul li .skill-logo {
+  .wrap main #skills .grid .skill-box ul li .skill-logo {
     width: 30%;
   }
 }
 
-main #skills .grid .skill-box ul li .skill-logo img {
+.wrap main #skills .grid .skill-box ul li .skill-logo img {
   width: 100%;
 }
 
-main #skills .grid .skill-box ul li .gauge-box {
+.wrap main #skills .grid .skill-box ul li .gauge-box {
   width: 63%;
   margin-top: 4%;
   padding-left: 5%;
   line-height: 1rem;
 }
 
-main #skills .grid .skill-box ul li .gauge-box .skill-text h3 {
+.wrap main #skills .grid .skill-box ul li .gauge-box .skill-text h3 {
   font-size: 1.3rem;
 }
 
-main #skills .grid .skill-box ul li .gauge-box .gaugeBorder {
+.wrap main #skills .grid .skill-box ul li .gauge-box .gaugeBorder {
   border: 5px solid #fff;
   height: 30%;
 }
 
-main #skills .grid .skill-box ul li .gauge-box .gaugeBorder .gauge {
+.wrap main #skills .grid .skill-box ul li .gauge-box .gaugeBorder .gauge {
   width: 10%;
   height: 100%;
   background-color: #ed2024;
 }
 
-main #video {
+.wrap main #video {
   width: 100%;
   height: 100vh;
   text-align: center;
   margin-top: 50vh;
 }
 
-main #video .grid .video-red {
+.wrap main #video .grid .video-red {
   padding: 16%;
   background-color: #ed2024;
 }
 
 @media screen and (min-width: 1024px) {
-  main #video .grid .video-red {
+  .wrap main #video .grid .video-red {
     margin: 0 auto;
     width: 674px;
     height: 479px;
@@ -1062,61 +1309,61 @@ main #video .grid .video-red {
 }
 
 @media screen and (min-width: 1024px) {
-  main #video .grid .video-red .video-text {
+  .wrap main #video .grid .video-red .video-text {
     margin-top: 80px;
   }
 }
 
-main #video .grid .video-red .video-text h3 {
+.wrap main #video .grid .video-red .video-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #video .grid .video-red .video-text h3 {
+  .wrap main #video .grid .video-red .video-text h3 {
     font-size: 2.5rem;
   }
 }
 
-main #video .grid .video-red .video-text p {
+.wrap main #video .grid .video-red .video-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  main #video .grid .video-red .video-text p {
+  .wrap main #video .grid .video-red .video-text p {
     font-size: 1.1rem;
   }
 }
 
-main #video .grid .video-red .video-text .view {
+.wrap main #video .grid .video-red .video-text .view {
   padding: 7%;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-main #video .grid .video-red .video-text .view a {
+.wrap main #video .grid .video-red .video-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-footer {
+.wrap footer {
   height: 75px;
   text-align: center;
   background-color: #ed2024;
 }
 
 @media screen and (min-width: 1024px) {
-  footer {
+  .wrap footer {
     height: 80px;
   }
 }
 
-footer .grid a img {
+.wrap footer .grid a img {
   width: 23%;
 }
 
 @media screen and (min-width: 1024px) {
-  footer .grid a img {
+  .wrap footer .grid a img {
     width: 125px;
   }
 }

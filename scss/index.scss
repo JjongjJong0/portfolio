@@ -12,867 +12,1037 @@
 }
 
 
-
-//header
-header {
-    position: relative;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 65px;
-    z-index: 100;
-    font : {
-        family: $font-crayon;
-        weight: bolder;
-    }
-    background-color: $menu-color;
-    .grid {
-        .logo {
-            float: left;
-            a {
-                img {
-                    width: 90%;
-                }
-            }
-        }
-
-        .mobileMenu {
-            position: absolute;
-            right: 15px;
-            top: 8px;
-            z-index: 100;
-            cursor: pointer;
-            &.open span:first-child {
-                transform: rotate(45deg) translate(15px, 12px);
-            }
-    
-            &.open span:nth-child(2) {
-                opacity: 0;
-            }
-            &.open span:last-child {
-                transform: rotate(-45deg) translate(15px, -12px);
-            }
-            @include responsive(pc-screens) {
-                display: none;
-            }
-            span {
-                display: block;
-                width: 45px;
-                height: 10px;
-                transition: all 0.25s;
-                border-radius: 5px;
-                background-color: $red;
-                background: url(../images/hamburger_border.png);
-                background-size: cover;
-                &:nth-child(2) {
-                    margin: 10px 0 10px;
-                }
-            }
-        }
-
-        nav {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            z-index: 10;
-            @include responsive(pc-screens) {
-                width: auto;
-            }
-            
-            .gnbMobile {
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                padding: 7% 0;
-                transition: 0.5s;
-                background-color: $menu-color;
-                @include responsive(pc-screens) {
-                    display: none;
-                }
-
-                &.show {
-                    left: 0%;
-                    opacity: 1;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-evenly;
-                }
-                &.hide {
-                    left: 100%;
-                    opacity: 0;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-evenly;
-                }
-
-                .menuClose {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                }
-                li {
-                    text-align: center;
-                    padding: 5%;
-                    
-                    
-                    a {
-                        font-size: 4rem;
-                        color: $red;
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-
-            .gnbPc {
-                display: none;
-                @include responsive(pc-screens) {
-                    display: block;
-                }
-
-                li {
-                    display: inline-block;
-                    vertical-align: middle;
-                    padding: 13px 15px;
-
-                    a{
-                        font-size: 2em;
-                        color: $red;
-
-                        img{
-                            width: 60%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.loader {
-    .background {
-        position: absolute;
+.wrap {
+    overflow: hidden;
+    //header
+    header {
+        position: relative;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 65px;
         z-index: 100;
-        transition: all 1s;
-        background-color: $background-color;
-        // animation-duration: 1s;
-        // animation-timing-function: ease;
-        // animation-delay: 5s;
-        // animation-iteration-count: 1;
-        // animation-direction: normal;
-        // animation-fill-mode: forwards;
-        // animation-play-state: running;
-
-
-        // @keyframes  {
-        //     0% {
-        //         opacity: 0;
-        //     }
-        //     100% {
-        //         opacity: 1;
-        //     }
-        // }
-    }
-    .grid {
-        .logoBox {
-            position: absolute;
-            top: 50vh;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            h1 {
-                img {
-                    width: 100%;
-                }
-            }
-        }
-        p {
-            position: absolute;
-            top: 32vh;
-            left: 53%;
-            font-size: 3.5rem;
-            color: $red;
-            animation-name: rotate;
-            animation-duration: 2s;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
-            animation-play-state: running;
-            @keyframes rotate {
-                0% { transform: rotate(0);}
-                100% { transform: rotate(360deg);}
-            }
-            // animation: rotate 5s infinite;
-            img {
-                width: 80%;
-            }
-        }
-    }
-    // &.hide {
-    //     opacity: 0;
-    //     visibility: hidden;
-    //     // display: none;
-    // }
-}
-
-//main
-main {
-    #about {
-        height: 100vh;
-        margin-top: 7vh;
-        @include responsive(pc-screens) {
-            margin-top: 20vh;
-        }
-        font: {
+        font : {
             family: $font-crayon;
             weight: bolder;
         }
-        color: $red;
+        background-color: $menu-color;
         .grid {
-            .about-flex {
-                @include responsive(tablet-screens) {
-                    display: flex;
-                    width: 100%;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-
-                .polaroidBox {
-                    margin: 10% 8% 5%;
-                    transform: scale(0.85, 0.85) rotate(5deg);
-                    transition: all 0.35s;
-                    @include responsive(pc-screens) {
-                        margin: 0;
-                        width: 40%;
-                    }
-                    &::before {
-                        position: absolute;
-                        content: '';
-                        z-index: -1;
-                        transition: all 0.35s;
-                    }
-                    &:hover {
-                        transform: scale(1, 1) rotate(0deg);
-                    }
-                    .polaroid {
-                        position: relative;
-                        padding: 1rem;
-                        background: $white;
-                        box-shadow: 0 0.25rem 1rem rgba($color: $black, $alpha: 0.2);
-                        .avatar {
-                            img {
-                                width: 100%;
-                                height: 400px;
-                            }
-                        }
-                        .textBox {
-                            margin-left: 5%;
-                            cursor: pointer;
-                            img {
-                                width: 25%;
-                            }
-                            strong {
-                                color: $red;
-                                font-size: 3.2rem;
-                            }
-                        }
-
-                        .txtWave {
-                            position: absolute;
-                            right: 21%;                            
-                            bottom: 1.5%;
-                            img {
-                                width: 100%;
-                            }
-                        }
-                        .txtEmoji {
-                            position: absolute;
-                            right: 15%;
-                            bottom: 12%;
-                            img {
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-
-                .emoji {
+            .logo {
+                float: left;
+                a {
                     img {
-                        width: 80%;
+                        width: 90%;
                     }
-                    .tape {
-                        position: absolute;
-                        top: 3%;
-                        left: 47%;
-                        @include responsive(tablet-screens) {
-                            top: 3%;
-                            left: 50%;
-                        }
-                        @include responsive(pc-screens) {
-                            top: 25px;
-                            left: 200px;
-                        }
+                }
+            }
+    
+            .mobileMenu {
+                position: absolute;
+                right: 15px;
+                top: 8px;
+                z-index: 100;
+                cursor: pointer;
+                &.open span:first-child {
+                    transform: rotate(45deg) translate(15px, 12px);
+                }
+        
+                &.open span:nth-child(2) {
+                    opacity: 0;
+                }
+                &.open span:last-child {
+                    transform: rotate(-45deg) translate(15px, -12px);
+                }
+                @include responsive(pc-screens) {
+                    display: none;
+                }
+                span {
+                    display: block;
+                    width: 45px;
+                    height: 10px;
+                    transition: all 0.25s;
+                    border-radius: 5px;
+                    background-color: $red;
+                    background: url(../images/hamburger_border.png);
+                    background-size: cover;
+                    &:nth-child(2) {
+                        margin: 10px 0 10px;
                     }
-
-                    .yellowStar {
-                        position: absolute;
-                        top: 5%;
-                        right: 2%;
-                        z-index: -1;
-                        @include responsive(pc-screens) {
-                            top: 80px;
-                            right: 170px;
-                        }
+                }
+            }
+    
+            nav {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                z-index: 10;
+                @include responsive(pc-screens) {
+                    width: auto;
+                }
+                
+                .gnbMobile {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh;
+                    padding: 7% 0;
+                    transition: 0.5s;
+                    background-color: $menu-color;
+                    @include responsive(pc-screens) {
+                        display: none;
                     }
-
-                    .redStar {
-                        position: absolute;
-                        top: 25%;
-                        left: 4%;
-                        z-index: -1;
-                        @include responsive(pc-screens) {
-                            top: 150px;
-                            left: 0;
-                        }
+    
+                    &.show {
+                        left: 0%;
+                        opacity: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-evenly;
                     }
-
-                    .purpleSpring {
+                    &.hide {
+                        left: 100%;
+                        opacity: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-evenly;
+                    }
+    
+                    .menuClose {
                         position: absolute;
-                        top: 30%;
+                        top: 0;
                         right: 0;
                     }
-
-                    .yellowWave {
-                        position: absolute;
-                        top: 55%;
-                        left: 5%;
-                        z-index: -1;
-                        @include responsive(pc-screens) {
-                            top: 480px;
-                            left: 0;
+                    li {
+                        text-align: center;
+                        padding: 5%;
+                        
+                        
+                        a {
+                            font-size: 4rem;
+                            color: $red;
                             img {
-                                width: 65%;
+                                width: 100%;
                             }
                         }
                     }
-
-                    .purpleArrow {
-                        position: absolute;
-                        top: 59%;
-                        right: 10%;
+                }
+    
+                .gnbPc {
+                    display: none;
+                    @include responsive(pc-screens) {
+                        display: block;
+                    }
+    
+                    li {
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding: 13px 15px;
+    
+                        a{
+                            font-size: 2em;
+                            color: $red;
+    
+                            img{
+                                width: 60%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .loader {
+        display: none;
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 100;
+            transition: all 1s;
+            background-color: $background-color;
+        }
+        .grid {
+            .logoBox {
+                position: absolute;
+                top: 50vh;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                h1 {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .rotate {
+                position: absolute;
+                top: 35vh;
+                left: 45%;
+                font-size: 3.5rem;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: 1;
+                animation-name: rotate;
+                .circleText {
+                    @keyframes rotate {
+                        from { transform: rotate(0);}
+                        to { transform: rotate(360deg);}
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        // &.hide {
+        //     opacity: 0;
+        //     visibility: hidden;
+        //     // display: none;
+        // }
+    }
+    
+    
+    
+    //main
+    main {
+        #about {
+            height: 100vh;
+            margin-top: 7vh;
+            @include responsive(pc-screens) {
+                margin-top: 20vh;
+            }
+            font: {
+                family: $font-crayon;
+                weight: bolder;
+            }
+            color: $red;
+            .grid {
+                .about-flex {
+                    @include responsive(tablet-screens) {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+    
+                    .polaroidBox {
+                        margin: 10% 8% 5%;
+                        transform: scale(0.85, 0.85) rotate(5deg);
+                        transition: all 0.35s;
                         @include responsive(pc-screens) {
-                            top: 505px;
-                            left: 200px;
-                            img {
-                                width: 25%;
+                            margin: 0;
+                            width: 40%;
+                        }
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            z-index: -1;
+                            transition: all 0.35s;
+                        }
+                        &:hover {
+                            transform: scale(1, 1) rotate(0deg);
+                        }
+                        .polaroid {
+                            position: relative;
+                            padding: 1rem;
+                            background: $white;
+                            box-shadow: 0 0.25rem 1rem rgba($color: $black, $alpha: 0.2);
+                            .avatar {
+                                img {
+                                    width: 100%;
+                                    height: 400px;
+                                }
+                            }
+                            .textBox {
+                                margin-left: 5%;
+                                cursor: pointer;
+                                img {
+                                    width: 25%;
+                                }
+                                strong {
+                                    color: $red;
+                                    font-size: 3.2rem;
+                                }
+                            }
+    
+                            .txtWave {
+                                position: absolute;
+                                right: 21%;                            
+                                bottom: 1.5%;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .txtEmoji {
+                                position: absolute;
+                                right: 15%;
+                                bottom: 12%;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+    
+                    .emoji {
+                        img {
+                            width: 80%;
+                        }
+                        .tape {
+                            position: absolute;
+                            top: 3%;
+                            left: 47%;
+                            @include responsive(tablet-screens) {
+                                top: 3%;
+                                left: 50%;
+                            }
+                            @include responsive(pc-screens) {
+                                top: 25px;
+                                left: 200px;
+                            }
+                        }
+    
+                        .yellowStar {
+                            position: absolute;
+                            top: 5%;
+                            right: 2%;
+                            z-index: -1;
+                            @include responsive(pc-screens) {
+                                top: 80px;
+                                right: 170px;
+                            }
+                        }
+    
+                        .redStar {
+                            position: absolute;
+                            top: 25%;
+                            left: 4%;
+                            z-index: -1;
+                            @include responsive(pc-screens) {
+                                top: 150px;
+                                left: 0;
+                            }
+                        }
+    
+                        .purpleSpring {
+                            position: absolute;
+                            top: 30%;
+                            right: 0;
+                        }
+    
+                        .yellowWave {
+                            position: absolute;
+                            top: 55%;
+                            left: 5%;
+                            z-index: -1;
+                            @include responsive(pc-screens) {
+                                top: 480px;
+                                left: 0;
+                                img {
+                                    width: 65%;
+                                }
+                            }
+                        }
+    
+                        .purpleArrow {
+                            position: absolute;
+                            top: 59%;
+                            right: 10%;
+                            @include responsive(pc-screens) {
+                                top: 505px;
+                                left: 200px;
+                                img {
+                                    width: 25%;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .profile {
+                        text-align: center;
+                        @include responsive(pc-screens) {
+                            width: 55%;
+                            height: 604px;
+                            padding: 110px 0;
+                            padding-left: 70px;
+                            background: url(../images/border.png) no-repeat left;
+                        }
+                        ul {
+                            display: inline-block;
+                            font-size: 2.3rem;
+                            line-height: 3.5rem;
+                            @include responsive(pc-screens) {
+                                font-size: 2.7rem;
+                                line-height: 4.8rem;
+                            }
+                            &:last-child {
+                                margin-left: 10%;
+                                font: {
+                                    size: 2.2rem;
+                                    family: $font-main;
+                                    weight: normal;
+                                }
+                                color: $black;
+                                @include responsive(pc-screens) {
+                                    font-size: 2.2rem;
+                                }
+                            }
+                            li {
+                                text-align: left;
                             }
                         }
                     }
                 }
                 
-                .profile {
-                    text-align: center;
+                
+            }
+        }
+    
+        .square {
+            .squareImg1 {
+                position: absolute;
+                overflow: hidden;
+                top: -5%;
+                left: -5%;
+                width: 350px;
+                height: 400px;
+                z-index: -10;
+                background-color: aqua;
+                img {
+                    width: 300px;
+                    animation: circle 200s linear infinite;
                     @include responsive(pc-screens) {
-                        width: 55%;
-                        height: 604px;
-                        padding: 110px 0;
-                        padding-left: 70px;
-                        background: url(../images/border.png) no-repeat left;
+                        width: 750px;
                     }
-                    ul {
-                        display: inline-block;
-                        font-size: 2.3rem;
-                        line-height: 3.5rem;
+                }
+            }
+
+            .squareImg2 {
+                position: absolute;
+                overflow: hidden;
+                top: 60%;
+                right: 0;
+                width: 300px;
+                height: 550px;
+                padding: 5%;
+                z-index: -10;
+                background-color: aqua;
+                img {
+                    width: 500px;
+                    height: 500px;
+                    animation: circle 2s linear infinite;
+                    @include responsive(pc-screens) {
+                        width: 750px;
+                    }
+                }
+            }
+
+            .squareImg3 {
+                position: absolute;
+                overflow: hidden;
+                top: 135%;
+                left: 0;
+                width: 100%;
+                height: 600px;
+                padding-top: 20%;
+                z-index: -10;
+                background-color: aqua;
+                img {
+                    width: 80%;
+                    animation: circle 2s linear infinite;
+                    @include responsive(pc-screens) {
+                        width: 750px;
+                    }
+                }
+            }
+
+            .squareImg4 {
+                position: absolute;
+                overflow: hidden;
+                top: 210%;
+                left: -50%;
+                width: 600px;
+                height: 800px;
+                padding-top: 15%;
+                z-index: -10;
+                background-color: aqua;
+                img {
+                    width: 500px;
+                    animation: circle 2s linear infinite;
+                    @include responsive(pc-screens) {
+                        width: 750px;
+                    }
+                }
+            }
+
+            .squareImg5 {
+                position: absolute;
+                overflow: hidden;
+                top: 280%;
+                right: 0;
+                width: 300px;
+                height: 600px;
+                padding: 20%;
+                z-index: -10;
+                background-color: aqua;
+                img {
+                    width: 300px;
+                    animation: circle 2s linear infinite;
+                    @include responsive(pc-screens) {
+                        width: 750px;
+                    }
+                }
+            }
+
+            .squareImg6 {
+                position: absolute;
+                overflow: hidden;
+                top: 360%;
+                left: 0;
+                width: 100%;
+                height: 600px;
+                padding-top: 20%;
+                padding-left: 5%;
+                z-index: -10;
+                background-color: aqua;
+                img {
+                    width: 80%;
+                    animation: circle 2s linear infinite;
+                    @include responsive(pc-screens) {
+                        width: 750px;
+                    }
+                }
+            }
+
+            .squareImg7 {
+                position: absolute;
+                overflow: hidden;
+                top: 490%;
+                left: -15%;
+                width: 100%;
+                height: 600px;
+                padding-top: 20%;
+                z-index: -10;
+                background-color: aqua;
+                img {
+                    width: 80%;
+                    animation: circle 2s linear infinite;
+                    @include responsive(pc-screens) {
+                        width: 750px;
+                    }
+                }
+            }
+
+            .squareImg8 {
+                position: absolute;
+                overflow: hidden;
+                top: 550%;
+                left: 0;
+                width: 100%;
+                height: 600px;
+                padding-top: 20%;
+                z-index: -10;
+                background-color: aqua;
+                img {
+                    width: 80%;
+                    animation: circle 2s linear infinite;
+                    @include responsive(pc-screens) {
+                        width: 750px;
+                    }
+                }
+            }
+
+            .squareImg9 {
+                position: absolute;
+                overflow: hidden;
+                top: 550%;
+                left: 0;
+                width: 100%;
+                height: 600px;
+                padding-top: 20%;
+                z-index: -10;
+                background-color: aqua;
+                img {
+                    width: 80%;
+                    animation: circle 2s linear infinite;
+                    @include responsive(pc-screens) {
+                        width: 750px;
+                    }
+                }
+            }
+            @keyframes circle {
+                0% {
+                  transform: rotate(0);       
+                }
+                100% {
+                  transform: rotate(360deg);  /*요소들이 360도 돌게 함*/
+                }
+            }
+        }
+        
+        
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.6);
+            &.on {
+                display: block;
+            }
+            .modalUp {
+                margin: 0 auto;
+                width: 95%;
+                height: 40%;
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background: url(../images/memo.png) no-repeat;
+                background-size: cover;
+                @include responsive(pc-screens) {
+                    width: 40%;
+                    height: 50%;
+                }
+                .closeBtn {
+                    position: absolute;
+                    top: 20px;
+                    right: 10px;
+                    cursor: pointer;
+                    img {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+        
+        #web {
+            text-align: center;
+            .grid {
+                .project1 {
+                    width: 100%;
+                    height: 100vh;
+                    margin-top: 50vh;
+                    background: url(../images/pro1Background.png) no-repeat;
+                    background-size: 100%;
+                    @include responsive(pc-screens) {
+                        width: 674px;
+                        height: 479px;
+                        margin-left: 30px;
+                        margin-top: 500px;
+                        background: url(../images/pro1_pc.png) no-repeat left top;
+                        background-size: 100%;
+                    }
+                    .pro1-box {
+                        padding: 13%;
+                        margin-left: 6%;
                         @include responsive(pc-screens) {
-                            font-size: 2.7rem;
-                            line-height: 4.8rem;
+                            padding: 10%;
                         }
-                        &:last-child {
-                            margin-left: 10%;
-                            font: {
-                                size: 2.2rem;
-                                family: $font-main;
-                                weight: normal;
+                        .pro1-text {
+                            
+                            h3 {
+                                margin-bottom: 20px;
+                                @include responsive(pc-screens) {
+                                    font-size: 2.5rem;
+                                }
                             }
-                            color: $black;
+                            strong {
+                                background: url(../images/red_border.png) no-repeat bottom;
+                                background-size: 100%;
+                                @include responsive(pc-screens) {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                            p {
+                                margin: 20px 25px;
+                                @include responsive(pc-screens) {
+                                    font-size: 1.1rem;
+                                }
+                            }
+                            .view {
+                                padding: 7%;
+                                margin-right: 15px;
+                                background: url(../images/red_btn.png) no-repeat center;
+                                background-size: 100%;
+                                a {
+                                    font: {
+                                        size: 1.3rem;
+                                        weight: bolder;
+                                    }
+                                    color: $white;
+                                }
+                            }
+                            .process {
+                                padding: 7%;
+                                background: url(../images/yellow_btn.png) no-repeat center;
+                                background-size: 100%;
+                                a {
+                                    font: {
+                                        size: 1.3rem;
+                                        weight: bolder;
+                                    }
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .project2 {
+                    width: 100%;
+                    height: 100vh;
+                    margin-top: 50vh;
+                    .pro2-box {
+                        margin: 300px 0;
+                        padding: 15%;
+                        background-color: $yellow;
+                        @include responsive(pc-screens) {
+                            width: 674px;
+                            height: 479px;
+                            margin-top: 500px;
+                            margin-left: 280px;
+                            padding: 30px 90px;
+                        }
+                        .pro2-text {
                             @include responsive(pc-screens) {
-                                font-size: 2.2rem;
+                                margin-top: 55px;
+                            }
+                            h3 {
+                                margin-bottom: 20px;
+                                @include responsive(pc-screens) {
+                                    font-size: 2.5rem;
+                                }
+                            }
+                            strong {
+                                background: url(../images/red_border.png) no-repeat bottom;
+                                background-size: 100%;
+                                @include responsive(pc-screens) {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                            p {
+                                margin: 20px 25px;
+                                @include responsive(pc-screens) {
+                                    font-size: 1.1rem;
+                                }
+                            }
+                            .view {
+                                padding: 7%;
+                                margin-right: 15px;
+                                background: url(../images/red_btn.png) no-repeat center;
+                                background-size: 100%;
+                                a {
+                                    font: {
+                                        size: 1.3rem;
+                                        weight: bolder;
+                                    }
+                                    color: $white;
+                                }
+                            }
+                            .process {
+                                padding: 7%;
+                                background: url(../images/yellow_btn.png) no-repeat center;
+                                background-size: 100%;
+                                a {
+                                    font: {
+                                        size: 1.3rem;
+                                        weight: bolder;
+                                    }
+                                    color: $white;
+                                }
                             }
                         }
-                        li {
-                            text-align: left;
+                    }
+                }
+    
+                .project3 {
+                    width: 100%;
+                    height: 100vh;
+                    margin-top: 50vh;
+                    .pro3-box {
+                        padding: 15%;
+                        background-color: $white;
+                        @include responsive(pc-screens) {
+                            width: 674px;
+                            height: 479px;
+                            margin-top: 500px;
+                            margin-left: 30px;
+                            padding: 30px 90px;
+                        }
+                        .pro3-text {
+                            @include responsive(pc-screens) {
+                                margin-top: 55px;
+                            }
+                            h3 {
+                                margin-bottom: 20px;
+                                @include responsive(pc-screens) {
+                                    font-size: 2.5rem;
+                                }
+                            }
+                            strong {
+                                background: url(../images/red_border.png) no-repeat bottom;
+                                background-size: 100%;
+                                @include responsive(pc-screens) {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                            p {
+                                margin: 20px 25px;
+                                @include responsive(pc-screens) {
+                                    font-size: 1.1rem;
+                                }
+                            }
+                            .view {
+                                padding: 7%;
+                                margin-right: 15px;
+                                background: url(../images/red_btn.png) no-repeat center;
+                                background-size: 100%;
+                                a {
+                                    font: {
+                                        size: 1.3rem;
+                                        weight: bolder;
+                                    }
+                                    color: $white;
+                                }
+                            }
+                            .process {
+                                padding: 7%;
+                                background: url(../images/yellow_btn.png) no-repeat center;
+                                background-size: 100%;
+                                a {
+                                    font: {
+                                        size: 1.3rem;
+                                        weight: bolder;
+                                    }
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .project4 {
+                    width: 100%;
+                    height: 100vh;
+                    margin-top: 50vh;
+                    .pro4-box {
+                        @include responsive(pc-screens) {
+                            width: 684px;
+                            height: 489px;
+                            margin-top: 500px;
+                            margin-left: 280px;
+                        }
+                        .pro4-red {
+                            padding: 10px;
+                            z-index: -1;
+                            background-color: $red;
+                            
+                            .pro4-yellow {
+                                background-color: $yellow;
+                                .pro4-text {
+                                    padding: 12.5%;
+                                    @include responsive(pc-screens) {
+                                        padding: 70px 80px;
+                                    }
+                                    h3 {
+                                        margin-bottom: 20px;
+                                        @include responsive(pc-screens) {
+                                            font-size: 2.5rem;
+                                        }
+                                    }
+                                    strong {
+                                        background: url(../images/red_border.png) no-repeat bottom;
+                                        background-size: 100%;
+                                        @include responsive(pc-screens) {
+                                            font-size: 1.2rem;
+                                        }
+                                    }
+                                    p {
+                                        margin: 20px 25px;
+                                        @include responsive(pc-screens) {
+                                            font-size: 1.1rem;
+                                        }
+                                    }
+                                    .view {
+                                        padding: 7%;
+                                        margin-right: 15px;
+                                        background: url(../images/red_btn.png) no-repeat center;
+                                        background-size: 100%;
+                                        a {
+                                            font: {
+                                                size: 1.3rem;
+                                                weight: bolder;
+                                            }
+                                            color: $white;
+                                        }
+                                    }
+                                    .process {
+                                        padding: 7%;
+                                        background: url(../images/yellow_btn.png) no-repeat center;
+                                        background-size: 100%;
+                                        a {
+                                            font: {
+                                                size: 1.3rem;
+                                                weight: bolder;
+                                            }
+                                            color: $white;
+                                        }
+                                    }
+                                }
+                                
+                            }
                         }
                     }
                 }
             }
-            
-            
         }
-    }
-
-    #modal {
-        display: none;
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        z-index: 100;
-        background: rgba(0, 0, 0, 0.6);
-        &.on {
-            display: block;
-        }
-        .modalUp {
+    
+        #skills {
+            width: 100%;
+            height: 100vh;
             margin: 0 auto;
-            width: 95%;
-            height: 40%;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background: url(../images/memo.png) no-repeat;
-            background-size: cover;
-            @include responsive(pc-screens) {
-                width: 40%;
-                height: 50%;
+            .grid {
+                .skill-box {
+                    display: flex;
+                    width: 100%;
+                  ul {
+                    width: 50%;
+                    margin: 10% 0;
+                    @include responsive(pc-screens) {
+                        margin: 50px 0;
+                    }
+                    &:last-child {
+                        margin-left: 5%;
+                        line-height: 2.4rem;
+                        @include responsive(pc-screens) {
+                            line-height: 3.2rem;
+                        }
+                    }
+                    li {
+                        display: flex;
+                        width: 100%;
+                        padding: 10% 0;
+                        @include responsive(pc-screens) {
+                            justify-content: space-around;
+                            padding: 25px 0;
+                        }
+                        .skill-logo {
+                            width: 37%;
+                            @include responsive(pc-screens) {
+                                width: 30%;
+                            }
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .gauge-box {
+                            width: 63%;
+                            margin-top: 4%;
+                            padding-left: 5%;
+                            line-height: 1rem;
+                            @include responsive(pc-screens) {
+                                // width: 50%;
+                            }
+                            .skill-text  {
+                                h3 {
+                                    font-size: 1.3rem;
+                                }
+                            }
+                            .gaugeBorder {
+                                border: 5px solid $white;
+                                height: 30%;
+                                .gauge {
+                                    width: 10%;
+                                    height: 100%;
+                                    background-color: $red;
+                                }
+                            }
+                        }
+                    }
+                  }
+                }
             }
-            .closeBtn {
-                position: absolute;
-                top: 20px;
-                right: 10px;
-                cursor: pointer;
-                img {
-                    width: 50px;
+            background-color: $background-color;
+        }
+    
+        #video {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            margin-top: 50vh;
+            // transform: translateY(-50%);
+            .grid {
+                .video-red {
+                    padding: 16%;
+                    background-color: $red;
+                    @include responsive(pc-screens) {
+                        margin: 0 auto;
+                        width: 674px;
+                        height: 479px;
+                        padding: 30px 90px;
+                    }
+                    .video-img {
+                       
+                    }
+                    .video-text {
+                        @include responsive(pc-screens) {
+                            margin-top: 80px;
+                        }
+                        h3 {
+                            margin-bottom: 20px;
+                            @include responsive(pc-screens) {
+                                font-size: 2.5rem;
+                            }
+                        }
+                        p {
+                            margin: 20px 25px;
+                            @include responsive(pc-screens) {
+                                font-size: 1.1rem;
+                            }
+                        }
+                        .view {
+                            padding: 7%;
+                            background: url(../images/red_btn.png) no-repeat center;
+                            background-size: 100%;
+                            a {
+                                font: {
+                                    size: 1.3rem;
+                                    weight: bolder;
+                                }
+                                color: $white;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
     
-    #web {
+    //footer
+    footer {
+        height: 75px;
         text-align: center;
-        .grid {
-            .project1 {
-                width: 100%;
-                height: 100vh;
-                margin-top: 50vh;
-                background: url(../images/pro1Background.png) no-repeat;
-                background-size: 100%;
-                @include responsive(pc-screens) {
-                    width: 674px;
-                    height: 479px;
-                    margin-left: 30px;
-                    margin-top: 500px;
-                    background: url(../images/pro1_pc.png) no-repeat left top;
-                    background-size: 100%;
-                }
-                .pro1-box {
-                    padding: 13%;
-                    margin-left: 6%;
-                    @include responsive(pc-screens) {
-                        padding: 10%;
-                    }
-                    .pro1-text {
-                        
-                        h3 {
-                            margin-bottom: 20px;
-                            @include responsive(pc-screens) {
-                                font-size: 2.5rem;
-                            }
-                        }
-                        strong {
-                            background: url(../images/red_border.png) no-repeat bottom;
-                            background-size: 100%;
-                            @include responsive(pc-screens) {
-                                font-size: 1.2rem;
-                            }
-                        }
-                        p {
-                            margin: 20px 25px;
-                            @include responsive(pc-screens) {
-                                font-size: 1.1rem;
-                            }
-                        }
-                        .view {
-                            padding: 7%;
-                            margin-right: 15px;
-                            background: url(../images/red_btn.png) no-repeat center;
-                            background-size: 100%;
-                            a {
-                                font: {
-                                    size: 1.3rem;
-                                    weight: bolder;
-                                }
-                                color: $white;
-                            }
-                        }
-                        .process {
-                            padding: 7%;
-                            background: url(../images/yellow_btn.png) no-repeat center;
-                            background-size: 100%;
-                            a {
-                                font: {
-                                    size: 1.3rem;
-                                    weight: bolder;
-                                }
-                                color: $white;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .project2 {
-                width: 100%;
-                height: 100vh;
-                margin-top: 50vh;
-                .pro2-box {
-                    margin: 300px 0;
-                    padding: 15%;
-                    background-color: $yellow;
-                    @include responsive(pc-screens) {
-                        width: 674px;
-                        height: 479px;
-                        margin-top: 500px;
-                        margin-left: 280px;
-                        padding: 30px 90px;
-                    }
-                    .pro2-text {
-                        @include responsive(pc-screens) {
-                            margin-top: 55px;
-                        }
-                        h3 {
-                            margin-bottom: 20px;
-                            @include responsive(pc-screens) {
-                                font-size: 2.5rem;
-                            }
-                        }
-                        strong {
-                            background: url(../images/red_border.png) no-repeat bottom;
-                            background-size: 100%;
-                            @include responsive(pc-screens) {
-                                font-size: 1.2rem;
-                            }
-                        }
-                        p {
-                            margin: 20px 25px;
-                            @include responsive(pc-screens) {
-                                font-size: 1.1rem;
-                            }
-                        }
-                        .view {
-                            padding: 7%;
-                            margin-right: 15px;
-                            background: url(../images/red_btn.png) no-repeat center;
-                            background-size: 100%;
-                            a {
-                                font: {
-                                    size: 1.3rem;
-                                    weight: bolder;
-                                }
-                                color: $white;
-                            }
-                        }
-                        .process {
-                            padding: 7%;
-                            background: url(../images/yellow_btn.png) no-repeat center;
-                            background-size: 100%;
-                            a {
-                                font: {
-                                    size: 1.3rem;
-                                    weight: bolder;
-                                }
-                                color: $white;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .project3 {
-                width: 100%;
-                height: 100vh;
-                margin-top: 50vh;
-                .pro3-box {
-                    padding: 15%;
-                    background-color: $white;
-                    @include responsive(pc-screens) {
-                        width: 674px;
-                        height: 479px;
-                        margin-top: 500px;
-                        margin-left: 30px;
-                        padding: 30px 90px;
-                    }
-                    .pro3-text {
-                        @include responsive(pc-screens) {
-                            margin-top: 55px;
-                        }
-                        h3 {
-                            margin-bottom: 20px;
-                            @include responsive(pc-screens) {
-                                font-size: 2.5rem;
-                            }
-                        }
-                        strong {
-                            background: url(../images/red_border.png) no-repeat bottom;
-                            background-size: 100%;
-                            @include responsive(pc-screens) {
-                                font-size: 1.2rem;
-                            }
-                        }
-                        p {
-                            margin: 20px 25px;
-                            @include responsive(pc-screens) {
-                                font-size: 1.1rem;
-                            }
-                        }
-                        .view {
-                            padding: 7%;
-                            margin-right: 15px;
-                            background: url(../images/red_btn.png) no-repeat center;
-                            background-size: 100%;
-                            a {
-                                font: {
-                                    size: 1.3rem;
-                                    weight: bolder;
-                                }
-                                color: $white;
-                            }
-                        }
-                        .process {
-                            padding: 7%;
-                            background: url(../images/yellow_btn.png) no-repeat center;
-                            background-size: 100%;
-                            a {
-                                font: {
-                                    size: 1.3rem;
-                                    weight: bolder;
-                                }
-                                color: $white;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .project4 {
-                width: 100%;
-                height: 100vh;
-                margin-top: 50vh;
-                .pro4-box {
-                    @include responsive(pc-screens) {
-                        width: 684px;
-                        height: 489px;
-                        margin-top: 500px;
-                        margin-left: 280px;
-                    }
-                    .pro4-red {
-                        padding: 10px;
-                        z-index: -1;
-                        background-color: $red;
-                        
-                        .pro4-yellow {
-                            background-color: $yellow;
-                            .pro4-text {
-                                padding: 12.5%;
-                                @include responsive(pc-screens) {
-                                    padding: 70px 80px;
-                                }
-                                h3 {
-                                    margin-bottom: 20px;
-                                    @include responsive(pc-screens) {
-                                        font-size: 2.5rem;
-                                    }
-                                }
-                                strong {
-                                    background: url(../images/red_border.png) no-repeat bottom;
-                                    background-size: 100%;
-                                    @include responsive(pc-screens) {
-                                        font-size: 1.2rem;
-                                    }
-                                }
-                                p {
-                                    margin: 20px 25px;
-                                    @include responsive(pc-screens) {
-                                        font-size: 1.1rem;
-                                    }
-                                }
-                                .view {
-                                    padding: 7%;
-                                    margin-right: 15px;
-                                    background: url(../images/red_btn.png) no-repeat center;
-                                    background-size: 100%;
-                                    a {
-                                        font: {
-                                            size: 1.3rem;
-                                            weight: bolder;
-                                        }
-                                        color: $white;
-                                    }
-                                }
-                                .process {
-                                    padding: 7%;
-                                    background: url(../images/yellow_btn.png) no-repeat center;
-                                    background-size: 100%;
-                                    a {
-                                        font: {
-                                            size: 1.3rem;
-                                            weight: bolder;
-                                        }
-                                        color: $white;
-                                    }
-                                }
-                            }
-                            
-                        }
-                    }
-                }
-            }
+        background-color: $red;
+        @include responsive(pc-screens) {
+            height: 80px;
         }
-    }
-
-    #skills {
-        width: 100%;
-        height: 100vh;
-        margin: 0 auto;
         .grid {
-            .skill-box {
-                display: flex;
-                width: 100%;
-              ul {
-                width: 50%;
-                margin: 10% 0;
-                @include responsive(pc-screens) {
-                    margin: 50px 0;
-                }
-                &:last-child {
-                    margin-left: 5%;
-                    line-height: 2.4rem;
+            a {
+                img {
+                    width: 23%;
                     @include responsive(pc-screens) {
-                        line-height: 3.2rem;
+                        width: 125px;
                     }
-                }
-                li {
-                    display: flex;
-                    width: 100%;
-                    padding: 10% 0;
-                    @include responsive(pc-screens) {
-                        justify-content: space-around;
-                        padding: 25px 0;
-                    }
-                    .skill-logo {
-                        width: 37%;
-                        @include responsive(pc-screens) {
-                            width: 30%;
-                        }
-                        img {
-                            width: 100%;
-                        }
-                    }
-                    .gauge-box {
-                        width: 63%;
-                        margin-top: 4%;
-                        padding-left: 5%;
-                        line-height: 1rem;
-                        @include responsive(pc-screens) {
-                            // width: 50%;
-                        }
-                        .skill-text  {
-                            h3 {
-                                font-size: 1.3rem;
-                            }
-                        }
-                        .gaugeBorder {
-                            border: 5px solid $white;
-                            height: 30%;
-                            .gauge {
-                                width: 10%;
-                                height: 100%;
-                                background-color: $red;
-                            }
-                        }
-                    }
-                }
-              }
-            }
-        }
-        background-color: $background-color;
-    }
-
-    #video {
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        margin-top: 50vh;
-        // transform: translateY(-50%);
-        .grid {
-            .video-red {
-                padding: 16%;
-                background-color: $red;
-                @include responsive(pc-screens) {
-                    margin: 0 auto;
-                    width: 674px;
-                    height: 479px;
-                    padding: 30px 90px;
-                }
-                .video-img {
-                   
-                }
-                .video-text {
-                    @include responsive(pc-screens) {
-                        margin-top: 80px;
-                    }
-                    h3 {
-                        margin-bottom: 20px;
-                        @include responsive(pc-screens) {
-                            font-size: 2.5rem;
-                        }
-                    }
-                    p {
-                        margin: 20px 25px;
-                        @include responsive(pc-screens) {
-                            font-size: 1.1rem;
-                        }
-                    }
-                    .view {
-                        padding: 7%;
-                        background: url(../images/red_btn.png) no-repeat center;
-                        background-size: 100%;
-                        a {
-                            font: {
-                                size: 1.3rem;
-                                weight: bolder;
-                            }
-                            color: $white;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-//footer
-footer {
-    height: 75px;
-    text-align: center;
-    background-color: $red;
-    @include responsive(pc-screens) {
-        height: 80px;
-    }
-    .grid {
-        a {
-            img {
-                width: 23%;
-                @include responsive(pc-screens) {
-                    width: 125px;
                 }
             }
         }
