@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .R_pub{float:right;position:relative;width:720px;height:520px;}
+        .R_pub>.on {
+            position: absolute;
+            width: 1050px;
+            left: 0;
+            top: -100px;
+            opacity: 0;
+        }
+
+        .R_pub>.on{opacity:1;}
+        .R_pub>.on>figure img{width:100%;height:100%;display:inline-block;}
+        .R_pub>.on:nth-of-type(1)>figure img{width:80%;margin-top:30px;margin-left:80px;}
+
+        .pubImg {
+            position: absolute;
+            top: 20%;
+            left: 108px;
+            width: 862px;
+            height: 442px;
+            overflow: hidden;
+        }
+
+        .R_pub>.on:nth-of-type(1).on>.pubImg>img{
+        width:91%;
+        animation: pubImgAni1 10s linear 0.5s infinite alternate;
+        }
+
+        @keyframes pubImgAni1 {
+        0% {transform:translateY(0);}
+        100% {transform:translateY(-78%);}
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="R_pub">
+          <div class="on">
+            <figure>
+              <img src="./images/test.png" alt="아이맥목업이미지">
+            </figure>
+            <div class="pubImg">
+              <img src="./images/miumiu.png" alt="러쉬 리디자인 이미지">
+            </div>
+        </div>
+      </div>
+</body>
+</html>

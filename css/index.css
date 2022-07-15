@@ -72,11 +72,7 @@ footer {
   padding: 0 15px;
 }
 
-.wrap {
-  overflow: hidden;
-}
-
-.wrap header {
+#wrapper header {
   position: relative;
   position: fixed;
   top: 0;
@@ -89,15 +85,15 @@ footer {
   background-color: #feea98;
 }
 
-.wrap header .grid .logo {
+#wrapper header .grid .logo {
   float: left;
 }
 
-.wrap header .grid .logo a img {
+#wrapper header .grid .logo a img {
   width: 90%;
 }
 
-.wrap header .grid .mobileMenu {
+#wrapper header .grid .mobileMenu {
   position: absolute;
   right: 15px;
   top: 8px;
@@ -105,27 +101,27 @@ footer {
   cursor: pointer;
 }
 
-.wrap header .grid .mobileMenu.open span:first-child {
+#wrapper header .grid .mobileMenu.open span:first-child {
   -webkit-transform: rotate(45deg) translate(15px, 12px);
           transform: rotate(45deg) translate(15px, 12px);
 }
 
-.wrap header .grid .mobileMenu.open span:nth-child(2) {
+#wrapper header .grid .mobileMenu.open span:nth-child(2) {
   opacity: 0;
 }
 
-.wrap header .grid .mobileMenu.open span:last-child {
+#wrapper header .grid .mobileMenu.open span:last-child {
   -webkit-transform: rotate(-45deg) translate(15px, -12px);
           transform: rotate(-45deg) translate(15px, -12px);
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap header .grid .mobileMenu {
+  #wrapper header .grid .mobileMenu {
     display: none;
   }
 }
 
-.wrap header .grid .mobileMenu span {
+#wrapper header .grid .mobileMenu span {
   display: block;
   width: 45px;
   height: 10px;
@@ -137,11 +133,11 @@ footer {
   background-size: cover;
 }
 
-.wrap header .grid .mobileMenu span:nth-child(2) {
+#wrapper header .grid .mobileMenu span:nth-child(2) {
   margin: 10px 0 10px;
 }
 
-.wrap header .grid nav {
+#wrapper header .grid nav {
   position: absolute;
   top: 0;
   right: 0;
@@ -150,12 +146,12 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap header .grid nav {
+  #wrapper header .grid nav {
     width: auto;
   }
 }
 
-.wrap header .grid nav .gnbMobile {
+#wrapper header .grid nav .gnbMobile {
   display: block;
   position: absolute;
   top: 0;
@@ -169,12 +165,12 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap header .grid nav .gnbMobile {
+  #wrapper header .grid nav .gnbMobile {
     display: none;
   }
 }
 
-.wrap header .grid nav .gnbMobile.show {
+#wrapper header .grid nav .gnbMobile.show {
   left: 0%;
   opacity: 1;
   display: -webkit-box;
@@ -192,7 +188,7 @@ footer {
           justify-content: space-evenly;
 }
 
-.wrap header .grid nav .gnbMobile.hide {
+#wrapper header .grid nav .gnbMobile.hide {
   left: 100%;
   opacity: 0;
   display: -webkit-box;
@@ -210,56 +206,56 @@ footer {
           justify-content: space-evenly;
 }
 
-.wrap header .grid nav .gnbMobile .menuClose {
+#wrapper header .grid nav .gnbMobile .menuClose {
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.wrap header .grid nav .gnbMobile li {
+#wrapper header .grid nav .gnbMobile li {
   text-align: center;
   padding: 5%;
 }
 
-.wrap header .grid nav .gnbMobile li a {
+#wrapper header .grid nav .gnbMobile li a {
   font-size: 4rem;
   color: #ed2024;
 }
 
-.wrap header .grid nav .gnbMobile li a img {
+#wrapper header .grid nav .gnbMobile li a img {
   width: 100%;
 }
 
-.wrap header .grid nav .gnbPc {
+#wrapper header .grid nav .gnbPc {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap header .grid nav .gnbPc {
+  #wrapper header .grid nav .gnbPc {
     display: block;
   }
 }
 
-.wrap header .grid nav .gnbPc li {
+#wrapper header .grid nav .gnbPc li {
   display: inline-block;
   vertical-align: middle;
   padding: 13px 15px;
 }
 
-.wrap header .grid nav .gnbPc li a {
+#wrapper header .grid nav .gnbPc li a {
   font-size: 2em;
   color: #ed2024;
 }
 
-.wrap header .grid nav .gnbPc li a img {
+#wrapper header .grid nav .gnbPc li a img {
   width: 60%;
 }
 
-.wrap .loader {
+#wrapper .loader {
   display: none;
 }
 
-.wrap .loader .background {
+#wrapper .loader .background {
   position: absolute;
   top: 0;
   left: 0;
@@ -271,7 +267,7 @@ footer {
   background-color: #ffcd5c;
 }
 
-.wrap .loader .grid .logoBox {
+#wrapper .loader .grid .logoBox {
   position: absolute;
   top: 50vh;
   left: 50%;
@@ -279,11 +275,11 @@ footer {
           transform: translate(-50%, -50%);
 }
 
-.wrap .loader .grid .logoBox h1 img {
+#wrapper .loader .grid .logoBox h1 img {
   width: 100%;
 }
 
-.wrap .loader .grid .rotate {
+#wrapper .loader .grid .rotate {
   position: absolute;
   top: 35vh;
   left: 45%;
@@ -320,11 +316,11 @@ footer {
   }
 }
 
-.wrap .loader .grid .rotate .circleText img {
+#wrapper .loader .grid .rotate .circleText img {
   width: 100%;
 }
 
-.wrap main #about {
+#wrapper main #about {
   height: 100vh;
   margin-top: 7vh;
   font-family: "DK Leftover Crayon";
@@ -333,13 +329,13 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #about {
+  #wrapper main #about {
     margin-top: 20vh;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .wrap main #about .grid .about-flex {
+  #wrapper main #about .grid .about-flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -353,7 +349,7 @@ footer {
   }
 }
 
-.wrap main #about .grid .about-flex .polaroidBox {
+#wrapper main #about .grid .about-flex .polaroidBox {
   margin: 10% 8% 5%;
   -webkit-transform: scale(0.85, 0.85) rotate(5deg);
           transform: scale(0.85, 0.85) rotate(5deg);
@@ -362,13 +358,13 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #about .grid .about-flex .polaroidBox {
+  #wrapper main #about .grid .about-flex .polaroidBox {
     margin: 0;
     width: 40%;
   }
 }
 
-.wrap main #about .grid .about-flex .polaroidBox::before {
+#wrapper main #about .grid .about-flex .polaroidBox::before {
   position: absolute;
   content: '';
   z-index: -1;
@@ -376,12 +372,12 @@ footer {
   transition: all 0.35s;
 }
 
-.wrap main #about .grid .about-flex .polaroidBox:hover {
+#wrapper main #about .grid .about-flex .polaroidBox:hover {
   -webkit-transform: scale(1, 1) rotate(0deg);
           transform: scale(1, 1) rotate(0deg);
 }
 
-.wrap main #about .grid .about-flex .polaroidBox .polaroid {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid {
   position: relative;
   padding: 1rem;
   background: #fff;
@@ -389,70 +385,70 @@ footer {
           box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.wrap main #about .grid .about-flex .polaroidBox .polaroid .avatar img {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .avatar img {
   width: 100%;
   height: 400px;
 }
 
-.wrap main #about .grid .about-flex .polaroidBox .polaroid .textBox {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox {
   margin-left: 5%;
   cursor: pointer;
 }
 
-.wrap main #about .grid .about-flex .polaroidBox .polaroid .textBox img {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox img {
   width: 25%;
 }
 
-.wrap main #about .grid .about-flex .polaroidBox .polaroid .textBox strong {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox strong {
   color: #ed2024;
   font-size: 3.2rem;
 }
 
-.wrap main #about .grid .about-flex .polaroidBox .polaroid .txtWave {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave {
   position: absolute;
   right: 21%;
   bottom: 1.5%;
 }
 
-.wrap main #about .grid .about-flex .polaroidBox .polaroid .txtWave img {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave img {
   width: 100%;
 }
 
-.wrap main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
   position: absolute;
   right: 15%;
   bottom: 12%;
 }
 
-.wrap main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji img {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji img {
   width: 100%;
 }
 
-.wrap main #about .grid .about-flex .emoji img {
+#wrapper main #about .grid .about-flex .emoji img {
   width: 80%;
 }
 
-.wrap main #about .grid .about-flex .emoji .tape {
+#wrapper main #about .grid .about-flex .emoji .tape {
   position: absolute;
   top: 3%;
   left: 47%;
 }
 
 @media screen and (min-width: 768px) {
-  .wrap main #about .grid .about-flex .emoji .tape {
+  #wrapper main #about .grid .about-flex .emoji .tape {
     top: 3%;
     left: 50%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #about .grid .about-flex .emoji .tape {
+  #wrapper main #about .grid .about-flex .emoji .tape {
     top: 25px;
     left: 200px;
   }
 }
 
-.wrap main #about .grid .about-flex .emoji .yellowStar {
+#wrapper main #about .grid .about-flex .emoji .yellowStar {
   position: absolute;
   top: 5%;
   right: 2%;
@@ -460,13 +456,13 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #about .grid .about-flex .emoji .yellowStar {
+  #wrapper main #about .grid .about-flex .emoji .yellowStar {
     top: 80px;
     right: 170px;
   }
 }
 
-.wrap main #about .grid .about-flex .emoji .redStar {
+#wrapper main #about .grid .about-flex .emoji .redStar {
   position: absolute;
   top: 25%;
   left: 4%;
@@ -474,19 +470,19 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #about .grid .about-flex .emoji .redStar {
+  #wrapper main #about .grid .about-flex .emoji .redStar {
     top: 150px;
     left: 0;
   }
 }
 
-.wrap main #about .grid .about-flex .emoji .purpleSpring {
+#wrapper main #about .grid .about-flex .emoji .purpleSpring {
   position: absolute;
   top: 30%;
   right: 0;
 }
 
-.wrap main #about .grid .about-flex .emoji .yellowWave {
+#wrapper main #about .grid .about-flex .emoji .yellowWave {
   position: absolute;
   top: 55%;
   left: 5%;
@@ -494,37 +490,37 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #about .grid .about-flex .emoji .yellowWave {
+  #wrapper main #about .grid .about-flex .emoji .yellowWave {
     top: 480px;
     left: 0;
   }
-  .wrap main #about .grid .about-flex .emoji .yellowWave img {
+  #wrapper main #about .grid .about-flex .emoji .yellowWave img {
     width: 65%;
   }
 }
 
-.wrap main #about .grid .about-flex .emoji .purpleArrow {
+#wrapper main #about .grid .about-flex .emoji .purpleArrow {
   position: absolute;
   top: 59%;
   right: 10%;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #about .grid .about-flex .emoji .purpleArrow {
+  #wrapper main #about .grid .about-flex .emoji .purpleArrow {
     top: 505px;
     left: 200px;
   }
-  .wrap main #about .grid .about-flex .emoji .purpleArrow img {
+  #wrapper main #about .grid .about-flex .emoji .purpleArrow img {
     width: 25%;
   }
 }
 
-.wrap main #about .grid .about-flex .profile {
+#wrapper main #about .grid .about-flex .profile {
   text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #about .grid .about-flex .profile {
+  #wrapper main #about .grid .about-flex .profile {
     width: 55%;
     height: 604px;
     padding: 110px 0;
@@ -533,20 +529,20 @@ footer {
   }
 }
 
-.wrap main #about .grid .about-flex .profile ul {
+#wrapper main #about .grid .about-flex .profile ul {
   display: inline-block;
   font-size: 2.3rem;
   line-height: 3.5rem;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #about .grid .about-flex .profile ul {
+  #wrapper main #about .grid .about-flex .profile ul {
     font-size: 2.7rem;
     line-height: 4.8rem;
   }
 }
 
-.wrap main #about .grid .about-flex .profile ul:last-child {
+#wrapper main #about .grid .about-flex .profile ul:last-child {
   margin-left: 10%;
   font-size: 2.2rem;
   font-family: "Nanum Pen";
@@ -555,16 +551,16 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #about .grid .about-flex .profile ul:last-child {
+  #wrapper main #about .grid .about-flex .profile ul:last-child {
     font-size: 2.2rem;
   }
 }
 
-.wrap main #about .grid .about-flex .profile ul li {
+#wrapper main #about .grid .about-flex .profile ul li {
   text-align: left;
 }
 
-.wrap main .square .squareImg1 {
+#wrapper main .square .squareImg1 {
   position: absolute;
   overflow: hidden;
   top: -5%;
@@ -572,11 +568,10 @@ footer {
   width: 350px;
   height: 400px;
   z-index: -10;
-  background-color: aqua;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg1 {
+  #wrapper main .square .squareImg1 {
     top: -10%;
     left: -10%;
     width: 750px;
@@ -584,19 +579,19 @@ footer {
   }
 }
 
-.wrap main .square .squareImg1 img {
+#wrapper main .square .squareImg1 img {
   width: 300px;
   -webkit-animation: circle 200s linear infinite;
           animation: circle 200s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg1 img {
+  #wrapper main .square .squareImg1 img {
     width: 700px;
   }
 }
 
-.wrap main .square .squareImg2 {
+#wrapper main .square .squareImg2 {
   position: absolute;
   overflow: hidden;
   top: 60%;
@@ -605,17 +600,16 @@ footer {
   height: 550px;
   padding: 5%;
   z-index: -10;
-  background-color: aqua;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg2 {
+  #wrapper main .square .squareImg2 {
     width: 700px;
     height: 1000px;
   }
 }
 
-.wrap main .square .squareImg2 img {
+#wrapper main .square .squareImg2 img {
   width: 500px;
   height: 500px;
   -webkit-animation: circle 190s linear infinite;
@@ -623,61 +617,81 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg2 img {
+  #wrapper main .square .squareImg2 img {
     width: 800px;
     height: 800px;
   }
 }
 
-.wrap main .square .squareImg3 {
+#wrapper main .square .squareImg3 {
   position: absolute;
   overflow: hidden;
-  top: 135%;
+  top: 110%;
   left: 0;
   width: 100%;
   height: 600px;
   padding-top: 20%;
+  padding-left: 5%;
   z-index: -10;
-  background-color: aqua;
-}
-
-.wrap main .square .squareImg3 img {
-  width: 80%;
-  -webkit-animation: circle 200s linear infinite;
-          animation: circle 200s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg3 img {
-    width: 750px;
+  #wrapper main .square .squareImg3 {
+    left: 800px;
+    width: 730px;
+    height: 1000px;
+    padding-top: 150px;
+    padding-left: 50px;
   }
 }
 
-.wrap main .square .squareImg4 {
+#wrapper main .square .squareImg3 img {
+  width: 100%;
+  -webkit-animation: circle 250s linear infinite;
+          animation: circle 250s linear infinite;
+  animation-direction: reverse;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main .square .squareImg3 img {
+    width: 650px;
+  }
+}
+
+#wrapper main .square .squareImg4 {
   position: absolute;
   overflow: hidden;
-  top: 210%;
+  top: 190%;
   left: -50%;
   width: 600px;
   height: 800px;
   padding-top: 15%;
   z-index: -10;
-  background-color: aqua;
 }
 
-.wrap main .square .squareImg4 img {
+@media screen and (min-width: 1024px) {
+  #wrapper main .square .squareImg4 {
+    left: -350px;
+    width: 1000px;
+    height: 1000px;
+    padding-top: 150px;
+    padding-left: 50px;
+  }
+}
+
+#wrapper main .square .squareImg4 img {
   width: 500px;
   -webkit-animation: circle 250s linear infinite;
           animation: circle 250s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg4 img {
+  #wrapper main .square .squareImg4 img {
     width: 750px;
   }
 }
 
-.wrap main .square .squareImg5 {
+#wrapper main .square .squareImg5 {
   position: absolute;
   overflow: hidden;
   top: 280%;
@@ -686,47 +700,65 @@ footer {
   height: 600px;
   padding: 20%;
   z-index: -10;
-  background-color: aqua;
-}
-
-.wrap main .square .squareImg5 img {
-  width: 300px;
-  -webkit-animation: circle 210s linear infinite;
-          animation: circle 210s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg5 img {
-    width: 750px;
+  #wrapper main .square .squareImg5 {
+    top: 2200px;
+    width: 700px;
+    height: 1100px;
+    padding-top: 50px;
   }
 }
 
-.wrap main .square .squareImg6 {
+#wrapper main .square .squareImg5 img {
+  width: 300px;
+  -webkit-animation: circle 210s linear infinite;
+          animation: circle 210s linear infinite;
+  animation-direction: reverse;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main .square .squareImg5 img {
+    width: 700px;
+  }
+}
+
+#wrapper main .square .squareImg6 {
   position: absolute;
   overflow: hidden;
-  top: 360%;
+  top: 400%;
   left: 0;
   width: 100%;
   height: 600px;
   padding-top: 20%;
   padding-left: 5%;
   z-index: -10;
-  background-color: aqua;
 }
 
-.wrap main .square .squareImg6 img {
-  width: 80%;
+@media screen and (min-width: 1024px) {
+  #wrapper main .square .squareImg6 {
+    top: 3500px;
+    left: 400px;
+    width: 1200px;
+    height: 1000px;
+    padding-top: 150px;
+  }
+}
+
+#wrapper main .square .squareImg6 img {
+  width: 100%;
   -webkit-animation: circle 230s linear infinite;
           animation: circle 230s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg6 img {
-    width: 750px;
+  #wrapper main .square .squareImg6 img {
+    width: 950px;
   }
 }
 
-.wrap main .square .squareImg7 {
+#wrapper main .square .squareImg7 {
   position: absolute;
   overflow: hidden;
   top: 490%;
@@ -735,67 +767,97 @@ footer {
   height: 600px;
   padding-top: 20%;
   z-index: -10;
-  background-color: aqua;
-}
-
-.wrap main .square .squareImg7 img {
-  width: 80%;
-  -webkit-animation: circle 200s linear infinite;
-          animation: circle 200s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg7 img {
-    width: 750px;
+  #wrapper main .square .squareImg7 {
+    top: 4700px;
+    left: 0;
+    width: 1500px;
+    height: 1900px;
+    padding-top: 150px;
   }
 }
 
-.wrap main .square .squareImg8 {
+#wrapper main .square .squareImg7 img {
+  width: 80%;
+  -webkit-animation: circle 300s linear infinite;
+          animation: circle 300s linear infinite;
+  animation-direction: reverse;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main .square .squareImg7 img {
+    width: 1200px;
+  }
+}
+
+#wrapper main .square .squareImg8 {
   position: absolute;
   overflow: hidden;
-  top: 810%;
+  top: 600%;
   left: -100px;
   width: 400px;
   height: 600px;
   padding-top: 20%;
   z-index: -10;
-  background-color: aqua;
-}
-
-.wrap main .square .squareImg8 img {
-  width: 400px;
-  -webkit-animation: circle 210s linear infinite;
-          animation: circle 210s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg8 img {
-    width: 750px;
+  #wrapper main .square .squareImg8 {
+    top: 7700px;
+    left: 0;
+    width: 1200px;
+    height: 1100px;
+    padding-top: 150px;
   }
 }
 
-.wrap main .square .squareImg9 {
+#wrapper main .square .squareImg8 img {
+  width: 400px;
+  -webkit-animation: circle 230s linear infinite;
+          animation: circle 230s linear infinite;
+  animation-direction: reverse;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main .square .squareImg8 img {
+    width: 950px;
+  }
+}
+
+#wrapper main .square .squareImg9 {
   position: absolute;
   overflow: hidden;
-  top: 880%;
+  top: 650%;
   right: 0;
   width: 100%;
   height: 600px;
   padding-top: 15%;
   padding-left: 20%;
   z-index: -10;
-  background-color: aqua;
-}
-
-.wrap main .square .squareImg9 img {
-  width: 100%;
-  -webkit-animation: circle 200s linear infinite;
-          animation: circle 200s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main .square .squareImg9 img {
-    width: 750px;
+  #wrapper main .square .squareImg9 {
+    top: 8600px;
+    right: 300px;
+    width: 1200px;
+    height: 1000px;
+    padding-top: 250px;
+    padding-left: 150px;
+  }
+}
+
+#wrapper main .square .squareImg9 img {
+  width: 100%;
+  -webkit-animation: circle 350s linear infinite;
+          animation: circle 350s linear infinite;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main .square .squareImg9 img {
+    width: 850px;
   }
 }
 
@@ -823,7 +885,7 @@ footer {
   }
 }
 
-.wrap main #modal {
+#wrapper main #modal {
   display: none;
   position: fixed;
   top: 0;
@@ -834,11 +896,11 @@ footer {
   background: rgba(0, 0, 0, 0.6);
 }
 
-.wrap main #modal.on {
+#wrapper main #modal.on {
   display: block;
 }
 
-.wrap main #modal .modalUp {
+#wrapper main #modal .modalUp {
   margin: 0 auto;
   width: 95%;
   height: 40%;
@@ -852,127 +914,198 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #modal .modalUp {
+  #wrapper main #modal .modalUp {
     width: 40%;
     height: 50%;
   }
 }
 
-.wrap main #modal .modalUp .closeBtn {
+#wrapper main #modal .modalUp .closeBtn {
   position: absolute;
   top: 20px;
   right: 10px;
   cursor: pointer;
 }
 
-.wrap main #modal .modalUp .closeBtn img {
+#wrapper main #modal .modalUp .closeBtn img {
   width: 50px;
 }
 
-.wrap main #web {
+#wrapper main #web {
   text-align: center;
 }
 
-.wrap main #web .grid .project1 {
+#wrapper main #web .grid .project1 {
   width: 100%;
-  height: 100vh;
-  margin-top: 50vh;
-  background: url(../images/pro1Background.png) no-repeat;
-  background-size: 100%;
+  height: 80vh;
+  margin-top: 20vh;
+  position: relative;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project1 {
+  #wrapper main #web .grid .project1 {
     width: 674px;
     height: 479px;
     margin-left: 30px;
-    margin-top: 500px;
     background: url(../images/pro1_pc.png) no-repeat left top;
     background-size: 100%;
   }
 }
 
-.wrap main #web .grid .project1 .pro1-box {
-  padding: 13%;
-  margin-left: 6%;
-}
-
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project1 .pro1-box {
+  #wrapper main #web .grid .project1 .pro1-box {
     padding: 10%;
   }
 }
 
-.wrap main #web .grid .project1 .pro1-box .pro1-text h3 {
+#wrapper main #web .grid .project1 .pro1-box .pro1-box-img img {
+  width: 100%;
+}
+
+#wrapper main #web .grid .project1 .pro1-box .pro1-img {
+  position: absolute;
+  top: 1.1%;
+  left: 10%;
+  overflow: hidden;
+}
+
+#wrapper main #web .grid .project1 .pro1-box .pro1-img img {
+  width: 90%;
+  -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
+          animation: imgAnimation 10s linear 0.5s infinite alternate;
+}
+
+#wrapper main #web .grid .project1 .pro1-box .pro1-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project1 .pro1-box .pro1-text h3 {
+  #wrapper main #web .grid .project1 .pro1-box .pro1-text h3 {
     font-size: 2.5rem;
   }
 }
 
-.wrap main #web .grid .project1 .pro1-box .pro1-text strong {
+#wrapper main #web .grid .project1 .pro1-box .pro1-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project1 .pro1-box .pro1-text strong {
+  #wrapper main #web .grid .project1 .pro1-box .pro1-text strong {
     font-size: 1.2rem;
   }
 }
 
-.wrap main #web .grid .project1 .pro1-box .pro1-text p {
+#wrapper main #web .grid .project1 .pro1-box .pro1-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project1 .pro1-box .pro1-text p {
+  #wrapper main #web .grid .project1 .pro1-box .pro1-text p {
     font-size: 1.1rem;
   }
 }
 
-.wrap main #web .grid .project1 .pro1-box .pro1-text .view {
+#wrapper main #web .grid .project1 .pro1-box .pro1-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-.wrap main #web .grid .project1 .pro1-box .pro1-text .view a {
+#wrapper main #web .grid .project1 .pro1-box .pro1-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-.wrap main #web .grid .project1 .pro1-box .pro1-text .process {
+#wrapper main #web .grid .project1 .pro1-box .pro1-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-.wrap main #web .grid .project1 .pro1-box .pro1-text .process a {
+#wrapper main #web .grid .project1 .pro1-box .pro1-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-.wrap main #web .grid .project2 {
-  width: 100%;
-  height: 100vh;
-  margin-top: 50vh;
+@-webkit-keyframes imgAnimation {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-78%);
+            transform: translateY(-78%);
+  }
 }
 
-.wrap main #web .grid .project2 .pro2-box {
-  margin: 300px 0;
+@keyframes imgAnimation {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-78%);
+            transform: translateY(-78%);
+  }
+}
+
+#wrapper main #web .grid .project1.scroll {
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+#wrapper main #web .grid .project1.scroll.scrolled {
+  opacity: 1;
+}
+
+#wrapper main #web .grid .project1.scroll.scrolled.slideLeft {
+  -webkit-animation: slide-in-left 1s ease-in-out both;
+          animation: slide-in-left 1s ease-in-out both;
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#wrapper main #web .grid .project2 {
+  width: 100%;
+  height: 80vh;
+}
+
+#wrapper main #web .grid .project2 .pro2-box {
   padding: 15%;
   background-color: #ffe554;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project2 .pro2-box {
+  #wrapper main #web .grid .project2 .pro2-box {
     width: 674px;
     height: 479px;
     margin-top: 500px;
@@ -982,80 +1115,120 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project2 .pro2-box .pro2-text {
+  #wrapper main #web .grid .project2 .pro2-box .pro2-text {
     margin-top: 55px;
   }
 }
 
-.wrap main #web .grid .project2 .pro2-box .pro2-text h3 {
+#wrapper main #web .grid .project2 .pro2-box .pro2-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project2 .pro2-box .pro2-text h3 {
+  #wrapper main #web .grid .project2 .pro2-box .pro2-text h3 {
     font-size: 2.5rem;
   }
 }
 
-.wrap main #web .grid .project2 .pro2-box .pro2-text strong {
+#wrapper main #web .grid .project2 .pro2-box .pro2-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project2 .pro2-box .pro2-text strong {
+  #wrapper main #web .grid .project2 .pro2-box .pro2-text strong {
     font-size: 1.2rem;
   }
 }
 
-.wrap main #web .grid .project2 .pro2-box .pro2-text p {
+#wrapper main #web .grid .project2 .pro2-box .pro2-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project2 .pro2-box .pro2-text p {
+  #wrapper main #web .grid .project2 .pro2-box .pro2-text p {
     font-size: 1.1rem;
   }
 }
 
-.wrap main #web .grid .project2 .pro2-box .pro2-text .view {
+#wrapper main #web .grid .project2 .pro2-box .pro2-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-.wrap main #web .grid .project2 .pro2-box .pro2-text .view a {
+#wrapper main #web .grid .project2 .pro2-box .pro2-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-.wrap main #web .grid .project2 .pro2-box .pro2-text .process {
+#wrapper main #web .grid .project2 .pro2-box .pro2-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-.wrap main #web .grid .project2 .pro2-box .pro2-text .process a {
+#wrapper main #web .grid .project2 .pro2-box .pro2-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-.wrap main #web .grid .project3 {
-  width: 100%;
-  height: 100vh;
-  margin-top: 50vh;
+#wrapper main #web .grid .project2.scroll {
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
 }
 
-.wrap main #web .grid .project3 .pro3-box {
+#wrapper main #web .grid .project2.scroll.scrolled {
+  opacity: 1;
+}
+
+#wrapper main #web .grid .project2.scroll.scrolled.slideRight {
+  -webkit-animation: slide-in-right 0.7s ease-in-out both;
+          animation: slide-in-right 0.7s ease-in-out both;
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#wrapper main #web .grid .project3 {
+  width: 100%;
+  height: 80vh;
+}
+
+#wrapper main #web .grid .project3 .pro3-box {
   padding: 15%;
   background-color: #fff;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project3 .pro3-box {
+  #wrapper main #web .grid .project3 .pro3-box {
     width: 674px;
     height: 479px;
     margin-top: 500px;
@@ -1065,75 +1238,102 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project3 .pro3-box .pro3-text {
+  #wrapper main #web .grid .project3 .pro3-box .pro3-text {
     margin-top: 55px;
   }
 }
 
-.wrap main #web .grid .project3 .pro3-box .pro3-text h3 {
+#wrapper main #web .grid .project3 .pro3-box .pro3-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project3 .pro3-box .pro3-text h3 {
+  #wrapper main #web .grid .project3 .pro3-box .pro3-text h3 {
     font-size: 2.5rem;
   }
 }
 
-.wrap main #web .grid .project3 .pro3-box .pro3-text strong {
+#wrapper main #web .grid .project3 .pro3-box .pro3-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project3 .pro3-box .pro3-text strong {
+  #wrapper main #web .grid .project3 .pro3-box .pro3-text strong {
     font-size: 1.2rem;
   }
 }
 
-.wrap main #web .grid .project3 .pro3-box .pro3-text p {
+#wrapper main #web .grid .project3 .pro3-box .pro3-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project3 .pro3-box .pro3-text p {
+  #wrapper main #web .grid .project3 .pro3-box .pro3-text p {
     font-size: 1.1rem;
   }
 }
 
-.wrap main #web .grid .project3 .pro3-box .pro3-text .view {
+#wrapper main #web .grid .project3 .pro3-box .pro3-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-.wrap main #web .grid .project3 .pro3-box .pro3-text .view a {
+#wrapper main #web .grid .project3 .pro3-box .pro3-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-.wrap main #web .grid .project3 .pro3-box .pro3-text .process {
+#wrapper main #web .grid .project3 .pro3-box .pro3-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-.wrap main #web .grid .project3 .pro3-box .pro3-text .process a {
+#wrapper main #web .grid .project3 .pro3-box .pro3-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-.wrap main #web .grid .project4 {
+#wrapper main #web .grid .project3.scroll {
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+#wrapper main #web .grid .project3.scroll.scrolled {
+  opacity: 1;
+}
+
+#wrapper main #web .grid .project3.scroll.scrolled.slideLeft {
+  -webkit-animation: slide-in-left 0.7s ease-in-out both;
+          animation: slide-in-left 0.7s ease-in-out both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#wrapper main #web .grid .project4 {
   width: 100%;
-  height: 100vh;
-  margin-top: 50vh;
+  height: 80vh;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project4 .pro4-box {
+  #wrapper main #web .grid .project4 .pro4-box {
     width: 684px;
     height: 489px;
     margin-top: 500px;
@@ -1141,119 +1341,153 @@ footer {
   }
 }
 
-.wrap main #web .grid .project4 .pro4-box .pro4-red {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red {
   padding: 10px;
   z-index: -1;
   background-color: #ed2024;
 }
 
-.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow {
   background-color: #ffe554;
 }
 
-.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text {
   padding: 12.5%;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text {
     padding: 70px 80px;
   }
 }
 
-.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text h3 {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text h3 {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text h3 {
     font-size: 2.5rem;
   }
 }
 
-.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text strong {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text strong {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text strong {
     font-size: 1.2rem;
   }
 }
 
-.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text p {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text p {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text p {
     font-size: 1.1rem;
   }
 }
 
-.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .view {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .view a {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-.wrap main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process a {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-.wrap main #skills {
+#wrapper main #web .grid .project4.scroll {
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+#wrapper main #web .grid .project4.scroll.scrolled {
+  opacity: 1;
+}
+
+#wrapper main #web .grid .project4.scroll.scrolled.slideRight {
+  -webkit-animation: slide-in-right 0.7s ease-in-out both;
+          animation: slide-in-right 0.7s ease-in-out both;
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#wrapper main #skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
   background-color: #ffcd5c;
 }
 
-.wrap main #skills .grid .skill-box {
+#wrapper main #skills .grid .skill-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-.wrap main #skills .grid .skill-box ul {
+#wrapper main #skills .grid .skill-box ul {
   width: 50%;
   margin: 10% 0;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #skills .grid .skill-box ul {
+  #wrapper main #skills .grid .skill-box ul {
     margin: 50px 0;
   }
 }
 
-.wrap main #skills .grid .skill-box ul:last-child {
+#wrapper main #skills .grid .skill-box ul:last-child {
   margin-left: 5%;
   line-height: 2.4rem;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #skills .grid .skill-box ul:last-child {
+  #wrapper main #skills .grid .skill-box ul:last-child {
     line-height: 3.2rem;
   }
 }
 
-.wrap main #skills .grid .skill-box ul li {
+#wrapper main #skills .grid .skill-box ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1262,63 +1496,63 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #skills .grid .skill-box ul li {
+  #wrapper main #skills .grid .skill-box ul li {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding: 25px 0;
   }
 }
 
-.wrap main #skills .grid .skill-box ul li .skill-logo {
+#wrapper main #skills .grid .skill-box ul li .skill-logo {
   width: 37%;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #skills .grid .skill-box ul li .skill-logo {
+  #wrapper main #skills .grid .skill-box ul li .skill-logo {
     width: 30%;
   }
 }
 
-.wrap main #skills .grid .skill-box ul li .skill-logo img {
+#wrapper main #skills .grid .skill-box ul li .skill-logo img {
   width: 100%;
 }
 
-.wrap main #skills .grid .skill-box ul li .gauge-box {
+#wrapper main #skills .grid .skill-box ul li .gauge-box {
   width: 63%;
   margin-top: 4%;
   padding-left: 5%;
   line-height: 1rem;
 }
 
-.wrap main #skills .grid .skill-box ul li .gauge-box .skill-text h3 {
+#wrapper main #skills .grid .skill-box ul li .gauge-box .skill-text h3 {
   font-size: 1.3rem;
 }
 
-.wrap main #skills .grid .skill-box ul li .gauge-box .gaugeBorder {
+#wrapper main #skills .grid .skill-box ul li .gauge-box .gaugeBorder {
   border: 5px solid #fff;
   height: 30%;
 }
 
-.wrap main #skills .grid .skill-box ul li .gauge-box .gaugeBorder .gauge {
-  width: 10%;
+#wrapper main #skills .grid .skill-box ul li .gauge-box .gaugeBorder .gauge {
+  width: 80%;
   height: 100%;
   background-color: #ed2024;
 }
 
-.wrap main #video {
+#wrapper main #video {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  margin: 60% 0;
   text-align: center;
-  margin-top: 50vh;
 }
 
-.wrap main #video .grid .video-red {
+#wrapper main #video .grid .video-red {
   padding: 16%;
   background-color: #ed2024;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #video .grid .video-red {
+  #wrapper main #video .grid .video-red {
     margin: 0 auto;
     width: 674px;
     height: 479px;
@@ -1327,61 +1561,61 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #video .grid .video-red .video-text {
+  #wrapper main #video .grid .video-red .video-text {
     margin-top: 80px;
   }
 }
 
-.wrap main #video .grid .video-red .video-text h3 {
+#wrapper main #video .grid .video-red .video-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #video .grid .video-red .video-text h3 {
+  #wrapper main #video .grid .video-red .video-text h3 {
     font-size: 2.5rem;
   }
 }
 
-.wrap main #video .grid .video-red .video-text p {
+#wrapper main #video .grid .video-red .video-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap main #video .grid .video-red .video-text p {
+  #wrapper main #video .grid .video-red .video-text p {
     font-size: 1.1rem;
   }
 }
 
-.wrap main #video .grid .video-red .video-text .view {
+#wrapper main #video .grid .video-red .video-text .view {
   padding: 7%;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-.wrap main #video .grid .video-red .video-text .view a {
+#wrapper main #video .grid .video-red .video-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-.wrap footer {
+#wrapper footer {
   height: 75px;
   text-align: center;
   background-color: #ed2024;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap footer {
+  #wrapper footer {
     height: 80px;
   }
 }
 
-.wrap footer .grid a img {
+#wrapper footer .grid a img {
   width: 23%;
 }
 
 @media screen and (min-width: 1024px) {
-  .wrap footer .grid a img {
+  #wrapper footer .grid a img {
     width: 125px;
   }
 }

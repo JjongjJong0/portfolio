@@ -10,7 +10,7 @@
     <title>LEE SEUL</title>
 </head>
 <body>
-    <div class="wrap">
+    <div id="wrapper">
         <header>
             <div class="grid">
                 <div class="logo">
@@ -55,19 +55,6 @@
                     <div class="rotate">
                         <p class="circleText">
                             <img src="./images/rotate_logo.svg" alt="rotateLogo">
-                            <!-- <img src="./images/miu2.png" alt="rotateLogo"> -->
-                            <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="400px" height="400px" viewBox="0 0 400 400" enable-background="new 0 0 200 200" xml:space="preserve" >
-                                <defs>
-                                    <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
-                                </defs>
-                                <circle cx="150" cy="100" r="75" fill="none"/>
-                                <g>
-                                    <use xlink:href="#circlePath" fill="none"/>
-                                    <text>
-                                        <textPath xlink:href="#circlePath">portfolio</textPath>
-                                    </text>
-                                </g>
-                            </svg> -->
                         </p>
                     </div>
                 </div>
@@ -86,8 +73,8 @@
                                     <img src="./images/me.gif" alt="avatar">
                                 </div><!--avatar-->
                                 <div class="textBox">
-                                   <img src="./images/flowers.png" alt="flowers">
-                                   <strong>ABOUT ME</strong>
+                                <img src="./images/flowers.png" alt="flowers">
+                                <strong>ABOUT ME</strong>
                                 </div><!--textBox-->
                                 <div class="txtWave">
                                     <img src="./images/wave.png" alt="wave">
@@ -97,7 +84,7 @@
                                 </div>
                             </div><!--polaroid-->
                         </div><!--polaroid-box-->
-
+    
                         <div class="emoji">
                             <div class="tape">
                                 <img src="./images/purpletape.png" alt="purpletape">
@@ -142,7 +129,7 @@
             </section><!--about-->
 
             
-            <div class="square">
+            <div class="square" data-type="background" data-speed="0.5">
                 <div class="squareImg1"><img src="./images/square.svg" alt="square1"></div>
 
                 <div class="squareImg2"><img src="./images/square2.svg" alt="square2"></div>
@@ -157,9 +144,9 @@
 
                 <div class="squareImg7"><img src="./images/square7.svg" alt="square7"></div>
 
-                <div class="squareImg8"><img src="./images/square8.svg" alt="square7"></div>
+                <div class="squareImg8"><img src="./images/square8.svg" alt="square8"></div>
 
-                <div class="squareImg9"><img src="./images/square9.svg" alt="square7"></div>
+                <div class="squareImg9"><img src="./images/square9.svg" alt="square"></div>
             </div>
 
             <div id="modal">
@@ -173,8 +160,14 @@
             <section id="web">
                 <div class="grid">
                     <h2>web</h2>
-                    <div class="project1">
+                    <div class="project1 scroll slideLeft">
                         <div class="pro1-box">
+                            <div class="pro1-box-img">
+                                <img src="./images/pro1Img.png" alt="">
+                            </div>
+                            <div class="pro1-img">
+                                <img src="./images/miumiu.png" alt="miumiu">
+                            </div>
                             <div class="pro1-text">
                                 <h3>TITLE</h3>
                                 <strong>#반응형 #애니메이션 #모달창</strong>
@@ -188,10 +181,10 @@
                                 <button class="view"><a href="#">VIEW SITE</a></button>
                                 <button class="process"><a href="#">PROCESS</a></button>
                             </div><!--pro1-text-->
-                        </div>
+                        </div><!--pro1-box-->
                     </div><!--project1-->
-    
-                    <div class="project2">
+
+                    <div class="project2 scroll slideRight">
                         <div class="pro2-box">
                             <div class="pro2-text">
                                 <h3>TITLE</h3>
@@ -208,8 +201,8 @@
                             </div><!--pro2-text-->
                         </div><!--pro2-box-->
                     </div><!--project2-->
-    
-                    <div class="project3">
+
+                    <div class="project3 scroll slideLeft">
                         <div class="pro3-box">
                             <div class="pro3-text">
                                 <h3>TITLE</h3>
@@ -226,8 +219,8 @@
                             </div><!--pro3-text-->
                         </div><!--pro3-yellow-->
                     </div><!--project3-->
-    
-                    <div class="project4">
+
+                    <div class="project4 scroll slideRight">
                         <div class="pro4-box">
                             <div class="pro4-red">
                                 <div class="pro4-yellow">
@@ -246,7 +239,7 @@
                                     </div><!--pro4-text-->
                                 </div><!--pro4-red-->
                             </div><!--pro4-yellow-->
-                        </div>
+                        </div><!--pro4-box-->
                     </div><!--project4-->
                 </div><!--grid-->
             </section><!--web-->
@@ -399,7 +392,7 @@
                             </p>
                             <button class="view"><a href="#">VIEW SITE</a></button>
                         </div><!--video-text-->
-                    </div>
+                    </div><!--video-red-->
                 </div><!--grid-->
             </section><!--video-->
         </main>
