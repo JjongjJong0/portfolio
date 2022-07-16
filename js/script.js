@@ -113,7 +113,6 @@ $(window).ready(function() {
                $(".project1").addClass("scrolled");
           }else {
                $(".project1").removeClass("scrolled");
-
           }
      });
 
@@ -124,7 +123,6 @@ $(window).ready(function() {
                $(".project2").addClass("scrolled");
           }else {
                $(".project2").removeClass("scrolled");
-
           }
      });
      
@@ -134,7 +132,6 @@ $(window).ready(function() {
                $(".project3").addClass("scrolled");
           }else {
                $(".project3").removeClass("scrolled");
-
           }
      });
 
@@ -146,8 +143,14 @@ $(window).ready(function() {
                $(".project4").addClass("scrolled");
           }else {
                $(".project4").removeClass("scrolled");
-
           }
+     });
+
+     // project1
+     $(".project1 > .pro1-box > .pro1-text").hover(function() {
+          $(".pro1-img > img").css("animation-play-state", "paused");
+     }, function() {
+          $(".pro1-img > img").css("animation-play-state", "");
      });
 
      //skills

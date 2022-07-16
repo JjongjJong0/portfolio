@@ -964,15 +964,50 @@ footer {
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img {
   position: absolute;
-  top: 1.1%;
-  left: 10%;
+  top: 1.15%;
+  left: 7.2%;
   overflow: hidden;
+  height: 53.5%;
+}
+
+#wrapper main #web .grid .project1 .pro1-box .pro1-img::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #000;
+}
+
+#wrapper main #web .grid .project1 .pro1-box .pro1-img::before:hover {
+  opacity: 0.5;
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img img {
-  width: 90%;
+  width: 97.2%;
   -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
           animation: imgAnimation 10s linear 0.5s infinite alternate;
+}
+
+#wrapper main #web .grid .project1 .pro1-box .pro1-text {
+  position: absolute;
+  top: 13%;
+  left: 7%;
+  opacity: 0;
+  z-index: 2;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: aqua;
+}
+
+#wrapper main #web .grid .project1 .pro1-box .pro1-text:hover {
+  opacity: 1;
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-text h3 {
@@ -997,6 +1032,7 @@ footer {
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-text p {
+  text-align: justify;
   margin: 20px 25px;
 }
 
@@ -1037,8 +1073,8 @@ footer {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-78%);
-            transform: translateY(-78%);
+    -webkit-transform: translateY(-68%);
+            transform: translateY(-68%);
   }
 }
 
@@ -1048,8 +1084,8 @@ footer {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-78%);
-            transform: translateY(-78%);
+    -webkit-transform: translateY(-68%);
+            transform: translateY(-68%);
   }
 }
 
