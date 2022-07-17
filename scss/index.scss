@@ -520,7 +520,7 @@
             .squareImg4 {
                 position: absolute;
                 overflow: hidden;
-                top: 190%;
+                top: 180%;
                 left: -50%;
                 width: 600px;
                 height: 800px;
@@ -545,7 +545,7 @@
             .squareImg5 {
                 position: absolute;
                 overflow: hidden;
-                top: 280%;
+                top: 250%;
                 right: 0;
                 width: 300px;
                 height: 600px;
@@ -570,7 +570,7 @@
             .squareImg6 {
                 position: absolute;
                 overflow: hidden;
-                top: 400%;
+                top: 340%;
                 left: 0;
                 width: 100%;
                 height: 600px;
@@ -596,7 +596,7 @@
             .squareImg7 {
                 position: absolute;
                 overflow: hidden;
-                top: 490%;
+                top: 400%;
                 left: -15%;
                 width: 100%;
                 height: 600px;
@@ -610,7 +610,7 @@
                     padding-top: 150px;
                 }
                 img {
-                    width: 80%;
+                    width: 100%;
                     animation: circle 300s linear infinite;
                     animation-direction: reverse;
                     @include responsive(pc-screens) {
@@ -622,8 +622,8 @@
             .squareImg8 {
                 position: absolute;
                 overflow: hidden;
-                top: 600%;
-                left: -100px;
+                top: 530%;
+                left: -5%;
                 width: 400px;
                 height: 600px;
                 padding-top: 20%;
@@ -636,7 +636,7 @@
                     padding-top: 150px;
                 }
                 img {
-                    width: 400px;
+                    width: 100%;
                     animation: circle 230s linear infinite;
                     animation-direction: reverse;
                     @include responsive(pc-screens) {
@@ -648,7 +648,7 @@
             .squareImg9 {
                 position: absolute;
                 overflow: hidden;
-                top: 650%;
+                top: 595%;
                 right: 0;
                 width: 100%;
                 height: 600px;
@@ -664,7 +664,7 @@
                     padding-left: 150px;
                 }
                 img {
-                    width: 100%;
+                    width: 120%;
                     animation: circle 350s linear infinite;
                     @include responsive(pc-screens) {
                         width: 850px;
@@ -719,7 +719,7 @@
         }
         
         #web {
-            text-align: center;
+            margin: 0 auto;
             .grid {
                 .project1 {
                     width: 100%;
@@ -727,59 +727,54 @@
                     margin-top: 20vh;
                     position: relative;
 
-                    // background: url(../images/pro1Background.png) no-repeat;
-                    // background-size: 100%;
                     @include responsive(pc-screens) {
                         width: 674px;
                         height: 479px;
                         margin-left: 30px;
-                        background: url(../images/pro1_pc.png) no-repeat left top;
-                        background-size: 100%;
                     }
                     .pro1-box {
-                        // padding: 13%;
-                        // margin-left: 6%;
                         @include responsive(pc-screens) {
-                            padding: 10%;
                         }
-                        .pro1-box-img {
+                        .box-img {
+                            filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
                             img {
-                                width: 100%;
+                                width: 505px;
+                                height: 355px;
                             }
-
                         }
                         .pro1-img {
                             position: absolute;
-                            top: 1.15%;
-                            left: 7.2%;
+                            top: 6.5px;
+                            left: 40px;
                             overflow: hidden;
-                            height: 53.5%;
+                            height: 310px;
                             &::before {
                                 display: block;
                                 position: absolute;
                                 top: 0;
-                                left: 1.4%;
+                                left: 0;
                                 content: "";
                                 z-index: 1;
-                                width: 97.2%;
+                                width: 100%;
                                 height: 100%;
                                 opacity: 0;
                                 transition: all 0.3s;
                                 background: $white;
                             }
                             &:hover::before {
-                                opacity: 0.5;
+                                opacity: 0.7;
                             }
                             img {
-                                width: 97.2%;
+                                width: 458px;
                                 animation: imgAnimation 10s linear 0.5s infinite alternate;
                             }
                             .pro1-text {
                                 position: absolute;
-                                top: 20%;
+                                top: 5%;
                                 left: 0;
                                 opacity: 0;
                                 z-index: 2;
+                                text-align: center;
                                 transition: all 0.3s;
                                
                                 h3 {
@@ -863,65 +858,105 @@
                 }
 
                 .project2 {
+                    position: relative;
                     width: 100%;
                     height: 80vh;
                     .pro2-box {
-                        padding: 15%;
+                        width: 505px;
+                        height: 355px;
+                        box-shadow: -7px 5px 7px rgba(0,0,0,0.25);
                         background-color: $yellow;
                         @include responsive(pc-screens) {
-                            width: 674px;
-                            height: 479px;
-                            margin-top: 500px;
-                            margin-left: 280px;
-                            padding: 30px 90px;
+                            // width: 674px;
+                            // height: 479px;
+                            // margin-top: 500px;
+                            // margin-left: 280px;
+                            // padding: 30px 90px;
                         }
-                        .pro2-text {
-                            @include responsive(pc-screens) {
-                                margin-top: 55px;
+                        .pro2-img {
+                            position: absolute;
+                            top: 5px;
+                            left: 5px;
+                            overflow: hidden;
+                            height: 345px;
+                            &::before {
+                                display: block;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                content: "";
+                                z-index: 1;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                                transition: all 0.3s;
+                                background: $white;
                             }
-                            h3 {
-                                margin-bottom: 20px;
+                            &:hover::before {
+                                opacity: 0.7;
+                            }
+                            img {
+                                width: 495px;
+                                animation: imgAnimation 10s linear 0.5s infinite alternate;
+                            }
+                            .pro2-text {
+                                position: absolute;
+                                top: 10%;
+                                left: 0;
+                                opacity: 0;
+                                z-index: 2;
+                                text-align: center;
+                                transition: all 0.3s;
                                 @include responsive(pc-screens) {
-                                    font-size: 2.5rem;
+                                    margin-top: 55px;
                                 }
-                            }
-                            strong {
-                                background: url(../images/red_border.png) no-repeat bottom;
-                                background-size: 100%;
-                                @include responsive(pc-screens) {
-                                    font-size: 1.2rem;
-                                }
-                            }
-                            p {
-                                margin: 20px 25px;
-                                @include responsive(pc-screens) {
-                                    font-size: 1.1rem;
-                                }
-                            }
-                            .view {
-                                padding: 7%;
-                                margin-right: 15px;
-                                background: url(../images/red_btn.png) no-repeat center;
-                                background-size: 100%;
-                                a {
-                                    font: {
-                                        size: 1.3rem;
-                                        weight: bolder;
+                                h3 {
+                                    margin-bottom: 20px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 2.5rem;
                                     }
-                                    color: $white;
+                                }
+                                strong {
+                                    background: url(../images/red_border.png) no-repeat bottom;
+                                    background-size: 100%;
+                                    @include responsive(pc-screens) {
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                                p {
+                                    margin: 20px 25px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 1.1rem;
+                                    }
+                                }
+                                .view {
+                                    padding: 7%;
+                                    margin-right: 15px;
+                                    background: url(../images/red_btn.png) no-repeat center;
+                                    background-size: 100%;
+                                    a {
+                                        font: {
+                                            size: 1.3rem;
+                                            weight: bolder;
+                                        }
+                                        color: $white;
+                                    }
+                                }
+                                .process {
+                                    padding: 7%;
+                                    background: url(../images/yellow_btn.png) no-repeat center;
+                                    background-size: 100%;
+                                    a {
+                                        font: {
+                                            size: 1.3rem;
+                                            weight: bolder;
+                                        }
+                                        color: $white;
+                                    }
                                 }
                             }
-                            .process {
-                                padding: 7%;
-                                background: url(../images/yellow_btn.png) no-repeat center;
-                                background-size: 100%;
-                                a {
-                                    font: {
-                                        size: 1.3rem;
-                                        weight: bolder;
-                                    }
-                                    color: $white;
-                                }
+                            &:hover .pro2-text{
+                                opacity: 1;
                             }
                         }
                     }
@@ -951,66 +986,105 @@
                 }
                 
                 .project3 {
+                    position: relative;
                     width: 100%;
                     height: 80vh;
-                    // margin-top: 50vh;
                     .pro3-box {
-                        padding: 15%;
+                        width: 505px;
+                        height: 355px;
+                        box-shadow: 7px 5px 7px rgba(0,0,0,0.2);
                         background-color: $white;
                         @include responsive(pc-screens) {
-                            width: 674px;
-                            height: 479px;
-                            margin-top: 500px;
-                            margin-left: 30px;
-                            padding: 30px 90px;
+                            // width: 674px;
+                            // height: 479px;
+                            // margin-top: 500px;
+                            // margin-left: 30px;
+                            // padding: 30px 90px;
                         }
-                        .pro3-text {
-                            @include responsive(pc-screens) {
-                                margin-top: 55px;
+                        .pro3-img {
+                            position: absolute;
+                            top: 5px;
+                            left: 5px;
+                            overflow: hidden;
+                            height: 345px;
+                            &::before {
+                                display: block;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                content: "";
+                                z-index: 1;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                                transition: all 0.3s;
+                                background: $white;
                             }
-                            h3 {
-                                margin-bottom: 20px;
+                            &:hover::before {
+                                opacity: 0.7;
+                            }
+                            img {
+                                width: 495px;
+                                animation: imgAnimation 10s linear 0.5s infinite alternate;
+                            }
+                            .pro3-text {
+                                position: absolute;
+                                top: 10%;
+                                left: 0;
+                                opacity: 0;
+                                z-index: 2;
+                                text-align: center;
+                                transition: all 0.3s;
                                 @include responsive(pc-screens) {
-                                    font-size: 2.5rem;
+                                    margin-top: 55px;
                                 }
-                            }
-                            strong {
-                                background: url(../images/red_border.png) no-repeat bottom;
-                                background-size: 100%;
-                                @include responsive(pc-screens) {
-                                    font-size: 1.2rem;
-                                }
-                            }
-                            p {
-                                margin: 20px 25px;
-                                @include responsive(pc-screens) {
-                                    font-size: 1.1rem;
-                                }
-                            }
-                            .view {
-                                padding: 7%;
-                                margin-right: 15px;
-                                background: url(../images/red_btn.png) no-repeat center;
-                                background-size: 100%;
-                                a {
-                                    font: {
-                                        size: 1.3rem;
-                                        weight: bolder;
+                                h3 {
+                                    margin-bottom: 20px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 2.5rem;
                                     }
-                                    color: $white;
+                                }
+                                strong {
+                                    background: url(../images/red_border.png) no-repeat bottom;
+                                    background-size: 100%;
+                                    @include responsive(pc-screens) {
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                                p {
+                                    margin: 20px 25px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 1.1rem;
+                                    }
+                                }
+                                .view {
+                                    padding: 7%;
+                                    margin-right: 15px;
+                                    background: url(../images/red_btn.png) no-repeat center;
+                                    background-size: 100%;
+                                    a {
+                                        font: {
+                                            size: 1.3rem;
+                                            weight: bolder;
+                                        }
+                                        color: $white;
+                                    }
+                                }
+                                .process {
+                                    padding: 7%;
+                                    background: url(../images/yellow_btn.png) no-repeat center;
+                                    background-size: 100%;
+                                    a {
+                                        font: {
+                                            size: 1.3rem;
+                                            weight: bolder;
+                                        }
+                                        color: $white;
+                                    }
                                 }
                             }
-                            .process {
-                                padding: 7%;
-                                background: url(../images/yellow_btn.png) no-repeat center;
-                                background-size: 100%;
-                                a {
-                                    font: {
-                                        size: 1.3rem;
-                                        weight: bolder;
-                                    }
-                                    color: $white;
-                                }
+                            &:hover .pro3-text{
+                                opacity: 1;
                             }
                         }
                     }
@@ -1040,9 +1114,9 @@
                 }
                 
                 .project4 {
+                    position: relative;
                     width: 100%;
                     height: 80vh;
-                    // margin-top: 50vh;
                     .pro4-box {
                         @include responsive(pc-screens) {
                             width: 684px;
@@ -1051,60 +1125,101 @@
                             margin-left: 280px;
                         }
                         .pro4-red {
-                            padding: 10px;
+                            width: 505px;
+                            height: 355px;
+                            padding: 5px;
                             z-index: -1;
+                            box-shadow: -7px 5px 7px rgba(0,0,0,0.3);
                             background-color: $red;
                             
                             .pro4-yellow {
+                                width: 100%;
+                                height: 100%;
                                 background-color: $yellow;
-                                .pro4-text {
-                                    padding: 12.5%;
-                                    @include responsive(pc-screens) {
-                                        padding: 70px 80px;
+                                .pro4-img {
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 10px;
+                                    overflow: hidden;
+                                    height: 335px;
+                                    &::before {
+                                        display: block;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        content: "";
+                                        z-index: 1;
+                                        width: 100%;
+                                        height: 100%;
+                                        opacity: 0;
+                                        transition: all 0.3s;
+                                        background: $white;
                                     }
-                                    h3 {
-                                        margin-bottom: 20px;
+                                    &:hover::before {
+                                        opacity: 0.7;
+                                    }
+                                    img {
+                                        width: 485px;
+                                        animation: imgAnimation 10s linear 0.5s infinite alternate;
+                                    }
+                                    .pro4-text {
+                                        position: absolute;
+                                        top: 10%;
+                                        left: 0;
+                                        opacity: 0;
+                                        z-index: 2;
+                                        text-align: center;
+                                        transition: all 0.3s;
                                         @include responsive(pc-screens) {
-                                            font-size: 2.5rem;
+                                            padding: 70px 80px;
                                         }
-                                    }
-                                    strong {
-                                        background: url(../images/red_border.png) no-repeat bottom;
-                                        background-size: 100%;
-                                        @include responsive(pc-screens) {
-                                            font-size: 1.2rem;
-                                        }
-                                    }
-                                    p {
-                                        margin: 20px 25px;
-                                        @include responsive(pc-screens) {
-                                            font-size: 1.1rem;
-                                        }
-                                    }
-                                    .view {
-                                        padding: 7%;
-                                        margin-right: 15px;
-                                        background: url(../images/red_btn.png) no-repeat center;
-                                        background-size: 100%;
-                                        a {
-                                            font: {
-                                                size: 1.3rem;
-                                                weight: bolder;
+                                        h3 {
+                                            margin-bottom: 20px;
+                                            @include responsive(pc-screens) {
+                                                font-size: 2.5rem;
                                             }
-                                            color: $white;
+                                        }
+                                        strong {
+                                            background: url(../images/red_border.png) no-repeat bottom;
+                                            background-size: 100%;
+                                            @include responsive(pc-screens) {
+                                                font-size: 1.2rem;
+                                            }
+                                        }
+                                        p {
+                                            margin: 20px 25px;
+                                            @include responsive(pc-screens) {
+                                                font-size: 1.1rem;
+                                            }
+                                        }
+                                        .view {
+                                            padding: 7%;
+                                            margin-right: 15px;
+                                            background: url(../images/red_btn.png) no-repeat center;
+                                            background-size: 100%;
+                                            a {
+                                                font: {
+                                                    size: 1.3rem;
+                                                    weight: bolder;
+                                                }
+                                                color: $white;
+                                            }
+                                        }
+                                        .process {
+                                            padding: 7%;
+                                            background: url(../images/yellow_btn.png) no-repeat center;
+                                            background-size: 100%;
+                                            a {
+                                                font: {
+                                                    size: 1.3rem;
+                                                    weight: bolder;
+                                                }
+                                                color: $white;
+                                            }
                                         }
                                     }
-                                    .process {
-                                        padding: 7%;
-                                        background: url(../images/yellow_btn.png) no-repeat center;
-                                        background-size: 100%;
-                                        a {
-                                            font: {
-                                                size: 1.3rem;
-                                                weight: bolder;
-                                            }
-                                            color: $white;
-                                        }
+                                    &:hover .pro4-text{
+                                        opacity: 1;
                                     }
                                 }
                                 
@@ -1195,9 +1310,10 @@
                                 .gaugeBorder {
                                     border: 5px solid $white;
                                     height: 30%;
-                                    .gauge {
-                                        width: 80%;
+                                    .skillbar {
+                                        width: 0;
                                         height: 100%;
+                                        transition: all 1.5s;
                                         background-color: $red;
                                     }
                                 }

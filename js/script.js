@@ -1,52 +1,3 @@
-// window.onbeforeunload = (function() { 
-//      $(".loader").show(); 
-// },3000);
-
-// $(window).load(function() {
-     //      $(".loader").fadeOut();
-     // }, 3000);
-// const scrollElements = document.querySelectorAll(".scroll");
-
-// const elementInView = (el, dividend = 1) => {
-//   const elementTop = el.getBoundingClientRect().top;
-
-//   return (
-//     elementTop <=
-//     (window.innerHeight || document.documentElement.clientHeight) / dividend
-//   );
-// };
-
-// const elementOutofView = (el) => {
-//   const elementTop = el.getBoundingClientRect().top;
-
-//   return (
-//     elementTop > (window.innerHeight || document.documentElement.clientHeight)
-//   );
-// };
-
-// const displayScrollElement = (element) => {
-//   element.classList.add("scrolled");
-// };
-
-// const hideScrollElement = (element) => {
-//   element.classList.remove("scrolled");
-// };
-
-// const handleScrollAnimation = () => {
-//   scrollElements.forEach((el) => {
-//     if (elementInView(el, 1.25)) {
-//       displayScrollElement(el);
-//     } else if (elementOutofView(el)) {
-//       hideScrollElement(el)
-//     }
-//   })
-// }
-
-// window.addEventListener("scroll", () => { 
-//   handleScrollAnimation();
-// });
-
-
      
 $(window).ready(function() {
      //loading
@@ -54,33 +5,7 @@ $(window).ready(function() {
      //      $(".loader").fadeOut();
      // }, 3000);
 
-     // //스크롤
-     // window.addEventListener("wheel", function(e) {
-     //      e.preventDefault();
-     // }, {passive : false});
-
-     // var html = $('html');
-     // var page = 1;
-     // var lastPage = $('footer');
-
-     // html.animate({scrollTop:0},10);
-
-     // $(window).on("wheel", function(e) {
-     //      if(html.is(":animated")) return;
-     //      if(e.originalEvent.deltaY > 0){
-     //           if(page == lastPage) return;
-     //           page++;
-     //      }else if(e.originalEvent.deltaY < 0) {
-     //           if(page == 1) return;
-     //           page--;
-     //      }
-     //      var posTop = (page-1) * $(window).height();
-
-     //      html.animate({scrollTop : posTop});
-     // });
-
      
-
      // 모바일(햄버거) 메뉴
      $(".mobileMenu").click(function() {
           $(this).toggleClass("open");
@@ -154,27 +79,37 @@ $(window).ready(function() {
           $(".pro1-img > img").css("animation-play-state", "");
      });
 
+     // project2
+     $(".project2 > .pro2-box > .pro2-img").hover(function() {
+          $(".pro2-img > img").css("animation-play-state", "paused");
+     }, function() {
+          $(".pro2-img > img").css("animation-play-state", "");
+     });
+
+     // project3
+     $(".project3 > .pro3-box > .pro3-img").hover(function() {
+          $(".pro3-img > img").css("animation-play-state", "paused");
+     }, function() {
+          $(".pro3-img > img").css("animation-play-state", "");
+     });
+
+     // project4
+     $(".project4 > .pro4-box > .pro4-red > .pro4-yellow > .pro4-img").hover(function() {
+          $(".pro4-img > img").css("animation-play-state", "paused");
+     }, function() {
+          $(".pro4-img > img").css("animation-play-state", "");
+     });
+
      //skills
-     // $(window).scroll(function() {
-          // $('.gaugeBorder[data-percentage]').each(function () {
-          //      var progress = $(this);
-          //      var percentage = Math.ceil($(this).attr('data-percentage'));
-          //      $({countNum: 0}).animate({countNum: percentage}, {
-          //        duration: 2000,
-          //        easing:'linear',
-
-          //        step: function() {
-          //        var pct = '';
-          //        if(percentage == 0){
-          //          pct = Math.floor(this.countNum) + '%';
-          //        }else{
-          //          pct = Math.floor(this.countNum+1) + '%';
-          //        }
-          //        progress.siblings().children().css('width',pct);
-          //        }
-          //      });
-          // });
-
-     // });
+     $(window).scroll(function() {
+          const skills = $("#skills").offset().top - $("header").outerHeight();
+          if($(window).scrollTop() > skills) {
+               $('.gaugeBorder .skillbar').css("width",
+                    function() {
+                         return $(this).attr("aria-valuenow") + "%";
+                    }
+               );
+          }
+     });
 
 });

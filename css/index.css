@@ -776,7 +776,7 @@ footer {
 #wrapper main .square .squareImg4 {
   position: absolute;
   overflow: hidden;
-  top: 190%;
+  top: 180%;
   left: -50%;
   width: 600px;
   height: 800px;
@@ -809,7 +809,7 @@ footer {
 #wrapper main .square .squareImg5 {
   position: absolute;
   overflow: hidden;
-  top: 280%;
+  top: 250%;
   right: 0;
   width: 300px;
   height: 600px;
@@ -842,7 +842,7 @@ footer {
 #wrapper main .square .squareImg6 {
   position: absolute;
   overflow: hidden;
-  top: 400%;
+  top: 340%;
   left: 0;
   width: 100%;
   height: 600px;
@@ -876,7 +876,7 @@ footer {
 #wrapper main .square .squareImg7 {
   position: absolute;
   overflow: hidden;
-  top: 490%;
+  top: 400%;
   left: -15%;
   width: 100%;
   height: 600px;
@@ -895,7 +895,7 @@ footer {
 }
 
 #wrapper main .square .squareImg7 img {
-  width: 80%;
+  width: 100%;
   -webkit-animation: circle 300s linear infinite;
           animation: circle 300s linear infinite;
   animation-direction: reverse;
@@ -910,8 +910,8 @@ footer {
 #wrapper main .square .squareImg8 {
   position: absolute;
   overflow: hidden;
-  top: 600%;
-  left: -100px;
+  top: 530%;
+  left: -5%;
   width: 400px;
   height: 600px;
   padding-top: 20%;
@@ -929,7 +929,7 @@ footer {
 }
 
 #wrapper main .square .squareImg8 img {
-  width: 400px;
+  width: 100%;
   -webkit-animation: circle 230s linear infinite;
           animation: circle 230s linear infinite;
   animation-direction: reverse;
@@ -944,7 +944,7 @@ footer {
 #wrapper main .square .squareImg9 {
   position: absolute;
   overflow: hidden;
-  top: 650%;
+  top: 595%;
   right: 0;
   width: 100%;
   height: 600px;
@@ -965,7 +965,7 @@ footer {
 }
 
 #wrapper main .square .squareImg9 img {
-  width: 100%;
+  width: 120%;
   -webkit-animation: circle 350s linear infinite;
           animation: circle 350s linear infinite;
 }
@@ -1047,7 +1047,7 @@ footer {
 }
 
 #wrapper main #web {
-  text-align: center;
+  margin: 0 auto;
 }
 
 #wrapper main #web .grid .project1 {
@@ -1062,37 +1062,35 @@ footer {
     width: 674px;
     height: 479px;
     margin-left: 30px;
-    background: url(../images/pro1_pc.png) no-repeat left top;
-    background-size: 100%;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 .pro1-box {
-    padding: 10%;
-  }
+#wrapper main #web .grid .project1 .pro1-box .box-img {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
-#wrapper main #web .grid .project1 .pro1-box .pro1-box-img img {
-  width: 100%;
+#wrapper main #web .grid .project1 .pro1-box .box-img img {
+  width: 505px;
+  height: 355px;
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img {
   position: absolute;
-  top: 1.15%;
-  left: 7.2%;
+  top: 6.5px;
+  left: 40px;
   overflow: hidden;
-  height: 53.5%;
+  height: 310px;
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img::before {
   display: block;
   position: absolute;
   top: 0;
-  left: 1.4%;
+  left: 0;
   content: "";
   z-index: 1;
-  width: 97.2%;
+  width: 100%;
   height: 100%;
   opacity: 0;
   -webkit-transition: all 0.3s;
@@ -1101,21 +1099,22 @@ footer {
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img:hover::before {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img img {
-  width: 97.2%;
+  width: 458px;
   -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
           animation: imgAnimation 10s linear 0.5s infinite alternate;
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text {
   position: absolute;
-  top: 20%;
+  top: 5%;
   left: 0;
   opacity: 0;
   z-index: 2;
+  text-align: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -1245,85 +1244,127 @@ footer {
 }
 
 #wrapper main #web .grid .project2 {
+  position: relative;
   width: 100%;
   height: 80vh;
 }
 
 #wrapper main #web .grid .project2 .pro2-box {
-  padding: 15%;
+  width: 505px;
+  height: 355px;
+  -webkit-box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.25);
+          box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.25);
   background-color: #ffe554;
 }
 
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .pro2-box {
-    width: 674px;
-    height: 479px;
-    margin-top: 500px;
-    margin-left: 280px;
-    padding: 30px 90px;
-  }
+#wrapper main #web .grid .project2 .pro2-box .pro2-img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  height: 345px;
+}
+
+#wrapper main #web .grid .project2 .pro2-box .pro2-img::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #fff;
+}
+
+#wrapper main #web .grid .project2 .pro2-box .pro2-img:hover::before {
+  opacity: 0.7;
+}
+
+#wrapper main #web .grid .project2 .pro2-box .pro2-img img {
+  width: 495px;
+  -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
+          animation: imgAnimation 10s linear 0.5s infinite alternate;
+}
+
+#wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .pro2-box .pro2-text {
+  #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text {
     margin-top: 55px;
   }
 }
 
-#wrapper main #web .grid .project2 .pro2-box .pro2-text h3 {
+#wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .pro2-box .pro2-text h3 {
+  #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text h3 {
     font-size: 2.5rem;
   }
 }
 
-#wrapper main #web .grid .project2 .pro2-box .pro2-text strong {
+#wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .pro2-box .pro2-text strong {
+  #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text strong {
     font-size: 1.2rem;
   }
 }
 
-#wrapper main #web .grid .project2 .pro2-box .pro2-text p {
+#wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .pro2-box .pro2-text p {
+  #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text p {
     font-size: 1.1rem;
   }
 }
 
-#wrapper main #web .grid .project2 .pro2-box .pro2-text .view {
+#wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-#wrapper main #web .grid .project2 .pro2-box .pro2-text .view a {
+#wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-#wrapper main #web .grid .project2 .pro2-box .pro2-text .process {
+#wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-#wrapper main #web .grid .project2 .pro2-box .pro2-text .process a {
+#wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
+}
+
+#wrapper main #web .grid .project2 .pro2-box .pro2-img:hover .pro2-text {
+  opacity: 1;
 }
 
 #wrapper main #web .grid .project2.scroll {
@@ -1368,85 +1409,127 @@ footer {
 }
 
 #wrapper main #web .grid .project3 {
+  position: relative;
   width: 100%;
   height: 80vh;
 }
 
 #wrapper main #web .grid .project3 .pro3-box {
-  padding: 15%;
+  width: 505px;
+  height: 355px;
+  -webkit-box-shadow: 7px 5px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 7px 5px 7px rgba(0, 0, 0, 0.2);
   background-color: #fff;
 }
 
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project3 .pro3-box {
-    width: 674px;
-    height: 479px;
-    margin-top: 500px;
-    margin-left: 30px;
-    padding: 30px 90px;
-  }
+#wrapper main #web .grid .project3 .pro3-box .pro3-img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+  height: 345px;
+}
+
+#wrapper main #web .grid .project3 .pro3-box .pro3-img::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #fff;
+}
+
+#wrapper main #web .grid .project3 .pro3-box .pro3-img:hover::before {
+  opacity: 0.7;
+}
+
+#wrapper main #web .grid .project3 .pro3-box .pro3-img img {
+  width: 495px;
+  -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
+          animation: imgAnimation 10s linear 0.5s infinite alternate;
+}
+
+#wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project3 .pro3-box .pro3-text {
+  #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text {
     margin-top: 55px;
   }
 }
 
-#wrapper main #web .grid .project3 .pro3-box .pro3-text h3 {
+#wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project3 .pro3-box .pro3-text h3 {
+  #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text h3 {
     font-size: 2.5rem;
   }
 }
 
-#wrapper main #web .grid .project3 .pro3-box .pro3-text strong {
+#wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project3 .pro3-box .pro3-text strong {
+  #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text strong {
     font-size: 1.2rem;
   }
 }
 
-#wrapper main #web .grid .project3 .pro3-box .pro3-text p {
+#wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project3 .pro3-box .pro3-text p {
+  #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text p {
     font-size: 1.1rem;
   }
 }
 
-#wrapper main #web .grid .project3 .pro3-box .pro3-text .view {
+#wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-#wrapper main #web .grid .project3 .pro3-box .pro3-text .view a {
+#wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-#wrapper main #web .grid .project3 .pro3-box .pro3-text .process {
+#wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-#wrapper main #web .grid .project3 .pro3-box .pro3-text .process a {
+#wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
+}
+
+#wrapper main #web .grid .project3 .pro3-box .pro3-img:hover .pro3-text {
+  opacity: 1;
 }
 
 #wrapper main #web .grid .project3.scroll {
@@ -1478,6 +1561,7 @@ footer {
 }
 
 #wrapper main #web .grid .project4 {
+  position: relative;
   width: 100%;
   height: 80vh;
 }
@@ -1492,79 +1576,129 @@ footer {
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red {
-  padding: 10px;
+  width: 505px;
+  height: 355px;
+  padding: 5px;
   z-index: -1;
+  -webkit-box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.3);
+          box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.3);
   background-color: #ed2024;
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow {
+  width: 100%;
+  height: 100%;
   background-color: #ffe554;
 }
 
-#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text {
-  padding: 12.5%;
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  overflow: hidden;
+  height: 335px;
+}
+
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #fff;
+}
+
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img:hover::before {
+  opacity: 0.7;
+}
+
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img img {
+  width: 485px;
+  -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
+          animation: imgAnimation 10s linear 0.5s infinite alternate;
+}
+
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text {
     padding: 70px 80px;
   }
 }
 
-#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text h3 {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text h3 {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text h3 {
     font-size: 2.5rem;
   }
 }
 
-#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text strong {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text strong {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text strong {
     font-size: 1.2rem;
   }
 }
 
-#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text p {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text p {
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text p {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text p {
     font-size: 1.1rem;
   }
 }
 
-#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .view {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .view a {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-text .process a {
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
+}
+
+#wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img:hover .pro4-text {
+  opacity: 1;
 }
 
 #wrapper main #web .grid .project4.scroll {
@@ -1683,9 +1817,11 @@ footer {
   height: 30%;
 }
 
-#wrapper main #skills .grid .skill-box ul li .gauge-box .gaugeBorder .gauge {
-  width: 80%;
+#wrapper main #skills .grid .skill-box ul li .gauge-box .gaugeBorder .skillbar {
+  width: 0;
   height: 100%;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
   background-color: #ed2024;
 }
 
