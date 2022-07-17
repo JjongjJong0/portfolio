@@ -279,7 +279,12 @@
                                 img {
                                     width: 100%;
                                 }
+                                &.blur {
+                                    display: none;
+                                    filter: blur(5px);
+                                }
                             }
+                            
                             .txtEmoji {
                                 position: absolute;
                                 right: 15%;
@@ -287,9 +292,14 @@
                                 img {
                                     width: 100%;
                                 }
+                                &.blur {
+                                    display: none;
+                                    filter: blur(5px);
+                                }
                             }
                         }
                     }
+
     
                     .emoji {
                         img {
@@ -297,8 +307,8 @@
                         }
                         .tape {
                             position: absolute;
-                            top: 3%;
-                            left: 47%;
+                            top: 4%;
+                            left: 48%;
                             @include responsive(tablet-screens) {
                                 top: 3%;
                                 left: 50%;
@@ -314,9 +324,16 @@
                             top: 5%;
                             right: 2%;
                             z-index: -1;
+                            animation: star 1s infinite linear alternate;
                             @include responsive(pc-screens) {
                                 top: 80px;
                                 right: 170px;
+                            }
+                            @keyframes star {
+                                from { opacity: 0.5;}
+                                to { opacity: 1; }
+                                from { transform:scale(0.85);}
+                                to { transform:scale(1); }
                             }
                         }
     
@@ -325,9 +342,16 @@
                             top: 25%;
                             left: 4%;
                             z-index: -1;
+                            animation: star 0.8s infinite linear alternate;
                             @include responsive(pc-screens) {
                                 top: 150px;
                                 left: 0;
+                            }
+                            @keyframes star {
+                                from { opacity: 0.5;}
+                                to { opacity: 1; }
+                                from { transform:scale(0.85);}
+                                to { transform:scale(1); }
                             }
                         }
     
@@ -335,6 +359,14 @@
                             position: absolute;
                             top: 30%;
                             right: 0;
+                            animation: spring 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite alternate;
+                            @keyframes spring {
+                                from { transform: translateY(0) rotateY(0);
+                                }
+                                to { transform: translateY(-50%) rotateY(-360deg);
+                                }
+                                
+                            }
                         }
     
                         .yellowWave {
@@ -342,12 +374,18 @@
                             top: 55%;
                             left: 5%;
                             z-index: -1;
+                            animation: wave 3s infinite linear alternate;
                             @include responsive(pc-screens) {
                                 top: 480px;
                                 left: 0;
                                 img {
                                     width: 65%;
                                 }
+                            }
+                            @keyframes wave {
+                                from { transform: rotate(10deg); }
+                                to { transform: rotate(-10deg); }
+
                             }
                         }
     
@@ -720,84 +758,83 @@
                                 display: block;
                                 position: absolute;
                                 top: 0;
-                                left: 0;
+                                left: 1.4%;
                                 content: "";
                                 z-index: 1;
-                                width: 100%;
+                                width: 97.2%;
                                 height: 100%;
                                 opacity: 0;
                                 transition: all 0.3s;
-                                background: $black;
-
-                                &:hover {
-                                    opacity: 0.5;
-                                }
+                                background: $white;
+                            }
+                            &:hover::before {
+                                opacity: 0.5;
                             }
                             img {
                                 width: 97.2%;
                                 animation: imgAnimation 10s linear 0.5s infinite alternate;
                             }
-                        }
-                        .pro1-text {
-                            position: absolute;
-                            top: 13%;
-                            left: 7%;
-                            opacity: 0;
-                            z-index: 2;
-                            transition: all 0.3s;
-                            background-color: aqua;
-                            &:hover {
+                            .pro1-text {
+                                position: absolute;
+                                top: 20%;
+                                left: 0;
+                                opacity: 0;
+                                z-index: 2;
+                                transition: all 0.3s;
+                               
+                                h3 {
+                                    margin-bottom: 20px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 2.5rem;
+                                    }
+                                }
+                                strong {
+                                    background: url(../images/red_border.png) no-repeat bottom;
+                                    background-size: 100%;
+                                    @include responsive(pc-screens) {
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                                p {
+                                    text-align: justify;
+                                    margin: 20px 25px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 1.1rem;
+                                    }
+                                }
+                                .view {
+                                    padding: 7%;
+                                    margin-right: 15px;
+                                    background: url(../images/red_btn.png) no-repeat center;
+                                    background-size: 100%;
+                                    a {
+                                        font: {
+                                            size: 1.3rem;
+                                            weight: bolder;
+                                        }
+                                        color: $white;
+                                    }
+                                }
+                                .process {
+                                    padding: 7%;
+                                    background: url(../images/yellow_btn.png) no-repeat center;
+                                    background-size: 100%;
+                                    a {
+                                        font: {
+                                            size: 1.3rem;
+                                            weight: bolder;
+                                        }
+                                        color: $white;
+                                    }
+                                }
+                            }
+                            &:hover .pro1-text{
                                 opacity: 1;
                             }
-                            h3 {
-                                margin-bottom: 20px;
-                                @include responsive(pc-screens) {
-                                    font-size: 2.5rem;
-                                }
+                            @keyframes imgAnimation {
+                                0% {transform:translateY(0);}
+                                100% {transform:translateY(-68%);}
                             }
-                            strong {
-                                background: url(../images/red_border.png) no-repeat bottom;
-                                background-size: 100%;
-                                @include responsive(pc-screens) {
-                                    font-size: 1.2rem;
-                                }
-                            }
-                            p {
-                                text-align: justify;
-                                margin: 20px 25px;
-                                @include responsive(pc-screens) {
-                                    font-size: 1.1rem;
-                                }
-                            }
-                            .view {
-                                padding: 7%;
-                                margin-right: 15px;
-                                background: url(../images/red_btn.png) no-repeat center;
-                                background-size: 100%;
-                                a {
-                                    font: {
-                                        size: 1.3rem;
-                                        weight: bolder;
-                                    }
-                                    color: $white;
-                                }
-                            }
-                            .process {
-                                padding: 7%;
-                                background: url(../images/yellow_btn.png) no-repeat center;
-                                background-size: 100%;
-                                a {
-                                    font: {
-                                        size: 1.3rem;
-                                        weight: bolder;
-                                    }
-                                    color: $white;
-                                }
-                            }
-                        }
-                        @keyframes imgAnimation {
-                            0% {transform:translateY(0);}
-                            100% {transform:translateY(-68%);}
                         }
                     }
                     &.scroll {

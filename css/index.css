@@ -414,6 +414,12 @@ footer {
   width: 100%;
 }
 
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave.blur {
+  display: none;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
 #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
   position: absolute;
   right: 15%;
@@ -424,14 +430,20 @@ footer {
   width: 100%;
 }
 
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji.blur {
+  display: none;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
 #wrapper main #about .grid .about-flex .emoji img {
   width: 80%;
 }
 
 #wrapper main #about .grid .about-flex .emoji .tape {
   position: absolute;
-  top: 3%;
-  left: 47%;
+  top: 4%;
+  left: 48%;
 }
 
 @media screen and (min-width: 768px) {
@@ -453,6 +465,8 @@ footer {
   top: 5%;
   right: 2%;
   z-index: -1;
+  -webkit-animation: star 1s infinite linear alternate;
+          animation: star 1s infinite linear alternate;
 }
 
 @media screen and (min-width: 1024px) {
@@ -462,11 +476,47 @@ footer {
   }
 }
 
+@-webkit-keyframes star {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+  from {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes star {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+  from {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 #wrapper main #about .grid .about-flex .emoji .redStar {
   position: absolute;
   top: 25%;
   left: 4%;
   z-index: -1;
+  -webkit-animation: star 0.8s infinite linear alternate;
+          animation: star 0.8s infinite linear alternate;
 }
 
 @media screen and (min-width: 1024px) {
@@ -476,10 +526,51 @@ footer {
   }
 }
 
+@keyframes star {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+  from {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 #wrapper main #about .grid .about-flex .emoji .purpleSpring {
   position: absolute;
   top: 30%;
   right: 0;
+  -webkit-animation: spring 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+          animation: spring 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate;
+}
+
+@-webkit-keyframes spring {
+  from {
+    -webkit-transform: translateY(0) rotateY(0);
+            transform: translateY(0) rotateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-50%) rotateY(-360deg);
+            transform: translateY(-50%) rotateY(-360deg);
+  }
+}
+
+@keyframes spring {
+  from {
+    -webkit-transform: translateY(0) rotateY(0);
+            transform: translateY(0) rotateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-50%) rotateY(-360deg);
+            transform: translateY(-50%) rotateY(-360deg);
+  }
 }
 
 #wrapper main #about .grid .about-flex .emoji .yellowWave {
@@ -487,6 +578,8 @@ footer {
   top: 55%;
   left: 5%;
   z-index: -1;
+  -webkit-animation: wave 3s infinite linear alternate;
+          animation: wave 3s infinite linear alternate;
 }
 
 @media screen and (min-width: 1024px) {
@@ -496,6 +589,28 @@ footer {
   }
   #wrapper main #about .grid .about-flex .emoji .yellowWave img {
     width: 65%;
+  }
+}
+
+@-webkit-keyframes wave {
+  from {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  to {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+
+@keyframes wave {
+  from {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  to {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
   }
 }
 
@@ -974,18 +1089,18 @@ footer {
   display: block;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1.4%;
   content: "";
   z-index: 1;
-  width: 100%;
+  width: 97.2%;
   height: 100%;
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background: #000;
+  background: #fff;
 }
 
-#wrapper main #web .grid .project1 .pro1-box .pro1-img::before:hover {
+#wrapper main #web .grid .project1 .pro1-box .pro1-img:hover::before {
   opacity: 0.5;
 }
 
@@ -995,76 +1110,75 @@ footer {
           animation: imgAnimation 10s linear 0.5s infinite alternate;
 }
 
-#wrapper main #web .grid .project1 .pro1-box .pro1-text {
+#wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text {
   position: absolute;
-  top: 13%;
-  left: 7%;
+  top: 20%;
+  left: 0;
   opacity: 0;
   z-index: 2;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: aqua;
 }
 
-#wrapper main #web .grid .project1 .pro1-box .pro1-text:hover {
-  opacity: 1;
-}
-
-#wrapper main #web .grid .project1 .pro1-box .pro1-text h3 {
+#wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text h3 {
   margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 .pro1-box .pro1-text h3 {
+  #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text h3 {
     font-size: 2.5rem;
   }
 }
 
-#wrapper main #web .grid .project1 .pro1-box .pro1-text strong {
+#wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text strong {
   background: url(../images/red_border.png) no-repeat bottom;
   background-size: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 .pro1-box .pro1-text strong {
+  #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text strong {
     font-size: 1.2rem;
   }
 }
 
-#wrapper main #web .grid .project1 .pro1-box .pro1-text p {
+#wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text p {
   text-align: justify;
   margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 .pro1-box .pro1-text p {
+  #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text p {
     font-size: 1.1rem;
   }
 }
 
-#wrapper main #web .grid .project1 .pro1-box .pro1-text .view {
+#wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .view {
   padding: 7%;
   margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-#wrapper main #web .grid .project1 .pro1-box .pro1-text .view a {
+#wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
 }
 
-#wrapper main #web .grid .project1 .pro1-box .pro1-text .process {
+#wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .process {
   padding: 7%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
 
-#wrapper main #web .grid .project1 .pro1-box .pro1-text .process a {
+#wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
+}
+
+#wrapper main #web .grid .project1 .pro1-box .pro1-img:hover .pro1-text {
+  opacity: 1;
 }
 
 @-webkit-keyframes imgAnimation {

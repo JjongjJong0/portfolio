@@ -87,21 +87,22 @@ $(window).ready(function() {
           $(".gnbMobile").toggleClass("hide show");
      });
 
-    //emoji
-   $(".polaroidBox").hover(function() {
-        $(".tape").css("z-index", "-1");
-        $(".purpleArrow").css("z-index", "-1");
-   }, function() {
-        $(".tape").css("z-index", "");
-        $(".purpleArrow").css("z-index", "");
+     //emoji
+     $(".polaroidBox").hover(function() {
+          $(".tape").css("z-index", "-1");
+          $(".purpleArrow").css("z-index", "-1");
+          $(".blur").css("display", "block");
+     }, function() {
+          $(".tape").css("z-index", "");
+          $(".purpleArrow").css("z-index", "");
+          $(".blur").css("display", "");
+     }); 
 
-   }); 
-
-    //modal
-    $(".textBox > strong").click(function() {
+     //modal
+     $(".textBox > strong").click(function() {
           $("#modal").addClass("on");
-    });
-    $("#modal > .modalUp > .closeBtn").click(function() {
+     });
+     $("#modal > .modalUp > .closeBtn").click(function() {
           $("#modal").removeClass("on");
      });
 
@@ -147,7 +148,7 @@ $(window).ready(function() {
      });
 
      // project1
-     $(".project1 > .pro1-box > .pro1-text").hover(function() {
+     $(".project1 > .pro1-box > .pro1-img").hover(function() {
           $(".pro1-img > img").css("animation-play-state", "paused");
      }, function() {
           $(".pro1-img > img").css("animation-play-state", "");
