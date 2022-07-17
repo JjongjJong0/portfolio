@@ -42,7 +42,7 @@ p {
 }
 
 strong {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 span {
@@ -687,8 +687,8 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg1 {
-    top: -10%;
-    left: -10%;
+    top: -120px;
+    left: -120px;
     width: 750px;
     height: 750px;
   }
@@ -719,7 +719,8 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg2 {
-    width: 700px;
+    top: 600px;
+    width: 600px;
     height: 1000px;
   }
 }
@@ -1051,18 +1052,10 @@ footer {
 }
 
 #wrapper main #web .grid .project1 {
+  position: relative;
   width: 100%;
   height: 80vh;
   margin-top: 20vh;
-  position: relative;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 {
-    width: 674px;
-    height: 479px;
-    margin-left: 30px;
-  }
 }
 
 #wrapper main #web .grid .project1 .pro1-box .box-img {
@@ -1075,12 +1068,27 @@ footer {
   height: 355px;
 }
 
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project1 .pro1-box .box-img img {
+    width: 700px;
+    height: 550px;
+  }
+}
+
 #wrapper main #web .grid .project1 .pro1-box .pro1-img {
   position: absolute;
   top: 6.5px;
   left: 40px;
   overflow: hidden;
-  height: 310px;
+  height: 40%;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project1 .pro1-box .pro1-img {
+    top: 10px;
+    left: 56px;
+    height: 480px;
+  }
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img::before {
@@ -1108,6 +1116,12 @@ footer {
           animation: imgAnimation 10s linear 0.5s infinite alternate;
 }
 
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project1 .pro1-box .pro1-img img {
+    width: 635px;
+  }
+}
+
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text {
   position: absolute;
   top: 5%;
@@ -1117,6 +1131,12 @@ footer {
   text-align: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text {
+    top: 18%;
+  }
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text h3 {
@@ -1244,12 +1264,12 @@ footer {
 }
 
 #wrapper main #web .grid .project2 {
-  position: relative;
   width: 100%;
   height: 80vh;
 }
 
 #wrapper main #web .grid .project2 .pro2-box {
+  position: relative;
   width: 505px;
   height: 355px;
   -webkit-box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.25);
@@ -1257,12 +1277,27 @@ footer {
   background-color: #ffe554;
 }
 
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .pro2-box {
+    width: 700px;
+    height: 550px;
+    margin-left: 290px;
+  }
+}
+
 #wrapper main #web .grid .project2 .pro2-box .pro2-img {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
   overflow: hidden;
-  height: 345px;
+  height: 44.2%;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .pro2-box .pro2-img {
+    top: 8px;
+    height: 536px;
+  }
 }
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img::before {
@@ -1285,9 +1320,15 @@ footer {
 }
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img img {
-  width: 495px;
+  width: 491px;
   -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
           animation: imgAnimation 10s linear 0.5s infinite alternate;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .pro2-box .pro2-img img {
+    width: 685px;
+  }
 }
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text {
@@ -1422,12 +1463,27 @@ footer {
   background-color: #fff;
 }
 
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project3 .pro3-box {
+    width: 700px;
+    height: 550px;
+  }
+}
+
 #wrapper main #web .grid .project3 .pro3-box .pro3-img {
   position: absolute;
   top: 5px;
   left: 5px;
   overflow: hidden;
-  height: 345px;
+  height: 44.7%;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project3 .pro3-box .pro3-img {
+    top: 8px;
+    left: 8px;
+    height: 536px;
+  }
 }
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img::before {
@@ -1453,6 +1509,12 @@ footer {
   width: 495px;
   -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
           animation: imgAnimation 10s linear 0.5s infinite alternate;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project3 .pro3-box .pro3-img img {
+    width: 685px;
+  }
 }
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text {
@@ -1561,28 +1623,35 @@ footer {
 }
 
 #wrapper main #web .grid .project4 {
-  position: relative;
   width: 100%;
   height: 80vh;
 }
 
+#wrapper main #web .grid .project4 .pro4-box {
+  position: relative;
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project4 .pro4-box {
-    width: 684px;
-    height: 489px;
-    margin-top: 500px;
-    margin-left: 280px;
+    margin-left: 290px;
   }
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red {
   width: 505px;
   height: 355px;
-  padding: 5px;
+  padding: 7px;
   z-index: -1;
   -webkit-box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.3);
           box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.3);
   background-color: #ed2024;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red {
+    width: 700px;
+    height: 550px;
+  }
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow {
@@ -1593,10 +1662,16 @@ footer {
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 13px;
+  left: 14px;
   overflow: hidden;
-  height: 335px;
+  height: 42.5%;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img {
+    height: 523px;
+  }
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img::before {
@@ -1619,9 +1694,15 @@ footer {
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img img {
-  width: 485px;
+  width: 478px;
   -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
           animation: imgAnimation 10s linear 0.5s infinite alternate;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img img {
+    width: 673px;
+  }
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text {

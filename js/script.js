@@ -63,7 +63,6 @@ $(window).ready(function() {
 
      var project4 = $(".project4").offset().top - $(".project4").outerHeight();
      $(window).scroll(function() {
-          console.log(project4);
           console.log($(window).scrollTop());
           if($(window).scrollTop() > project4) {
                $(".project4").addClass("scrolled");
@@ -102,7 +101,8 @@ $(window).ready(function() {
 
      //skills
      $(window).scroll(function() {
-          const skills = $("#skills").offset().top - $("header").outerHeight();
+          const skills = $("#skills").offset().top - $("#skills").outerHeight();
+          console.log(skills);
           if($(window).scrollTop() > skills) {
                $('.gaugeBorder .skillbar').css("width",
                     function() {
