@@ -1,4 +1,18 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Nanum Pen';
+  font-style: normal;
+  src: url("../fonts/NanumPenScript-Regular.eot");
+  src: local("NanumPenScript-Regular"), url("../fonts/NanumPenScript-Regular.otf") format("embedded-opentype"), url("../fonts/NanumPenScript-Regular.woff") format("woff"), url("../fonts/NanumPenScript-Regular.ttf") format("truetype"), url("../fonts/NanumPenScript-Regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'DK Leftover Crayon';
+  font-style: normal;
+  src: url("../fonts/DK-Leftover-Crayon.eot");
+  src: local("DK-Leftover-Crayon"), url("../fonts/DK Leftover Crayon.otf") format("embedded-opentype"), url("../fonts/DK-Leftover-Crayon.woff") format("woff"), url("../fonts/DK-Leftover-Crayon.ttf") format("truetype"), url("../fonts/DK-Leftover-Crayon.svg") format("svg");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -62,6 +76,17 @@ aside,
 section,
 footer {
   display: block;
+}
+
+@media only screen and (min-width: 1200px) {
+  #container {
+    -ms-scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+  }
 }
 
 .grid {
@@ -334,7 +359,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   #wrapper main #about .grid .about-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -355,6 +380,12 @@ footer {
           transform: scale(0.85, 0.85) rotate(5deg);
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #about .grid .about-flex .polaroidBox {
+    margin: 10% 18% 5%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -410,6 +441,18 @@ footer {
   bottom: 1.5%;
 }
 
+@media screen and (min-width: 768px) {
+  #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave {
+    right: 25%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave {
+    right: 17%;
+  }
+}
+
 #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave img {
   width: 100%;
 }
@@ -424,6 +467,18 @@ footer {
   position: absolute;
   right: 15%;
   bottom: 12%;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
+    right: 20%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
+    right: 11%;
+  }
 }
 
 #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji img {
@@ -448,8 +503,8 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #about .grid .about-flex .emoji .tape {
-    top: 3%;
-    left: 50%;
+    top: 6%;
+    left: 48%;
   }
 }
 
@@ -457,6 +512,12 @@ footer {
   #wrapper main #about .grid .about-flex .emoji .tape {
     top: 25px;
     left: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #about .grid .about-flex .emoji .tape img {
+    width: 85%;
   }
 }
 
@@ -582,9 +643,16 @@ footer {
           animation: wave 3s infinite linear alternate;
 }
 
+@media screen and (min-width: 768px) {
+  #wrapper main #about .grid .about-flex .emoji .yellowWave {
+    top: 58%;
+    left: 13%;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper main #about .grid .about-flex .emoji .yellowWave {
-    top: 480px;
+    top: 485px;
     left: 0;
   }
   #wrapper main #about .grid .about-flex .emoji .yellowWave img {
@@ -618,6 +686,13 @@ footer {
   position: absolute;
   top: 59%;
   right: 10%;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #about .grid .about-flex .emoji .purpleArrow {
+    top: 59.5%;
+    right: 22%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -665,6 +740,18 @@ footer {
   color: #000;
 }
 
+@media screen and (min-width: 768px) {
+  #wrapper main #about .grid .about-flex .profile ul:last-child {
+    margin-left: 15%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #about .grid .about-flex .profile ul:last-child {
+    margin-left: 50px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper main #about .grid .about-flex .profile ul:last-child {
     font-size: 2.2rem;
@@ -709,12 +796,18 @@ footer {
 #wrapper main .square .squareImg2 {
   position: absolute;
   overflow: hidden;
-  top: 60%;
+  top: 50%;
   right: 0;
   width: 300px;
   height: 550px;
   padding: 5%;
   z-index: -10;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main .square .squareImg2 {
+    height: 600px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -745,15 +838,22 @@ footer {
   top: 110%;
   left: 0;
   width: 100%;
-  height: 600px;
+  height: 100%;
   padding-top: 20%;
   padding-left: 5%;
   z-index: -10;
 }
 
+@media screen and (min-width: 768px) {
+  #wrapper main .square .squareImg3 {
+    width: 450px;
+    left: 300px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg3 {
-    left: 800px;
+    left: 850px;
     width: 730px;
     height: 1000px;
     padding-top: 150px;
@@ -768,6 +868,12 @@ footer {
   animation-direction: reverse;
 }
 
+@media screen and (min-width: 768px) {
+  #wrapper main .square .squareImg3 img {
+    width: 500px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg3 img {
     width: 650px;
@@ -777,12 +883,18 @@ footer {
 #wrapper main .square .squareImg4 {
   position: absolute;
   overflow: hidden;
-  top: 180%;
+  top: 170%;
   left: -50%;
   width: 600px;
   height: 800px;
   padding-top: 15%;
   z-index: -10;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main .square .squareImg4 {
+    left: -30%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -818,6 +930,14 @@ footer {
   z-index: -10;
 }
 
+@media screen and (min-width: 768px) {
+  #wrapper main .square .squareImg5 {
+    top: 230%;
+    width: 400px;
+    height: 800px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg5 {
     top: 2200px;
@@ -832,6 +952,12 @@ footer {
   -webkit-animation: circle 210s linear infinite;
           animation: circle 210s linear infinite;
   animation-direction: reverse;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main .square .squareImg5 img {
+    width: 400px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -852,6 +978,13 @@ footer {
   z-index: -10;
 }
 
+@media screen and (min-width: 768px) {
+  #wrapper main .square .squareImg6 {
+    top: 300%;
+    height: 800px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg6 {
     top: 2900px;
@@ -864,8 +997,8 @@ footer {
 
 #wrapper main .square .squareImg6 img {
   width: 100%;
-  -webkit-animation: circle 230s linear infinite;
-          animation: circle 230s linear infinite;
+  -webkit-animation: circle 210s linear infinite;
+          animation: circle 210s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
@@ -912,11 +1045,19 @@ footer {
   position: absolute;
   overflow: hidden;
   top: 530%;
-  left: -5%;
-  width: 400px;
+  left: -15%;
+  width: 500px;
   height: 600px;
   padding-top: 20%;
   z-index: -10;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main .square .squareImg8 {
+    top: 520%;
+    width: 600px;
+    height: 650px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -930,10 +1071,16 @@ footer {
 }
 
 #wrapper main .square .squareImg8 img {
-  width: 100%;
+  width: 90%;
   -webkit-animation: circle 230s linear infinite;
           animation: circle 230s linear infinite;
   animation-direction: reverse;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main .square .squareImg8 img {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -945,7 +1092,7 @@ footer {
 #wrapper main .square .squareImg9 {
   position: absolute;
   overflow: hidden;
-  top: 595%;
+  top: 585%;
   right: 0;
   width: 100%;
   height: 600px;
@@ -954,12 +1101,18 @@ footer {
   z-index: -10;
 }
 
+@media screen and (min-width: 768px) {
+  #wrapper main .square .squareImg9 {
+    height: 700px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg9 {
-    top: 6270px;
+    top: 6350px;
     right: 300px;
     width: 1200px;
-    height: 1000px;
+    height: 800px;
     padding-top: 250px;
     padding-left: 150px;
   }
@@ -1047,15 +1200,26 @@ footer {
   width: 50px;
 }
 
-#wrapper main #web {
-  margin: 0 auto;
-}
-
 #wrapper main #web .grid .project1 {
-  position: relative;
   width: 100%;
   height: 80vh;
   margin-top: 20vh;
+}
+
+#wrapper main #web .grid .project1 .pro1-box {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #web .grid .project1 .pro1-box {
+    margin-left: 15%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project1 .pro1-box {
+    text-align: left;
+  }
 }
 
 #wrapper main #web .grid .project1 .pro1-box .box-img {
@@ -1080,7 +1244,7 @@ footer {
   top: 6.5px;
   left: 40px;
   overflow: hidden;
-  height: 40%;
+  height: 86.5%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1124,7 +1288,7 @@ footer {
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text {
   position: absolute;
-  top: 5%;
+  top: 10%;
   left: 0;
   opacity: 0;
   z-index: 2;
@@ -1161,12 +1325,13 @@ footer {
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text p {
+  margin: 5% 15%;
   text-align: justify;
-  margin: 20px 25px;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text p {
+    margin: 5% 110px;
     font-size: 1.1rem;
   }
 }
@@ -1272,6 +1437,7 @@ footer {
   position: relative;
   width: 505px;
   height: 355px;
+  margin: 0 auto;
   -webkit-box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.25);
           box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.25);
   background-color: #ffe554;
@@ -1320,7 +1486,7 @@ footer {
 }
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img img {
-  width: 491px;
+  width: 492px;
   -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
           animation: imgAnimation 10s linear 0.5s infinite alternate;
 }
@@ -1335,6 +1501,7 @@ footer {
   position: absolute;
   top: 10%;
   left: 0;
+  margin: 0 5%;
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -1370,11 +1537,13 @@ footer {
 }
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text p {
-  margin: 20px 25px;
+  margin: 5% 17%;
+  text-align: justify;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text p {
+    margin: 5% 100px;
     font-size: 1.1rem;
   }
 }
@@ -1450,14 +1619,15 @@ footer {
 }
 
 #wrapper main #web .grid .project3 {
-  position: relative;
   width: 100%;
   height: 80vh;
 }
 
 #wrapper main #web .grid .project3 .pro3-box {
+  position: relative;
   width: 505px;
   height: 355px;
+  margin: 0 auto;
   -webkit-box-shadow: 7px 5px 7px rgba(0, 0, 0, 0.2);
           box-shadow: 7px 5px 7px rgba(0, 0, 0, 0.2);
   background-color: #fff;
@@ -1472,16 +1642,15 @@ footer {
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 7px;
+  left: 7px;
   overflow: hidden;
-  height: 44.7%;
+  height: 96%;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project3 .pro3-box .pro3-img {
     top: 8px;
-    left: 8px;
     height: 536px;
   }
 }
@@ -1506,7 +1675,7 @@ footer {
 }
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img img {
-  width: 495px;
+  width: 492px;
   -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
           animation: imgAnimation 10s linear 0.5s infinite alternate;
 }
@@ -1519,8 +1688,9 @@ footer {
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 0;
+  margin: 0 15%;
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -1556,11 +1726,13 @@ footer {
 }
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text p {
-  margin: 20px 25px;
+  margin: 5% 20%;
+  text-align: justify;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text p {
+    margin: 5% 80px;
     font-size: 1.1rem;
   }
 }
@@ -1629,6 +1801,12 @@ footer {
 
 #wrapper main #web .grid .project4 .pro4-box {
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #web .grid .project4 .pro4-box {
+    margin-left: 15%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1707,8 +1885,8 @@ footer {
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text {
   position: absolute;
-  top: 10%;
-  left: 0;
+  top: 12%;
+  left: 12%;
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -1718,7 +1896,8 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text {
-    padding: 70px 80px;
+    left: 45px;
+    margin-top: 55px;
   }
 }
 
@@ -1744,11 +1923,13 @@ footer {
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text p {
-  margin: 20px 25px;
+  margin: 5% 16%;
+  text-align: justify;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text p {
+    margin: 20px 85px;
     font-size: 1.1rem;
   }
 }
@@ -1816,23 +1997,30 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .emoji2 .purpleStar {
+    display: block;
     position: absolute;
-    top: 6.5%;
-    right: 12%;
-    top: 3%;
-    left: 50%;
+    top: 4%;
+    right: 6%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .emoji2 .purpleStar {
-    top: 25px;
-    left: 200px;
+    top: 135px;
+    right: 80px;
   }
 }
 
-#wrapper main #web .grid .emoji2 .purpleStar img {
-  width: 75%;
+@media screen and (min-width: 768px) {
+  #wrapper main #web .grid .emoji2 .purpleStar img {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .emoji2 .purpleStar img {
+    width: 70px;
+  }
 }
 
 #wrapper main #web .grid .emoji2 .purpleWave {
@@ -1841,23 +2029,22 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .emoji2 .purpleWave {
+    display: block;
     position: absolute;
-    top: 6.5%;
-    right: 12%;
-    top: 3%;
-    left: 50%;
+    top: 28%;
+    left: 8%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .emoji2 .purpleWave {
-    top: 25px;
-    left: 200px;
+    top: 1015px;
+    left: 240px;
   }
 }
 
 #wrapper main #web .grid .emoji2 .purpleWave img {
-  width: 75%;
+  width: 80%;
 }
 
 #wrapper main #web .grid .emoji2 .purpleSpring2 {
@@ -1866,23 +2053,22 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .emoji2 .purpleSpring2 {
+    display: block;
     position: absolute;
-    top: 6.5%;
-    right: 12%;
-    top: 3%;
-    left: 50%;
+    top: 40%;
+    left: 44%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .emoji2 .purpleSpring2 {
-    top: 25px;
-    left: 200px;
+    top: 1650px;
+    left: 600px;
   }
 }
 
 #wrapper main #web .grid .emoji2 .purpleSpring2 img {
-  width: 75%;
+  width: 80%;
 }
 
 #wrapper main #web .grid .emoji2 .purpleTiara {
@@ -1891,18 +2077,17 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .emoji2 .purpleTiara {
+    display: block;
     position: absolute;
-    top: 6.5%;
-    right: 12%;
-    top: 3%;
-    left: 50%;
+    top: 51.5%;
+    left: 45%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .emoji2 .purpleTiara {
-    top: 25px;
-    left: 200px;
+    top: 1890px;
+    left: 470px;
   }
 }
 
@@ -1916,23 +2101,28 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .emoji2 .flowers {
+    display: block;
     position: absolute;
-    top: 6.5%;
-    right: 12%;
-    top: 3%;
-    left: 50%;
+    top: 75%;
+    left: 8%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .emoji2 .flowers {
-    top: 25px;
-    left: 200px;
+    top: 2730px;
+    left: 230px;
   }
 }
 
 #wrapper main #web .grid .emoji2 .flowers img {
-  width: 75%;
+  width: 85%;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .emoji2 .flowers img {
+    width: 100%;
+  }
 }
 
 #wrapper main #skills {
@@ -2045,13 +2235,14 @@ footer {
 
 #wrapper main #video {
   width: 100%;
-  height: 80vh;
-  margin-top: 60%;
+  height: 70vh;
+  margin-top: 50%;
   text-align: center;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #video {
+    height: 80vh;
     margin-top: 300px;
   }
 }
@@ -2121,8 +2312,9 @@ footer {
 
 #wrapper main #video .grid .video-red .video-img .video-text {
   position: absolute;
-  top: 17%;
+  top: 20%;
   left: 0;
+  margin: 0 5%;
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -2147,11 +2339,13 @@ footer {
 }
 
 #wrapper main #video .grid .video-red .video-img .video-text p {
-  margin: 20px 25px;
+  margin: 5% 22%;
+  text-align: justify;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #video .grid .video-red .video-img .video-text p {
+    margin: 20px 95px;
     font-size: 1.1rem;
   }
 }
@@ -2186,6 +2380,12 @@ footer {
 
 #wrapper footer .grid a img {
   width: 23%;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper footer .grid a img {
+    width: 17%;
+  }
 }
 
 @media screen and (min-width: 1024px) {

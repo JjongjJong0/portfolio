@@ -11,7 +11,6 @@
     // background-color: aquamarine;
 }
 
-
 #wrapper {
     //header
     header {
@@ -225,7 +224,7 @@
             color: $red;
             .grid {
                 .about-flex {
-                    @include responsive(tablet-screens) {
+                    @include responsive(pc-screens) {
                         display: flex;
                         width: 100%;
                         justify-content: space-between;
@@ -236,6 +235,9 @@
                         margin: 10% 8% 5%;
                         transform: scale(0.85, 0.85) rotate(5deg);
                         transition: all 0.35s;
+                        @include responsive(tablet-screens) {
+                            margin: 10% 18% 5%;
+                        }
                         @include responsive(pc-screens) {
                             margin: 0;
                             width: 40%;
@@ -276,6 +278,12 @@
                                 position: absolute;
                                 right: 21%;                            
                                 bottom: 1.5%;
+                                @include responsive(tablet-screens) {
+                                    right: 25%;
+                                }
+                                @include responsive(pc-screens) {
+                                    right: 17%;
+                                }
                                 img {
                                     width: 100%;
                                 }
@@ -289,6 +297,12 @@
                                 position: absolute;
                                 right: 15%;
                                 bottom: 12%;
+                                @include responsive(tablet-screens) {
+                                    right: 20%;
+                                }
+                                @include responsive(pc-screens) {
+                                    right: 11%;
+                                }
                                 img {
                                     width: 100%;
                                 }
@@ -310,12 +324,17 @@
                             top: 4%;
                             left: 48%;
                             @include responsive(tablet-screens) {
-                                top: 3%;
-                                left: 50%;
+                                top: 6%;
+                                left: 48%;
                             }
                             @include responsive(pc-screens) {
                                 top: 25px;
                                 left: 200px;
+                            }
+                            img {
+                                @include responsive(tablet-screens) {
+                                    width: 85%;
+                                }
                             }
                         }
     
@@ -374,8 +393,12 @@
                             left: 5%;
                             z-index: -1;
                             animation: wave 3s infinite linear alternate;
+                            @include responsive(tablet-screens) {
+                                top: 58%;
+                                left: 13%;
+                            }
                             @include responsive(pc-screens) {
-                                top: 480px;
+                                top: 485px;
                                 left: 0;
                                 img {
                                     width: 65%;
@@ -392,6 +415,10 @@
                             position: absolute;
                             top: 59%;
                             right: 10%;
+                            @include responsive(tablet-screens) {
+                                top: 59.5%;
+                                right: 22%;
+                            }
                             @include responsive(pc-screens) {
                                 top: 505px;
                                 left: 200px;
@@ -421,6 +448,12 @@
                             }
                             &:last-child {
                                 margin-left: 10%;
+                                @include responsive(tablet-screens) {
+                                    margin-left: 15%;
+                                }
+                                @include responsive(pc-screens) {
+                                    margin-left: 50px;
+                                }
                                 font: {
                                     size: 2.2rem;
                                     family: $font-main;
@@ -468,12 +501,15 @@
             .squareImg2 {
                 position: absolute;
                 overflow: hidden;
-                top: 60%;
+                top: 50%;
                 right: 0;
                 width: 300px;
                 height: 550px;
                 padding: 5%;
                 z-index: -10;
+                @include responsive(tablet-screens) {
+                    height: 600px;
+                }
                 @include responsive(pc-screens) {
                     top: 600px;
                     width: 600px;
@@ -496,12 +532,16 @@
                 top: 110%;
                 left: 0;
                 width: 100%;
-                height: 600px;
+                height: 100%;
                 padding-top: 20%;
                 padding-left: 5%;
                 z-index: -10;
+                @include responsive(tablet-screens) {
+                    width: 450px;
+                    left: 300px;
+                }
                 @include responsive(pc-screens) {
-                    left: 800px;
+                    left: 850px;
                     width: 730px;
                     height: 1000px;
                     padding-top: 150px;
@@ -511,6 +551,9 @@
                     width: 100%;
                     animation: circle 250s linear infinite;
                     animation-direction: reverse;
+                    @include responsive(tablet-screens) {
+                        width: 500px;
+                    }
                     @include responsive(pc-screens) {
                         width: 650px;
                     }
@@ -520,12 +563,15 @@
             .squareImg4 {
                 position: absolute;
                 overflow: hidden;
-                top: 180%;
+                top: 170%;
                 left: -50%;
                 width: 600px;
                 height: 800px;
                 padding-top: 15%;
                 z-index: -10;
+                @include responsive(tablet-screens) {
+                    left: -30%;
+                }
                 @include responsive(pc-screens) {
                     left: -350px;
                     width: 1000px;
@@ -551,6 +597,11 @@
                 height: 600px;
                 padding: 20%;
                 z-index: -10;
+                @include responsive(tablet-screens) {
+                    top: 230%;
+                    width: 400px;
+                    height: 800px;
+                }
                 @include responsive(pc-screens) {
                     top: 2200px;
                     width: 700px;
@@ -561,6 +612,9 @@
                     width: 300px;
                     animation: circle 210s linear infinite;
                     animation-direction: reverse;
+                    @include responsive(tablet-screens) {
+                        width: 400px;
+                    }
                     @include responsive(pc-screens) {
                         width: 700px;
                     }
@@ -577,6 +631,10 @@
                 padding-top: 20%;
                 padding-left: 5%;
                 z-index: -10;
+                @include responsive(tablet-screens) {
+                    top: 300%;
+                    height: 800px;
+                }
                 @include responsive(pc-screens) {
                     top: 2900px;
                     left: 600px;
@@ -586,7 +644,7 @@
                 }
                 img {
                     width: 100%;
-                    animation: circle 230s linear infinite;
+                    animation: circle 210s linear infinite;
                     @include responsive(pc-screens) {
                         width: 750px;
                     }
@@ -623,11 +681,17 @@
                 position: absolute;
                 overflow: hidden;
                 top: 530%;
-                left: -5%;
-                width: 400px;
+                left: -15%;
+                width: 500px;
                 height: 600px;
                 padding-top: 20%;
                 z-index: -10;
+                @include responsive(tablet-screens) {
+                    top: 520%;
+                    width: 600px;
+                    height: 650px;
+
+                }
                 @include responsive(pc-screens) {
                     top: 5500px;
                     left: -100px;
@@ -636,9 +700,12 @@
                     padding-top: 150px;
                 }
                 img {
-                    width: 100%;
+                    width: 90%;
                     animation: circle 230s linear infinite;
                     animation-direction: reverse;
+                    @include responsive(tablet-screens) {
+                        width: 80%;
+                    }
                     @include responsive(pc-screens) {
                         width: 950px;
                     }
@@ -648,18 +715,21 @@
             .squareImg9 {
                 position: absolute;
                 overflow: hidden;
-                top: 595%;
+                top: 585%;
                 right: 0;
                 width: 100%;
                 height: 600px;
                 padding-top: 15%;
                 padding-left: 20%;
                 z-index: -10;
+                @include responsive(tablet-screens) {
+                    height: 700px;
+                }
                 @include responsive(pc-screens) {
-                    top: 6270px;
+                    top: 6350px;
                     right: 300px;
                     width: 1200px;
-                    height: 1000px;
+                    height: 800px;
                     padding-top: 250px;
                     padding-left: 150px;
                 }
@@ -719,14 +789,19 @@
         }
         
         #web {
-            margin: 0 auto;
             .grid {
                 .project1 {
-                    position: relative;
                     width: 100%;
                     height: 80vh;
                     margin-top: 20vh;
                     .pro1-box {
+                        position: relative;
+                        @include responsive(tablet-screens) {
+                            margin-left: 15%;
+                        }
+                        @include responsive(pc-screens) {
+                            text-align: left;
+                        }
                         .box-img {
                             filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
                             img {
@@ -743,7 +818,7 @@
                             top: 6.5px;
                             left: 40px;
                             overflow: hidden;
-                            height: 40%;
+                            height: 86.5%;
                             @include responsive(pc-screens) {
                                 top: 10px;
                                 left: 56px;
@@ -775,7 +850,7 @@
                             }
                             .pro1-text {
                                 position: absolute;
-                                top: 5%;
+                                top: 10%;
                                 left: 0;
                                 opacity: 0;
                                 z-index: 2;
@@ -799,9 +874,10 @@
                                     }
                                 }
                                 p {
+                                    margin: 5% 15%;
                                     text-align: justify;
-                                    margin: 20px 25px;
                                     @include responsive(pc-screens) {
+                                        margin: 5% 110px;
                                         font-size: 1.1rem;
                                     }
                                 }
@@ -872,6 +948,7 @@
                         position: relative;
                         width: 505px;
                         height: 355px;
+                        margin: 0 auto;
                         box-shadow: -7px 5px 7px rgba(0,0,0,0.25);
                         background-color: $yellow;
                         @include responsive(pc-screens) {
@@ -906,7 +983,7 @@
                                 opacity: 0.7;
                             }
                             img {
-                                width: 491px;
+                                width: 492px;
                                 animation: imgAnimation 10s linear 0.5s infinite alternate;
                                 @include responsive(pc-screens) {
                                     width: 685px;
@@ -916,6 +993,7 @@
                                 position: absolute;
                                 top: 10%;
                                 left: 0;
+                                margin: 0 5%;
                                 opacity: 0;
                                 z-index: 2;
                                 text-align: center;
@@ -937,8 +1015,10 @@
                                     }
                                 }
                                 p {
-                                    margin: 20px 25px;
+                                    margin: 5% 17%;
+                                    text-align: justify;
                                     @include responsive(pc-screens) {
+                                        margin: 5% 100px;
                                         font-size: 1.1rem;
                                     }
                                 }
@@ -999,12 +1079,13 @@
                 }
                 
                 .project3 {
-                    position: relative;
                     width: 100%;
                     height: 80vh;
                     .pro3-box {
+                        position: relative;
                         width: 505px;
                         height: 355px;
+                        margin: 0 auto;
                         box-shadow: 7px 5px 7px rgba(0,0,0,0.2);
                         background-color: $white;
                         @include responsive(pc-screens) {
@@ -1013,13 +1094,12 @@
                         }
                         .pro3-img {
                             position: absolute;
-                            top: 5px;
-                            left: 5px;
+                            top: 7px;
+                            left: 7px;
                             overflow: hidden;
-                            height: 44.7%;
+                            height: 96%;
                             @include responsive(pc-screens) {
                                 top: 8px;
-                                left: 8px;
                                 height: 536px;
                             }
                             &::before {
@@ -1039,7 +1119,7 @@
                                 opacity: 0.7;
                             }
                             img {
-                                width: 495px;
+                                width: 492px;
                                 animation: imgAnimation 10s linear 0.5s infinite alternate;
                                 @include responsive(pc-screens) {
                                     width: 685px;
@@ -1047,8 +1127,9 @@
                             }
                             .pro3-text {
                                 position: absolute;
-                                top: 10%;
+                                top: 15%;
                                 left: 0;
+                                margin: 0 15%;
                                 opacity: 0;
                                 z-index: 2;
                                 text-align: center;
@@ -1070,8 +1151,10 @@
                                     }
                                 }
                                 p {
-                                    margin: 20px 25px;
+                                    margin: 5% 20%;
+                                    text-align: justify;
                                     @include responsive(pc-screens) {
+                                        margin: 5% 80px;
                                         font-size: 1.1rem;
                                     }
                                 }
@@ -1136,6 +1219,9 @@
                     height: 80vh;
                     .pro4-box {
                         position: relative;
+                        @include responsive(tablet-screens) {
+                            margin-left: 15%;
+                        }
                         @include responsive(pc-screens) {
                             margin-left: 290px;
                         }
@@ -1188,14 +1274,15 @@
                                     }
                                     .pro4-text {
                                         position: absolute;
-                                        top: 10%;
-                                        left: 0;
+                                        top: 12%;
+                                        left: 12%;
                                         opacity: 0;
                                         z-index: 2;
                                         text-align: center;
                                         transition: all 0.3s;
                                         @include responsive(pc-screens) {
-                                            padding: 70px 80px;
+                                            left: 45px;
+                                            margin-top: 55px;
                                         }
                                         h3 {
                                             margin-bottom: 20px;
@@ -1211,8 +1298,10 @@
                                             }
                                         }
                                         p {
-                                            margin: 20px 25px;
+                                            margin: 5% 16%;
+                                            text-align: justify;
                                             @include responsive(pc-screens) {
+                                                margin: 20px 85px;
                                                 font-size: 1.1rem;
                                             }
                                         }
@@ -1279,69 +1368,70 @@
                     .purpleStar {
                         display: none;
                         @include responsive(tablet-screens) {
+                            display: block;
                             position: absolute;
-                            top: 6.5%;
-                            right: 12%;
-                            top: 3%;
-                            left: 50%;
+                            top: 4%;
+                            right: 6%;
                         }
                         @include responsive(pc-screens) {
-                            top: 25px;
-                            left: 200px;
+                            top: 135px;
+                            right: 80px;
                         }
                         img {
-                            width: 75%;
+                            @include responsive(tablet-screens) {
+                                width: 80%;
+                            }
+                            @include responsive(pc-screens) {
+                                width: 70px;
+                            }
                         }
                     }
 
                     .purpleWave {
                         display: none;
                         @include responsive(tablet-screens) {
+                            display: block;
                             position: absolute;
-                            top: 6.5%;
-                            right: 12%;
-                            top: 3%;
-                            left: 50%;
+                            top: 28%;
+                            left: 8%;
                         }
                         @include responsive(pc-screens) {
-                            top: 25px;
-                            left: 200px;
+                            top: 1015px;
+                            left: 240px;
                         }
                         img {
-                            width: 75%;
+                            width: 80%;
                         }
                     }
 
                     .purpleSpring2 {
                         display: none;
                         @include responsive(tablet-screens) {
+                            display: block;
                             position: absolute;
-                            top: 6.5%;
-                            right: 12%;
-                            top: 3%;
-                            left: 50%;
+                            top: 40%;
+                            left: 44%;
                         }
                         @include responsive(pc-screens) {
-                            top: 25px;
-                            left: 200px;
+                            top: 1650px;
+                            left: 600px;
                         }
                         img {
-                            width: 75%;
+                            width: 80%;
                         }
                     }
 
                     .purpleTiara {
                         display: none;
                         @include responsive(tablet-screens) {
+                            display: block;
                             position: absolute;
-                            top: 6.5%;
-                            right: 12%;
-                            top: 3%;
-                            left: 50%;
+                            top: 51.5%;
+                            left: 45%;
                         }
                         @include responsive(pc-screens) {
-                            top: 25px;
-                            left: 200px;
+                            top: 1890px;
+                            left: 470px;
                         }
                         img {
                             width: 75%;
@@ -1351,18 +1441,20 @@
                     .flowers {
                         display: none;
                         @include responsive(tablet-screens) {
+                            display: block;
                             position: absolute;
-                            top: 6.5%;
-                            right: 12%;
-                            top: 3%;
-                            left: 50%;
+                            top: 75%;
+                            left: 8%;
                         }
                         @include responsive(pc-screens) {
-                            top: 25px;
-                            left: 200px;
+                            top: 2730px;
+                            left: 230px;
                         }
                         img {
-                            width: 75%;
+                            width: 85%;
+                            @include responsive(pc-screens) {
+                                width: 100%;
+                            }
                         }
                     }
                 }
@@ -1445,10 +1537,11 @@
     
         #video {
             width: 100%;
-            height: 80vh;
-            margin-top: 60%;
+            height: 70vh;
+            margin-top: 50%;
             text-align: center;
             @include responsive(pc-screens) {
+                height: 80vh;
                 margin-top: 300px;
             }
             .grid {
@@ -1499,8 +1592,9 @@
                         }
                         .video-text {
                             position: absolute;
-                            top: 17%;
+                            top: 20%;
                             left: 0;
+                            margin: 0 5%;
                             opacity: 0;
                             z-index: 2;
                             text-align: center;
@@ -1515,8 +1609,10 @@
                                 }
                             }
                             p {
-                                margin: 20px 25px;
+                                margin: 5% 22%;
+                                text-align: justify;
                                 @include responsive(pc-screens) {
+                                    margin: 20px 95px;
                                     font-size: 1.1rem;
                                 }
                             }
@@ -1555,6 +1651,9 @@
             a {
                 img {
                     width: 23%;
+                    @include responsive(tablet-screens) {
+                        width: 17%;
+                    }
                     @include responsive(pc-screens) {
                         width: 125px;
                     }

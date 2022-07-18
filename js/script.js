@@ -1,4 +1,4 @@
-     
+
 $(window).ready(function() {
      //loading
      // setInterval(function() {
@@ -7,8 +7,8 @@ $(window).ready(function() {
 
      
      // 모바일(햄버거) 메뉴
-     $(".mobileMenu").click(function() {
-          $(this).toggleClass("open");
+     $(".mobileMenu, .gnbMobile").click(function() {
+          $(".mobileMenu").toggleClass("open");
           $(".gnbMobile").toggleClass("hide show");
      });
 
@@ -104,7 +104,7 @@ $(window).ready(function() {
           const skills = $("#skills").offset().top - $("#skills").outerHeight();
           console.log(skills);
           if($(window).scrollTop() > skills) {
-               $('.gaugeBorder .skillbar').css("width",
+               $('.gaugeBorder > .skillbar').css("width",
                     function() {
                          return $(this).attr("aria-valuenow") + "%";
                     }
