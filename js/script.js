@@ -7,9 +7,10 @@ $(window).ready(function() {
 
      
      // 모바일(햄버거) 메뉴
+     // $(".gnbMobile").hide();
      $(".mobileMenu,  .gnbMobile").click(function() {
           $(".mobileMenu").toggleClass("open");
-          $(".gnbMobile").toggleClass("hide show");
+          $(".gnbMobile").toggleClass("show");
      });
 
      //emoji
@@ -112,67 +113,13 @@ $(window).ready(function() {
           }
      });
 
-     // $(".skill-text > p").hide();
+     
+     $(".skill-over-txt").hide();
 
-     // $(".skill-box > ul > li").hover(function() {
-     //      $(".gaugeBorder, .skill-text > h3, span").addClass("none");
-     //      $(this).show();
-     //      // $(this).animate({opacity:"1"},300);
-     // }, function() {
-     //      $(this).css("opacity","");
-     // });
+     $(".skill-box > ul > li").hover(function() {
+          $(this).children('.gauge-box').hide().next().show();
+     }, function() {
+          $(this).children('.gauge-box').show().next().hide();
+     });
 
-     // $(".skill-box > ul > .html").hover(function() {
-     //      $(".html > p").animate({opacity:"1"},300);
-     // }, function() {
-     //      $(".html > p").css("opacity","");
-     // });
-
-     // $(".skill-box > ul > .css").hover(function() {
-     //      $(".css > p").animate({opacity:"1"},300);
-     // }, function() {
-     //      $(".css > p").css("opacity","");
-     // });
-
-     // $(".skill-box > ul > .sass").hover(function() {
-     //      $(".sass > p").animate({opacity:"1"},300);
-     // }, function() {
-     //      $(".sass > p").css("opacity","");
-     // });
-
-     // $(".skill-box > ul > .jQuery").hover(function() {
-     //      $(".jQuery > p").animate({opacity:"1"},300);
-     // }, function() {
-     //      $(".jQuery > p").css("opacity","");
-     // });
-
-     // $(".skill-box > ul > .js").hover(function() {
-     //      $(".js > p").animate({opacity:"1"},300);
-     // }, function() {
-     //      $(".js > p").css("opacity","");
-     // });
-
-     // $(".skill-box > ul > .ps").hover(function() {
-     //      $(".ps > p").animate({opacity:"1"},300);
-     // }, function() {
-     //      $(".ps > p").css("opacity","");
-     // });
-
-     // $(".skill-box > ul > .ai").hover(function() {
-     //      $(".ai > p").animate({opacity:"1"},300);
-     // }, function() {
-     //      $(".ai > p").css("opacity","");
-     // });
-
-     // $(".skill-box > ul > .pr").hover(function() {
-     //      $(".pr > p").animate({opacity:"1"},300);
-     // }, function() {
-     //      $(".pr > p").css("opacity","");
-     // });
-
-     // $(".skill-box > ul > .ae").hover(function() {
-     //      $(".ae > p").animate({opacity:"1"},300);
-     // }, function() {
-     //      $(".ae > p").css("opacity","");
-     // });
 });

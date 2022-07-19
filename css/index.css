@@ -170,20 +170,26 @@ footer {
   z-index: 10;
 }
 
-@media screen and (min-width: 1024px) {
-  #wrapper header .grid nav {
-    width: auto;
-  }
-}
-
 #wrapper header .grid nav .gnbMobile {
-  display: block;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  opacity: 0;
   width: 100%;
   height: 100vh;
-  padding: 7% 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: #feea98;
@@ -191,44 +197,24 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper header .grid nav .gnbMobile {
-    display: none;
+    left: 0;
+    height: 65px;
+    margin-left: 45%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    opacity: 1;
+    background-color: transparent;
   }
 }
 
 #wrapper header .grid nav .gnbMobile.show {
-  left: 0%;
+  left: 0;
   opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-#wrapper header .grid nav .gnbMobile.hide {
-  left: 100%;
-  opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 #wrapper header .grid nav .gnbMobile .menuClose {
@@ -237,9 +223,14 @@ footer {
   right: 0;
 }
 
-#wrapper header .grid nav .gnbMobile li {
-  text-align: center;
-  padding: 5%;
+@media screen and (min-width: 1024px) {
+  #wrapper header .grid nav .gnbMobile li {
+    margin-left: 3%;
+  }
+}
+
+#wrapper header .grid nav .gnbMobile li:last-child {
+  margin-top: 1%;
 }
 
 #wrapper header .grid nav .gnbMobile li a {
@@ -247,33 +238,20 @@ footer {
   color: #ed2024;
 }
 
+@media screen and (min-width: 1024px) {
+  #wrapper header .grid nav .gnbMobile li a {
+    font-size: 2.5rem;
+  }
+}
+
 #wrapper header .grid nav .gnbMobile li a img {
   width: 100%;
 }
 
-#wrapper header .grid nav .gnbPc {
-  display: none;
-}
-
 @media screen and (min-width: 1024px) {
-  #wrapper header .grid nav .gnbPc {
-    display: block;
+  #wrapper header .grid nav .gnbMobile li a img {
+    width: 75%;
   }
-}
-
-#wrapper header .grid nav .gnbPc li {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 13px 15px;
-}
-
-#wrapper header .grid nav .gnbPc li a {
-  font-size: 2em;
-  color: #ed2024;
-}
-
-#wrapper header .grid nav .gnbPc li a img {
-  width: 60%;
 }
 
 #wrapper .loader {
@@ -1243,13 +1221,6 @@ footer {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 .pro1-box .pro1-img {
-    top: 10px;
-    left: 56px;
-  }
-}
-
 #wrapper main #web .grid .project1 .pro1-box .pro1-img::before {
   display: block;
   position: absolute;
@@ -1289,14 +1260,8 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text {
-    top: 17%;
-    left: 10%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text {
-    top: 18%;
+    top: 15%;
+    left: 5%;
   }
 }
 
@@ -1328,20 +1293,9 @@ footer {
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text p {
-  margin: 5% 15% 0;
+  margin: 5% 11% 0;
+  font-size: 1.1rem;
   text-align: justify;
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text p {
-    font-size: 1.1rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text p {
-    margin: 5% 110px;
-  }
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .view {
@@ -1358,7 +1312,7 @@ footer {
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .process {
-  padding: 14%;
+  padding: 13.2%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
@@ -1467,12 +1421,6 @@ footer {
   height: 96%;
 }
 
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .pro2-box .pro2-img {
-    top: 8px;
-  }
-}
-
 #wrapper main #web .grid .project2 .pro2-box .pro2-img::before {
   display: block;
   position: absolute;
@@ -1513,19 +1461,14 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text {
-    top: 17%;
-    left: 10%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text {
-    margin-top: 55px;
+    top: 14%;
+    left: 6%;
   }
 }
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text h3 {
   margin-bottom: 20px;
+  font-size: 2.2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -1546,19 +1489,14 @@ footer {
 }
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text p {
-  margin: 5% 17% 8%;
+  margin: 7% 12%;
+  font-size: 1.1rem;
   text-align: justify;
 }
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text p {
-    font-size: 1.1rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text p {
-    margin: 5% 100px;
+    margin: 7% 17%;
   }
 }
 
@@ -1570,18 +1508,6 @@ footer {
 }
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text .view a {
-  font-size: 1.3rem;
-  font-weight: bolder;
-  color: #fff;
-}
-
-#wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text .process {
-  padding: 7%;
-  background: url(../images/yellow_btn.png) no-repeat center;
-  background-size: 100%;
-}
-
-#wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text .process a {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
@@ -1641,6 +1567,8 @@ footer {
   position: relative;
   width: 100%;
   height: 45%;
+  max-width: 650px;
+  max-height: 450px;
   margin: 0 auto;
   -webkit-box-shadow: 7px 5px 7px rgba(0, 0, 0, 0.2);
           box-shadow: 7px 5px 7px rgba(0, 0, 0, 0.2);
@@ -1649,7 +1577,6 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project3 .pro3-box {
-    width: 100%;
     height: 55%;
   }
 }
@@ -1672,7 +1599,6 @@ footer {
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project3 .pro3-box .pro3-img {
     top: 8px;
-    height: 536px;
   }
 }
 
@@ -1697,14 +1623,9 @@ footer {
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img img {
   width: 98.6%;
+  max-width: 640px;
   -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
           animation: imgAnimation 10s linear 0.5s infinite alternate;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project3 .pro3-box .pro3-img img {
-    width: 685px;
-  }
 }
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text {
@@ -1721,14 +1642,8 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text {
-    top: 17%;
-    left: 7%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text {
-    margin-top: 55px;
+    top: 14%;
+    left: 3%;
   }
 }
 
@@ -1754,19 +1669,14 @@ footer {
 }
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text p {
-  margin: 5% 20% 0;
+  margin: 7% 5%;
+  font-size: 1.1rem;
   text-align: justify;
 }
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text p {
-    font-size: 1.1rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text p {
-    margin: 5% 80px;
+    margin: 7% 10%;
   }
 }
 
@@ -1784,7 +1694,7 @@ footer {
 }
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text .process {
-  padding: 16%;
+  padding: 15.2%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
@@ -1836,18 +1746,20 @@ footer {
   position: relative;
   width: 100%;
   height: 45%;
+  max-width: 650px;
+  max-height: 450px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project4 .pro4-box {
-    width: 100%;
     height: 55%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project4 .pro4-box {
-    margin-left: 290px;
+    margin-left: 35%;
   }
 }
 
@@ -1861,13 +1773,6 @@ footer {
   background-color: #ed2024;
 }
 
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red {
-    width: 700px;
-    height: 550px;
-  }
-}
-
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow {
   width: 100%;
   height: 100%;
@@ -1876,16 +1781,10 @@ footer {
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img {
   position: absolute;
-  top: 4%;
-  left: 2.7%;
+  top: 3.5%;
+  left: 2.6%;
   overflow: hidden;
-  height: 92.1%;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img {
-    height: 523px;
-  }
+  height: 93%;
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img::before {
@@ -1909,20 +1808,15 @@ footer {
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img img {
   width: 97.2%;
+  max-width: 640px;
   -webkit-animation: imgAnimation 10s linear 0.5s infinite alternate;
           animation: imgAnimation 10s linear 0.5s infinite alternate;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img img {
-    width: 673px;
-  }
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text {
   position: absolute;
   top: 12%;
-  left: 12%;
+  left: 7%;
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -1932,15 +1826,8 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text {
-    top: 17%;
-    left: 20%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text {
-    left: 45px;
-    margin-top: 55px;
+    top: 16%;
+    left: 16%;
   }
 }
 
@@ -1967,19 +1854,8 @@ footer {
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text p {
   margin: 5% 16% 0;
+  font-size: 1.1rem;
   text-align: justify;
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text p {
-    font-size: 1.1rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text p {
-    margin: 20px 85px;
-  }
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text .view {
@@ -1996,7 +1872,7 @@ footer {
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text .process {
-  padding: 16%;
+  padding: 15.2%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
@@ -2184,6 +2060,7 @@ footer {
 }
 
 #wrapper main #skills .grid .skill-box ul li {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2249,15 +2126,6 @@ footer {
   }
 }
 
-#wrapper main #skills .grid .skill-box ul li .gauge-box .skill-text p {
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  line-height: 1.3rem;
-  text-align: justify;
-  color: #fff;
-}
-
 #wrapper main #skills .grid .skill-box ul li .gauge-box .gaugeBorder {
   height: 30%;
   margin-top: 7%;
@@ -2278,31 +2146,21 @@ footer {
   background-color: #ed2024;
 }
 
-#wrapper main #skills .grid .skill-box ul li:hover h3 {
-  display: none;
+#wrapper main #skills .grid .skill-box ul li .skill-over-txt {
+  position: absolute;
+  top: 30%;
+  right: 2%;
+  width: 57%;
 }
 
-#wrapper main #skills .grid .skill-box ul li:hover span {
-  display: none;
-}
-
-#wrapper main #skills .grid .skill-box ul li:hover .gaugeBorder {
-  display: none;
-}
-
-#wrapper main #skills .grid .skill-box ul li:hover p {
-  opacity: 1;
+#wrapper main #skills .grid .skill-box ul li .skill-over-txt p {
+  line-height: 1.3rem;
+  text-align: justify;
+  color: #fff;
 }
 
 #wrapper main #video {
   text-align: center;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #video {
-    height: 80vh;
-    margin-top: 300px;
-  }
 }
 
 #wrapper main #video .grid .video-box {
@@ -2315,6 +2173,8 @@ footer {
   position: relative;
   width: 100%;
   height: 45%;
+  max-width: 650px;
+  max-height: 450px;
   margin: 0 auto;
   -webkit-box-shadow: 1px 2px 12px 7px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 2px 12px 7px rgba(0, 0, 0, 0.2);
@@ -2333,14 +2193,6 @@ footer {
   left: 1.5%;
   width: 97%;
   height: 96%;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #video .grid .video-box .video-red .video-img {
-    top: 8px;
-    left: 8px;
-    height: 534px;
-  }
 }
 
 #wrapper main #video .grid .video-box .video-red .video-img::before {
@@ -2365,18 +2217,12 @@ footer {
 #wrapper main #video .grid .video-box .video-red .video-img img {
   width: 100%;
   height: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #video .grid .video-box .video-red .video-img img {
-    width: 685px;
-    height: 534px;
-  }
+  max-width: 640px;
 }
 
 #wrapper main #video .grid .video-box .video-red .video-img .video-text {
   position: absolute;
-  top: 25%;
+  top: 22%;
   left: 0;
   margin: 0 5%;
   opacity: 0;
@@ -2389,13 +2235,7 @@ footer {
 @media screen and (min-width: 768px) {
   #wrapper main #video .grid .video-box .video-red .video-img .video-text {
     top: 22%;
-    left: 10%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #video .grid .video-box .video-red .video-img .video-text {
-    margin-top: 55px;
+    left: 4%;
   }
 }
 
@@ -2410,14 +2250,9 @@ footer {
 }
 
 #wrapper main #video .grid .video-box .video-red .video-img .video-text p {
-  margin: 5% 22%;
+  margin: 5% 18%;
+  font-size: 1.1rem;
   text-align: justify;
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper main #video .grid .video-box .video-red .video-img .video-text p {
-    font-size: 1.1rem;
-  }
 }
 
 @media screen and (min-width: 1024px) {
