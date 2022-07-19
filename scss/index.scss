@@ -8,7 +8,7 @@
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 15px;
-    // background-color: aquamarine;
+    background-color: aquamarine;
 }
 
 #wrapper {
@@ -236,7 +236,7 @@
                         transform: scale(0.85, 0.85) rotate(5deg);
                         transition: all 0.35s;
                         @include responsive(tablet-screens) {
-                            margin: 10% 18% 5%;
+                            margin: 10% 20% 5%;
                         }
                         @include responsive(pc-screens) {
                             margin: 0;
@@ -718,12 +718,13 @@
                 top: 585%;
                 right: 0;
                 width: 100%;
-                height: 600px;
-                padding-top: 15%;
+                height: 50%;
+                padding-top: 18%;
                 padding-left: 20%;
                 z-index: -10;
                 @include responsive(tablet-screens) {
-                    height: 700px;
+                    top: 590%;
+                    height: 69%;
                 }
                 @include responsive(pc-screens) {
                     top: 6350px;
@@ -746,7 +747,7 @@
                   transform: rotate(0);       
                 }
                 100% {
-                  transform: rotate(360deg);  /*요소들이 360도 돌게 함*/
+                  transform: rotate(360deg);
                 }
             }
         }
@@ -796,33 +797,32 @@
                     margin-top: 20vh;
                     .pro1-box {
                         position: relative;
+                        width: 100%;
+                        height: 45%;
+                        max-width: 650px;
+                        max-height: 450px;
+                        margin: 0 auto;
                         @include responsive(tablet-screens) {
-                            margin-left: 15%;
-                        }
-                        @include responsive(pc-screens) {
-                            text-align: left;
+                            height: 55%;
                         }
                         .box-img {
                             filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
                             img {
-                                width: 505px;
-                                height: 355px;
-                                @include responsive(pc-screens) {
-                                    width: 700px;
-                                    height: 550px;
-                                }
+                                width: 100%;
                             }
                         }
                         .pro1-img {
                             position: absolute;
-                            top: 6.5px;
-                            left: 40px;
+                            top: 1.7%;
+                            left: 8%;
                             overflow: hidden;
-                            height: 86.5%;
+                            height: 81.6%;
+                            @include responsive(tablet-screens) {
+                                height: 87.3%;
+                            }
                             @include responsive(pc-screens) {
                                 top: 10px;
                                 left: 56px;
-                                height: 480px;
                             }
 
                             &::before {
@@ -832,7 +832,7 @@
                                 left: 0;
                                 content: "";
                                 z-index: 1;
-                                width: 100%;
+                                width: 98.5%;
                                 height: 100%;
                                 opacity: 0;
                                 transition: all 0.3s;
@@ -842,26 +842,33 @@
                                 opacity: 0.7;
                             }
                             img {
-                                width: 458px;
+                                width: 98.5%;
+                                max-width: 640px;
                                 animation: imgAnimation 10s linear 0.5s infinite alternate;
                                 @include responsive(pc-screens) {
-                                    width: 635px;
                                 }
                             }
                             .pro1-text {
                                 position: absolute;
-                                top: 10%;
+                                top: 7%;
                                 left: 0;
                                 opacity: 0;
                                 z-index: 2;
                                 text-align: center;
                                 transition: all 0.3s;
+                                @include responsive(tablet-screens) {
+                                    top: 17%;
+                                    left: 10%;
+                                }
                                 @include responsive(pc-screens) {
                                     top: 18%;
                                 }
 
                                 h3 {
                                     margin-bottom: 20px;
+                                    @include responsive(tablet-screens) {
+                                        font-size: 2.3rem;
+                                    }
                                     @include responsive(pc-screens) {
                                         font-size: 2.5rem;
                                     }
@@ -869,21 +876,25 @@
                                 strong {
                                     background: url(../images/red_border.png) no-repeat bottom;
                                     background-size: 100%;
-                                    @include responsive(pc-screens) {
+                                    @include responsive(tablet-screens) {
                                         font-size: 1.2rem;
+                                    }
+                                    @include responsive(pc-screens) {
                                     }
                                 }
                                 p {
-                                    margin: 5% 15%;
+                                    margin: 5% 15% 0;
                                     text-align: justify;
+                                    @include responsive(tablet-screens) {
+                                        font-size: 1.1rem;
+                                    }
                                     @include responsive(pc-screens) {
                                         margin: 5% 110px;
-                                        font-size: 1.1rem;
                                     }
                                 }
                                 .view {
                                     padding: 7%;
-                                    margin-right: 15px;
+                                    margin-right: 4%;
                                     background: url(../images/red_btn.png) no-repeat center;
                                     background-size: 100%;
                                     a {
@@ -895,7 +906,7 @@
                                     }
                                 }
                                 .process {
-                                    padding: 7%;
+                                    padding: 14%;
                                     background: url(../images/yellow_btn.png) no-repeat center;
                                     background-size: 100%;
                                     a {
@@ -946,25 +957,25 @@
                     height: 80vh;
                     .pro2-box {
                         position: relative;
-                        width: 505px;
-                        height: 355px;
+                        width: 100%;
+                        height: 45%;
+                        max-width: 650px;
+                        max-height: 450px;
                         margin: 0 auto;
                         box-shadow: -7px 5px 7px rgba(0,0,0,0.25);
                         background-color: $yellow;
-                        @include responsive(pc-screens) {
-                            width: 700px;
-                            height: 550px;
-                            margin-left: 290px;
+                        @include responsive(tablet-screens) {
+                            height: 55%;
                         }
                         .pro2-img {
                             position: absolute;
-                            top: 7px;
-                            left: 7px;
+                            top: 2.1%;
+                            left: 1.5%;
                             overflow: hidden;
                             height: 96%;
                             @include responsive(pc-screens) {
                                 top: 8px;
-                                height: 536px;
+                                // height: 536px;
                             }
                             &::before {
                                 display: block;
@@ -973,7 +984,7 @@
                                 left: 0;
                                 content: "";
                                 z-index: 1;
-                                width: 100%;
+                                width: 98.6%;
                                 height: 100%;
                                 opacity: 0;
                                 transition: all 0.3s;
@@ -983,43 +994,53 @@
                                 opacity: 0.7;
                             }
                             img {
-                                width: 492px;
+                                width: 98.6%;
+                                max-width: 640px;
                                 animation: imgAnimation 10s linear 0.5s infinite alternate;
                                 @include responsive(pc-screens) {
-                                    width: 685px;
                                 }
                             }
                             .pro2-text {
                                 position: absolute;
                                 top: 10%;
-                                left: 0;
+                                left: 2%;
                                 margin: 0 5%;
                                 opacity: 0;
                                 z-index: 2;
                                 text-align: center;
                                 transition: all 0.3s;
+                                @include responsive(tablet-screens) {
+                                    top: 17%;
+                                    left: 10%;
+                                }
                                 @include responsive(pc-screens) {
                                     margin-top: 55px;
                                 }
                                 h3 {
                                     margin-bottom: 20px;
-                                    @include responsive(pc-screens) {
+                                    @include responsive(tablet-screens) {
                                         font-size: 2.5rem;
+                                    }
+                                    @include responsive(pc-screens) {
                                     }
                                 }
                                 strong {
                                     background: url(../images/red_border.png) no-repeat bottom;
                                     background-size: 100%;
-                                    @include responsive(pc-screens) {
+                                    @include responsive(tablet-screens) {
                                         font-size: 1.2rem;
+                                    }
+                                    @include responsive(pc-screens) {
                                     }
                                 }
                                 p {
-                                    margin: 5% 17%;
+                                    margin: 5% 17% 8%;
                                     text-align: justify;
+                                    @include responsive(tablet-screens) {
+                                        font-size: 1.1rem;
+                                    }
                                     @include responsive(pc-screens) {
                                         margin: 5% 100px;
-                                        font-size: 1.1rem;
                                     }
                                 }
                                 .view {
@@ -1083,19 +1104,23 @@
                     height: 80vh;
                     .pro3-box {
                         position: relative;
-                        width: 505px;
-                        height: 355px;
+                        width: 100%;
+                        height: 45%;
                         margin: 0 auto;
                         box-shadow: 7px 5px 7px rgba(0,0,0,0.2);
                         background-color: $white;
+                        @include responsive(tablet-screens) {
+                            width: 100%;
+                            height: 55%;
+                        }
                         @include responsive(pc-screens) {
                             width: 700px;
                             height: 550px;
                         }
                         .pro3-img {
                             position: absolute;
-                            top: 7px;
-                            left: 7px;
+                            top: 2.1%;
+                            left: 1.5%;
                             overflow: hidden;
                             height: 96%;
                             @include responsive(pc-screens) {
@@ -1119,7 +1144,7 @@
                                 opacity: 0.7;
                             }
                             img {
-                                width: 492px;
+                                width: 98.6%;
                                 animation: imgAnimation 10s linear 0.5s infinite alternate;
                                 @include responsive(pc-screens) {
                                     width: 685px;
@@ -1127,40 +1152,50 @@
                             }
                             .pro3-text {
                                 position: absolute;
-                                top: 15%;
+                                top: 12%;
                                 left: 0;
                                 margin: 0 15%;
                                 opacity: 0;
                                 z-index: 2;
                                 text-align: center;
                                 transition: all 0.3s;
+                                @include responsive(tablet-screens) {
+                                    top: 17%;
+                                    left: 7%;
+                                }
                                 @include responsive(pc-screens) {
                                     margin-top: 55px;
                                 }
                                 h3 {
                                     margin-bottom: 20px;
-                                    @include responsive(pc-screens) {
+                                    @include responsive(tablet-screens) {
                                         font-size: 2.5rem;
+                                    }
+                                    @include responsive(pc-screens) {
                                     }
                                 }
                                 strong {
                                     background: url(../images/red_border.png) no-repeat bottom;
                                     background-size: 100%;
-                                    @include responsive(pc-screens) {
+                                    @include responsive(tablet-screens) {
                                         font-size: 1.2rem;
+                                    }
+                                    @include responsive(pc-screens) {
                                     }
                                 }
                                 p {
-                                    margin: 5% 20%;
+                                    margin: 5% 20% 0;
                                     text-align: justify;
+                                    @include responsive(tablet-screens) {
+                                        font-size: 1.1rem;
+                                    }
                                     @include responsive(pc-screens) {
                                         margin: 5% 80px;
-                                        font-size: 1.1rem;
                                     }
                                 }
                                 .view {
                                     padding: 7%;
-                                    margin-right: 15px;
+                                    margin-right: 4%;
                                     background: url(../images/red_btn.png) no-repeat center;
                                     background-size: 100%;
                                     a {
@@ -1172,7 +1207,7 @@
                                     }
                                 }
                                 .process {
-                                    padding: 7%;
+                                    padding: 16%;
                                     background: url(../images/yellow_btn.png) no-repeat center;
                                     background-size: 100%;
                                     a {
@@ -1219,16 +1254,19 @@
                     height: 80vh;
                     .pro4-box {
                         position: relative;
+                        width: 100%;
+                        height: 45%;
                         @include responsive(tablet-screens) {
-                            margin-left: 15%;
+                            width: 100%;
+                            height: 55%;
                         }
                         @include responsive(pc-screens) {
                             margin-left: 290px;
                         }
                         .pro4-red {
-                            width: 505px;
-                            height: 355px;
-                            padding: 7px;
+                            width: 100%;
+                            height: 100%;
+                            padding: 1.5%;
                             z-index: -1;
                             box-shadow: -7px 5px 7px rgba(0,0,0,0.3);
                             background-color: $red;
@@ -1242,10 +1280,10 @@
                                 background-color: $yellow;
                                 .pro4-img {
                                     position: absolute;
-                                    top: 13px;
-                                    left: 14px;
+                                    top: 4%;
+                                    left: 2.7%;
                                     overflow: hidden;
-                                    height: 92.5%;
+                                    height: 92.1%;
                                     @include responsive(pc-screens) {
                                         height: 523px;
                                     }
@@ -1256,7 +1294,7 @@
                                         left: 0;
                                         content: "";
                                         z-index: 1;
-                                        width: 100%;
+                                        width: 97.2%;
                                         height: 100%;
                                         opacity: 0;
                                         transition: all 0.3s;
@@ -1266,7 +1304,7 @@
                                         opacity: 0.7;
                                     }
                                     img {
-                                        width: 478px;
+                                        width: 97.2%;
                                         animation: imgAnimation 10s linear 0.5s infinite alternate;
                                         @include responsive(pc-screens) {
                                             width: 673px;
@@ -1280,34 +1318,44 @@
                                         z-index: 2;
                                         text-align: center;
                                         transition: all 0.3s;
+                                        @include responsive(tablet-screens) {
+                                            top: 17%;
+                                            left: 20%;
+                                        }
                                         @include responsive(pc-screens) {
                                             left: 45px;
                                             margin-top: 55px;
                                         }
                                         h3 {
                                             margin-bottom: 20px;
-                                            @include responsive(pc-screens) {
+                                            @include responsive(tablet-screens) {
                                                 font-size: 2.5rem;
+                                            }
+                                            @include responsive(pc-screens) {
                                             }
                                         }
                                         strong {
                                             background: url(../images/red_border.png) no-repeat bottom;
                                             background-size: 100%;
-                                            @include responsive(pc-screens) {
+                                            @include responsive(tablet-screens) {
                                                 font-size: 1.2rem;
+                                            }
+                                            @include responsive(pc-screens) {
                                             }
                                         }
                                         p {
-                                            margin: 5% 16%;
+                                            margin: 5% 16% 0;
                                             text-align: justify;
+                                            @include responsive(tablet-screens) {
+                                                font-size: 1.1rem;
+                                            }
                                             @include responsive(pc-screens) {
                                                 margin: 20px 85px;
-                                                font-size: 1.1rem;
                                             }
                                         }
                                         .view {
                                             padding: 7%;
-                                            margin-right: 15px;
+                                            margin-right: 4%;
                                             background: url(../images/red_btn.png) no-repeat center;
                                             background-size: 100%;
                                             a {
@@ -1319,7 +1367,7 @@
                                             }
                                         }
                                         .process {
-                                            padding: 7%;
+                                            padding: 16%;
                                             background: url(../images/yellow_btn.png) no-repeat center;
                                             background-size: 100%;
                                             a {
@@ -1367,15 +1415,12 @@
                 .emoji2 {
                     .purpleStar {
                         display: none;
-                        @include responsive(tablet-screens) {
+                        @include responsive(pc-screens) {
                             display: block;
                             position: absolute;
                             top: 4%;
-                            right: 6%;
-                        }
-                        @include responsive(pc-screens) {
-                            top: 135px;
-                            right: 80px;
+                            right: 22%;
+                            z-index: -10;
                         }
                         img {
                             @include responsive(tablet-screens) {
@@ -1389,15 +1434,12 @@
 
                     .purpleWave {
                         display: none;
-                        @include responsive(tablet-screens) {
+                        @include responsive(pc-screens) {
                             display: block;
                             position: absolute;
-                            top: 28%;
-                            left: 8%;
-                        }
-                        @include responsive(pc-screens) {
-                            top: 1015px;
-                            left: 240px;
+                            top: 27.5%;
+                            left: 22%;
+                            z-index: -10;
                         }
                         img {
                             width: 80%;
@@ -1406,15 +1448,12 @@
 
                     .purpleSpring2 {
                         display: none;
-                        @include responsive(tablet-screens) {
+                        @include responsive(pc-screens) {
                             display: block;
                             position: absolute;
-                            top: 40%;
-                            left: 44%;
-                        }
-                        @include responsive(pc-screens) {
-                            top: 1650px;
-                            left: 600px;
+                            top: 45.5%;
+                            right: 30%;
+                            z-index: -10;
                         }
                         img {
                             width: 80%;
@@ -1423,15 +1462,11 @@
 
                     .purpleTiara {
                         display: none;
-                        @include responsive(tablet-screens) {
+                        @include responsive(pc-screens) {
                             display: block;
                             position: absolute;
                             top: 51.5%;
                             left: 45%;
-                        }
-                        @include responsive(pc-screens) {
-                            top: 1890px;
-                            left: 470px;
                         }
                         img {
                             width: 75%;
@@ -1440,15 +1475,11 @@
 
                     .flowers {
                         display: none;
-                        @include responsive(tablet-screens) {
+                        @include responsive(pc-screens) {
                             display: block;
                             position: absolute;
                             top: 75%;
                             left: 8%;
-                        }
-                        @include responsive(pc-screens) {
-                            top: 2730px;
-                            left: 230px;
                         }
                         img {
                             width: 85%;
@@ -1487,14 +1518,17 @@
                         }
                         li {
                             display: flex;
+                            justify-content: space-between;
                             width: 100%;
                             padding: 10% 0;
+                            
+                            
                             @include responsive(pc-screens) {
                                 justify-content: space-around;
                                 padding: 25px 0;
                             }
                             .skill-logo {
-                                width: 37%;
+                                width: 40%;
                                 @include responsive(pc-screens) {
                                     width: 30%;
                                 }
@@ -1503,24 +1537,42 @@
                                 }
                             }
                             .gauge-box {
-                                width: 63%;
-                                margin-top: 4%;
-                                padding-left: 5%;
+                                width: 57%;
+                                margin-top: 2%;
                                 line-height: 1rem;
+                                @include responsive(tablet-screens) {
+                                    margin-top: 5%;
+                                }
                                 @include responsive(pc-screens) {
                                     width: 55%;
                                 }
                                 .skill-text  {
+                                    position: relative;
                                     h3 {
+                                        margin-bottom: 7%;
                                         font-size: 1.3rem;
                                         @include responsive(pc-screens) {
                                             font-size: 1.5rem;
                                         }
                                     }
+                                    span {
+                                    }
+                                    p {
+                                        position: absolute;
+                                        top: 0;
+                                        opacity: 0;
+                                        line-height: 1.3rem;
+                                        text-align: justify;
+                                        color: $white;
+                                    }
                                 }
                                 .gaugeBorder {
-                                    border: 5px solid $white;
                                     height: 30%;
+                                    margin-top: 7%;
+                                    border: 5px solid $white;
+                                    @include responsive(tablet-screens) {
+                                        height: 25%;
+                                    }
                                     .skillbar {
                                         width: 0;
                                         height: 100%;
@@ -1529,111 +1581,142 @@
                                     }
                                 }
                             }
+                            &:hover h3{
+                                display: none;
+                            }
+                            &:hover span{
+                                display: none;
+                            }
+                            &:hover .gaugeBorder{
+                                display: none;
+                            }
+                            &:hover p{
+                                opacity: 1;
+                            }
                         }
+                        // .none {
+                        //     display: none;
+                        // }
+                        // .pShow {
+                        //     opacity: 1;
+                        // }
                     }
                 }
             }
         }
     
         #video {
-            width: 100%;
-            height: 70vh;
-            margin-top: 50%;
+            
             text-align: center;
             @include responsive(pc-screens) {
                 height: 80vh;
                 margin-top: 300px;
             }
             .grid {
-                .video-red {
-                    position: relative;
-                    width: 505px;
-                    height: 355px;
-                    margin: 0 auto;
-                    box-shadow: 1px 2px 12px 7px rgba(0,0,0,0.2);
-                    background-color: $red;
-                    @include responsive(pc-screens) {
-                        width: 700px;
-                        height: 550px;
-                    }
-                    .video-img {
-                        position: absolute;
-                        top: 5px;
-                        left: 5px;
-                        height: 345px;
+                .video-box {
+                    width: 100%;
+                    height: 80vh;
+                    margin-top: 40vh;
+                    .video-red {
+                        position: relative;
+                        width: 100%;
+                        height: 45%;
+                        margin: 0 auto;
+                        box-shadow: 1px 2px 12px 7px rgba(0,0,0,0.2);
+                        background-color: $red;
+                        @include responsive(tablet-screens) {
+                            height: 55%;
+                        }
                         @include responsive(pc-screens) {
-                            top: 8px;
-                            left: 8px;
-                            height: 534px;
                         }
-                        &::before {
-                            display: block;
+                        .video-img {
                             position: absolute;
-                            top: 0;
-                            left: 0;
-                            content: "";
-                            z-index: 1;
-                            width: 100%;
-                            height: 100%;
-                            opacity: 0;
-                            transition: all 0.3s;
-                            background: $white;
-                        }
-                        &:hover::before {
-                            opacity: 0.8;
-                        }
-                        img {
-                            width: 495px;
-                            height: 345px;
+                            top: 2.1%;
+                            left: 1.5%;
+                            width: 97%;
+                            height: 96%;
                             @include responsive(pc-screens) {
-                                width: 685px;
+                                top: 8px;
+                                left: 8px;
                                 height: 534px;
                             }
-                        }
-                        .video-text {
-                            position: absolute;
-                            top: 20%;
-                            left: 0;
-                            margin: 0 5%;
-                            opacity: 0;
-                            z-index: 2;
-                            text-align: center;
-                            transition: all 0.3s;
-                            @include responsive(pc-screens) {
-                                margin-top: 55px;
+                            &::before {
+                                display: block;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                content: "";
+                                z-index: 1;
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0;
+                                transition: all 0.3s;
+                                background: $white;
                             }
-                            h3 {
-                                margin-bottom: 20px;
+                            &:hover::before {
+                                opacity: 0.8;
+                            }
+                            img {
+                                width: 100%;
+                                height: 100%;
                                 @include responsive(pc-screens) {
-                                    font-size: 2.5rem;
+                                    width: 685px;
+                                    height: 534px;
                                 }
                             }
-                            p {
-                                margin: 5% 22%;
-                                text-align: justify;
-                                @include responsive(pc-screens) {
-                                    margin: 20px 95px;
-                                    font-size: 1.1rem;
+                            .video-text {
+                                position: absolute;
+                                top: 25%;
+                                left: 0;
+                                margin: 0 5%;
+                                opacity: 0;
+                                z-index: 2;
+                                text-align: center;
+                                transition: all 0.3s;
+                                @include responsive(tablet-screens) {
+                                    top: 22%;
+                                    left: 10%;
                                 }
-                            }
-                            .view {
-                                padding: 7%;
-                                background: url(../images/red_btn.png) no-repeat center;
-                                background-size: 100%;
-                                a {
-                                    font: {
-                                        size: 1.3rem;
-                                        weight: bolder;
+                                @include responsive(pc-screens) {
+                                    margin-top: 55px;
+                                }
+                                h3 {
+                                    margin-bottom: 20px;
+                                    @include responsive(tablet-screens) {
+                                        font-size: 2.5rem;
                                     }
-                                    color: $white;
+                                    @include responsive(pc-screens) {
+                                    }
+                                }
+                                p {
+                                    margin: 5% 22%;
+                                    text-align: justify;
+                                    @include responsive(tablet-screens) {
+                                        font-size: 1.1rem;
+                                    }
+                                    @include responsive(pc-screens) {
+                                        margin: 20px 95px;
+                                    }
+                                }
+                                .view {
+                                    padding: 7%;
+                                    background: url(../images/red_btn.png) no-repeat center;
+                                    background-size: 100%;
+                                    a {
+                                        font: {
+                                            size: 1.3rem;
+                                            weight: bolder;
+                                        }
+                                        color: $white;
+                                    }
                                 }
                             }
+                            &:hover .video-text{
+                                opacity: 1;
+                            }
                         }
-                        &:hover .video-text{
-                            opacity: 1;
-                        }
+                        
                     }
-                    
                 }
             }
         }

@@ -7,7 +7,7 @@ $(window).ready(function() {
 
      
      // 모바일(햄버거) 메뉴
-     $(".mobileMenu, .gnbMobile").click(function() {
+     $(".mobileMenu,  .gnbMobile").click(function() {
           $(".mobileMenu").toggleClass("open");
           $(".gnbMobile").toggleClass("hide show");
      });
@@ -112,4 +112,67 @@ $(window).ready(function() {
           }
      });
 
+     // $(".skill-text > p").hide();
+
+     // $(".skill-box > ul > li").hover(function() {
+     //      $(".gaugeBorder, .skill-text > h3, span").addClass("none");
+     //      $(this).show();
+     //      // $(this).animate({opacity:"1"},300);
+     // }, function() {
+     //      $(this).css("opacity","");
+     // });
+
+     // $(".skill-box > ul > .html").hover(function() {
+     //      $(".html > p").animate({opacity:"1"},300);
+     // }, function() {
+     //      $(".html > p").css("opacity","");
+     // });
+
+     // $(".skill-box > ul > .css").hover(function() {
+     //      $(".css > p").animate({opacity:"1"},300);
+     // }, function() {
+     //      $(".css > p").css("opacity","");
+     // });
+
+     // $(".skill-box > ul > .sass").hover(function() {
+     //      $(".sass > p").animate({opacity:"1"},300);
+     // }, function() {
+     //      $(".sass > p").css("opacity","");
+     // });
+
+     // $(".skill-box > ul > .jQuery").hover(function() {
+     //      $(".jQuery > p").animate({opacity:"1"},300);
+     // }, function() {
+     //      $(".jQuery > p").css("opacity","");
+     // });
+
+     // $(".skill-box > ul > .js").hover(function() {
+     //      $(".js > p").animate({opacity:"1"},300);
+     // }, function() {
+     //      $(".js > p").css("opacity","");
+     // });
+
+     // $(".skill-box > ul > .ps").hover(function() {
+     //      $(".ps > p").animate({opacity:"1"},300);
+     // }, function() {
+     //      $(".ps > p").css("opacity","");
+     // });
+
+     // $(".skill-box > ul > .ai").hover(function() {
+     //      $(".ai > p").animate({opacity:"1"},300);
+     // }, function() {
+     //      $(".ai > p").css("opacity","");
+     // });
+
+     // $(".skill-box > ul > .pr").hover(function() {
+     //      $(".pr > p").animate({opacity:"1"},300);
+     // }, function() {
+     //      $(".pr > p").css("opacity","");
+     // });
+
+     // $(".skill-box > ul > .ae").hover(function() {
+     //      $(".ae > p").animate({opacity:"1"},300);
+     // }, function() {
+     //      $(".ae > p").css("opacity","");
+     // });
 });
