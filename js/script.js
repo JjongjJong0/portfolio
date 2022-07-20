@@ -13,9 +13,9 @@ $(window).ready(function() {
      
      // 모바일(햄버거) 메뉴
      // $(".gnbMobile").hide();
-     $(".mobileMenu,  .gnbMobile").click(function() {
+     $(".mobileMenu,  #gnb").click(function() {
           $(".mobileMenu").toggleClass("open");
-          $(".gnbMobile").toggleClass("show");
+          $("#gnb").toggleClass("show");
      });
 
      //emoji

@@ -19,7 +19,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 65px;
+        height: 75px;
         z-index: 100;
         font : {
             family: $font-crayon;
@@ -39,7 +39,7 @@
             .mobileMenu {
                 position: absolute;
                 right: 15px;
-                top: 8px;
+                top: 12px;
                 z-index: 100;
                 cursor: pointer;
                 &.open span:first-child {
@@ -76,9 +76,6 @@
                 right: 0;
                 width: 100%;
                 z-index: 10;
-                @include responsive(pc-screens) {
-                }
-                
                 #gnb {
                     display: flex;
                     position: absolute;
@@ -95,6 +92,7 @@
                     @include responsive(pc-screens) {
                         left: 0;
                         height: 65px;
+                        margin-top: 7px;
                         margin-left: 45%;
                         flex-direction: row;
                         justify-content:unset;
@@ -130,7 +128,7 @@
                             img {
                                 width: 100%;
                                 @include responsive(pc-screens) {
-                                    width: 75%;
+                                    width: 80%;
                                 }
                             }
                         }
@@ -184,14 +182,7 @@
                 }
             }
         }
-        // &.hide {
-        //     opacity: 0;
-        //     visibility: hidden;
-        //     // display: none;
-        // }
     }
-    
-    
     
     //main
     main {
@@ -383,7 +374,7 @@
                                 left: 13%;
                             }
                             @include responsive(pc-screens) {
-                                top: 485px;
+                                top: 500px;
                                 left: 0;
                                 img {
                                     width: 65%;
@@ -408,7 +399,7 @@
                                 top: 515px;
                                 left: 200px;
                                 img {
-                                    width: 25%;
+                                    width: 35%;
                                 }
                             }
                         }
@@ -535,7 +526,7 @@
                 }
                 img {
                     width: 100%;
-                    animation: circle 230s linear infinite;
+                    animation: circle 200s linear infinite;
                     animation-direction: reverse;
                     @include responsive(tablet-screens) {
                         width: 500px;
@@ -567,7 +558,7 @@
                 }
                 img {
                     width: 500px;
-                    animation: circle 200s linear infinite;
+                    animation: circle 195s linear infinite;
                     @include responsive(pc-screens) {
                         width: 650px;
                     }
@@ -596,7 +587,7 @@
                 }
                 img {
                     width: 300px;
-                    animation: circle 210s linear infinite;
+                    animation: circle 190s linear infinite;
                     animation-direction: reverse;
                     @include responsive(tablet-screens) {
                         width: 400px;
@@ -630,7 +621,7 @@
                 }
                 img {
                     width: 100%;
-                    animation: circle 220s linear infinite;
+                    animation: circle 200s linear infinite;
                     @include responsive(pc-screens) {
                         width: 600px;
                     }
@@ -655,7 +646,7 @@
                 }
                 img {
                     width: 95%;
-                    animation: circle 350s linear infinite;
+                    animation: circle 185s linear infinite;
                     animation-direction: reverse;
                     @include responsive(pc-screens) {
                         width: 1000px;
@@ -688,7 +679,7 @@
                 }
                 img {
                     width: 90%;
-                    animation: circle 230s linear infinite;
+                    animation: circle 180s linear infinite;
                     animation-direction: reverse;
                     @include responsive(tablet-screens) {
                         width: 80%;
@@ -723,7 +714,7 @@
                 }
                 img {
                     width: 120%;
-                    animation: circle 300s linear infinite;
+                    animation: circle 200s linear infinite;
                     @include responsive(pc-screens) {
                         width: 600px;
                     }
@@ -1493,22 +1484,24 @@
                             display: flex;
                             justify-content: space-between;
                             width: 100%;
-                            padding: 10% 0;
+                            padding: 12% 0;
                             &:hover .skill-logo{
 	                            animation: skillLogo 0.6s linear both;
                             }
+                            @include responsive(tablet-screens) {
+                                padding: 6% 0;
+                            }
                             @include responsive(pc-screens) {
                                 justify-content: space-around;
-                                padding: 20px 0;
+                                padding: 14px 0;
                             }
                             .skill-logo {
                                 width: 40%;
-                                
                                 @include responsive(tablet-screens) {
                                     width: 32%;
                                 }
                                 @include responsive(pc-screens) {
-                                    width: 30%;
+                                    width: 28%;
                                 }
                                 img {
                                     width: 100%;
@@ -1523,7 +1516,7 @@
                                     margin-top: 3%;
                                 }
                                 @include responsive(pc-screens) {
-                                    width: 50%;
+                                    width: 45%;
                                 }
                                 .skill-text  {
                                     position: relative;
@@ -1532,9 +1525,6 @@
                                         font-size: 1.3rem;
                                         @include responsive(tablet-screens) {
                                             font-size: 1.5rem;
-                                        }
-                                        @include responsive(pc-screens) {
-                                            
                                         }
                                     }
                                 }
@@ -1559,10 +1549,10 @@
                                 right: 2%;
                                 width: 57%;
                                 @include responsive(tablet-screens) {
-                                    top: 19%;
+                                    top: 15%;
                                 }
                                 @include responsive(pc-screens) {
-                                    top: 12%;
+                                    top: 10%;
                                 }
                                 p {
                                     line-height: 1.3rem;
@@ -1663,16 +1653,12 @@
                                     @include responsive(tablet-screens) {
                                         font-size: 2.5rem;
                                     }
-                                    @include responsive(pc-screens) {
-                                    }
                                 }
                                 p {
                                     margin: 5% 18%;
                                     font-size: 1.1rem;
                                     text-align: justify;
                                     @include responsive(tablet-screens) {
-                                    }
-                                    @include responsive(pc-screens) {
                                         margin: 20px 95px;
                                     }
                                 }
