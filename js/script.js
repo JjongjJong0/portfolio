@@ -5,6 +5,11 @@ $(window).ready(function() {
      //      $(".loader").fadeOut();
      // }, 3000);
 
+     //메뉴스크롤
+     $('#gnb > li > a').click(function() {
+          var target = $(this).attr("href"); 
+          $("html").animate({scrollTop:$(target).offset().top}, 1000);
+     });
      
      // 모바일(햄버거) 메뉴
      // $(".gnbMobile").hide();
@@ -72,40 +77,19 @@ $(window).ready(function() {
           }
      });
 
-     // project1
-     $(".project1 > .pro1-box > .pro1-img").hover(function() {
-          $(".pro1-img > img").css("animation-play-state", "paused");
+     // img-animation
+     $(".pro1-img, .pro2-img, .pro3-img, .pro4-img").hover(function() {
+          $(this).find("img").css("animation-play-state", "paused");
      }, function() {
-          $(".pro1-img > img").css("animation-play-state", "");
+          $(this).find("img").css("animation-play-state", "");
      });
-
-     // project2
-     $(".project2 > .pro2-box > .pro2-img").hover(function() {
-          $(".pro2-img > img").css("animation-play-state", "paused");
-     }, function() {
-          $(".pro2-img > img").css("animation-play-state", "");
-     });
-
-     // project3
-     $(".project3 > .pro3-box > .pro3-img").hover(function() {
-          $(".pro3-img > img").css("animation-play-state", "paused");
-     }, function() {
-          $(".pro3-img > img").css("animation-play-state", "");
-     });
-
-     // project4
-     $(".project4 > .pro4-box > .pro4-red > .pro4-yellow > .pro4-img").hover(function() {
-          $(".pro4-img > img").css("animation-play-state", "paused");
-     }, function() {
-          $(".pro4-img > img").css("animation-play-state", "");
-     });
-
-     //skills
+     
+     //skills-gauge
      $(window).scroll(function() {
           const skills = $("#skills").offset().top - $("#skills").outerHeight();
           console.log(skills);
           if($(window).scrollTop() > skills) {
-               $('.gaugeBorder > .skillbar').css("width",
+               $('.gauge-border > .skill-bar').css("width",
                     function() {
                          return $(this).attr("aria-valuenow") + "%";
                     }
@@ -113,13 +97,13 @@ $(window).ready(function() {
           }
      });
 
-     
+     //skills-txt
      $(".skill-over-txt").hide();
-
      $(".skill-box > ul > li").hover(function() {
-          $(this).children('.gauge-box').hide().next().show();
+          $(this).children('.gauge-box').css("opacity","0").next().show();
      }, function() {
-          $(this).children('.gauge-box').show().next().hide();
+          $(this).children('.gauge-box').css("opacity","").next().hide();
+
      });
 
 });

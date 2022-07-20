@@ -94,7 +94,6 @@ footer {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 15px;
-  background-color: aquamarine;
 }
 
 #wrapper header {
@@ -153,7 +152,7 @@ footer {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   border-radius: 5px;
-  background-color: #ed2024;
+  background-color: #e6363b;
   background: url(../images/hamburger_border.png);
   background-size: cover;
 }
@@ -170,13 +169,15 @@ footer {
   z-index: 10;
 }
 
-#wrapper header .grid nav .gnbMobile {
-  position: absolute;
-  top: 0;
-  left: 100%;
+#wrapper header .grid nav #gnb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -188,15 +189,13 @@ footer {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   opacity: 0;
-  width: 100%;
-  height: 100vh;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: #feea98;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper header .grid nav .gnbMobile {
+  #wrapper header .grid nav #gnb {
     left: 0;
     height: 65px;
     margin-left: 45%;
@@ -208,48 +207,50 @@ footer {
         -ms-flex-pack: unset;
             justify-content: unset;
     opacity: 1;
+    -webkit-transition: none;
+    transition: none;
     background-color: transparent;
   }
 }
 
-#wrapper header .grid nav .gnbMobile.show {
+#wrapper header .grid nav #gnb.show {
   left: 0;
   opacity: 1;
 }
 
-#wrapper header .grid nav .gnbMobile .menuClose {
+#wrapper header .grid nav #gnb .menuClose {
   position: absolute;
   top: 0;
   right: 0;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper header .grid nav .gnbMobile li {
+  #wrapper header .grid nav #gnb li {
     margin-left: 3%;
   }
 }
 
-#wrapper header .grid nav .gnbMobile li:last-child {
+#wrapper header .grid nav #gnb li:last-child {
   margin-top: 1%;
 }
 
-#wrapper header .grid nav .gnbMobile li a {
+#wrapper header .grid nav #gnb li a {
   font-size: 4rem;
-  color: #ed2024;
+  color: #e6363b;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper header .grid nav .gnbMobile li a {
+  #wrapper header .grid nav #gnb li a {
     font-size: 2.5rem;
   }
 }
 
-#wrapper header .grid nav .gnbMobile li a img {
+#wrapper header .grid nav #gnb li a img {
   width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper header .grid nav .gnbMobile li a img {
+  #wrapper header .grid nav #gnb li a img {
     width: 75%;
   }
 }
@@ -328,7 +329,7 @@ footer {
   margin-top: 7vh;
   font-family: "DK Leftover Crayon";
   font-weight: bolder;
-  color: #ed2024;
+  color: #e6363b;
 }
 
 @media screen and (min-width: 1024px) {
@@ -396,7 +397,6 @@ footer {
 
 #wrapper main #about .grid .about-flex .polaroidBox .polaroid .avatar img {
   width: 100%;
-  height: 400px;
 }
 
 #wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox {
@@ -409,7 +409,7 @@ footer {
 }
 
 #wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox strong {
-  color: #ed2024;
+  color: #e6363b;
   font-size: 3.2rem;
 }
 
@@ -662,20 +662,20 @@ footer {
 
 #wrapper main #about .grid .about-flex .emoji .purpleArrow {
   position: absolute;
-  top: 59%;
+  top: 61%;
   right: 10%;
 }
 
 @media screen and (min-width: 768px) {
   #wrapper main #about .grid .about-flex .emoji .purpleArrow {
-    top: 59.5%;
+    top: 62%;
     right: 22%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #about .grid .about-flex .emoji .purpleArrow {
-    top: 505px;
+    top: 515px;
     left: 200px;
   }
   #wrapper main #about .grid .about-flex .emoji .purpleArrow img {
@@ -774,7 +774,7 @@ footer {
 #wrapper main .square .squareImg2 {
   position: absolute;
   overflow: hidden;
-  top: 50%;
+  top: 45%;
   right: 0;
   width: 300px;
   height: 550px;
@@ -792,7 +792,7 @@ footer {
   #wrapper main .square .squareImg2 {
     top: 600px;
     width: 600px;
-    height: 1000px;
+    height: 850px;
   }
 }
 
@@ -806,14 +806,14 @@ footer {
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg2 img {
     width: 800px;
-    height: 800px;
+    height: 700px;
   }
 }
 
 #wrapper main .square .squareImg3 {
   position: absolute;
   overflow: hidden;
-  top: 110%;
+  top: 105%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -824,25 +824,26 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main .square .squareImg3 {
-    width: 450px;
-    left: 300px;
+    left: 30%;
+    width: 70%;
+    height: 60%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg3 {
-    left: 850px;
-    width: 730px;
-    height: 1000px;
-    padding-top: 150px;
-    padding-left: 50px;
+    top: 1300px;
+    left: 35%;
+    width: 680px;
+    height: 730px;
+    padding-top: 130px;
   }
 }
 
 #wrapper main .square .squareImg3 img {
   width: 100%;
-  -webkit-animation: circle 250s linear infinite;
-          animation: circle 250s linear infinite;
+  -webkit-animation: circle 230s linear infinite;
+          animation: circle 230s linear infinite;
   animation-direction: reverse;
 }
 
@@ -854,7 +855,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg3 img {
-    width: 650px;
+    width: 480px;
   }
 }
 
@@ -920,7 +921,7 @@ footer {
   #wrapper main .square .squareImg5 {
     top: 2200px;
     width: 700px;
-    height: 1100px;
+    height: 800px;
     padding-top: 50px;
   }
 }
@@ -940,7 +941,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg5 img {
-    width: 700px;
+    width: 500px;
   }
 }
 
@@ -965,23 +966,23 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg6 {
-    top: 2900px;
-    left: 600px;
-    width: 1200px;
-    height: 1000px;
+    top: 3000px;
+    left: 30%;
+    width: 710px;
+    height: 750px;
     padding-top: 150px;
   }
 }
 
 #wrapper main .square .squareImg6 img {
   width: 100%;
-  -webkit-animation: circle 210s linear infinite;
-          animation: circle 210s linear infinite;
+  -webkit-animation: circle 220s linear infinite;
+          animation: circle 220s linear infinite;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg6 img {
-    width: 750px;
+    width: 600px;
   }
 }
 
@@ -991,8 +992,8 @@ footer {
   top: 400%;
   left: -15%;
   width: 100%;
-  height: 600px;
-  padding-top: 20%;
+  height: 60%;
+  padding-top: 10%;
   z-index: -10;
 }
 
@@ -1000,32 +1001,32 @@ footer {
   #wrapper main .square .squareImg7 {
     top: 3600px;
     left: -500px;
-    width: 1500px;
-    height: 1900px;
+    width: 1200px;
+    height: 1200px;
     padding-top: 150px;
   }
 }
 
 #wrapper main .square .squareImg7 img {
-  width: 100%;
-  -webkit-animation: circle 300s linear infinite;
-          animation: circle 300s linear infinite;
+  width: 95%;
+  -webkit-animation: circle 350s linear infinite;
+          animation: circle 350s linear infinite;
   animation-direction: reverse;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg7 img {
-    width: 1200px;
+    width: 1000px;
   }
 }
 
 #wrapper main .square .squareImg8 {
   position: absolute;
   overflow: hidden;
-  top: 530%;
+  top: 520%;
   left: -15%;
-  width: 500px;
-  height: 600px;
+  width: 100%;
+  height: 55%;
   padding-top: 20%;
   z-index: -10;
 }
@@ -1040,10 +1041,10 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg8 {
-    top: 5500px;
+    top: 5600px;
     left: -100px;
-    width: 1200px;
-    height: 1100px;
+    width: 750px;
+    height: 770px;
     padding-top: 150px;
   }
 }
@@ -1063,14 +1064,14 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg8 img {
-    width: 950px;
+    width: 650px;
   }
 }
 
 #wrapper main .square .squareImg9 {
   position: absolute;
   overflow: hidden;
-  top: 585%;
+  top: 595%;
   right: 0;
   width: 100%;
   height: 50%;
@@ -1088,12 +1089,12 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg9 {
-    top: 6350px;
-    right: 300px;
-    width: 1200px;
-    height: 800px;
-    padding-top: 250px;
-    padding-left: 150px;
+    top: 6200px;
+    right: 20%;
+    width: 700px;
+    height: 650px;
+    padding-top: 160px;
+    padding-left: 0;
   }
 }
 
@@ -1105,7 +1106,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main .square .squareImg9 img {
-    width: 850px;
+    width: 600px;
   }
 }
 
@@ -1159,10 +1160,47 @@ footer {
   background-size: cover;
 }
 
+@media screen and (min-width: 768px) {
+  #wrapper main #modal .modalUp {
+    width: 70%;
+    height: 45%;
+    max-width: 700px;
+    max-height: 500px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper main #modal .modalUp {
-    width: 40%;
     height: 50%;
+  }
+}
+
+#wrapper main #modal .modalUp .modal-text {
+  text-align: center;
+  margin: 8%;
+}
+
+#wrapper main #modal .modalUp .modal-text h3 {
+  font-family: "Nanum Pen";
+  font-size: 2.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #modal .modalUp .modal-text h3 {
+    font-size: 3rem;
+  }
+}
+
+#wrapper main #modal .modalUp .modal-text p {
+  margin-top: 7%;
+  text-align: justify;
+  font-family: "Nanum Pen";
+  font-size: 1.9rem;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #modal .modalUp .modal-text p {
+    font-size: 2.2rem;
   }
 }
 
@@ -1183,10 +1221,28 @@ footer {
   margin-top: 20vh;
 }
 
+#wrapper main #web .grid .project1 .purpleStar {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project1 .purpleStar {
+    display: block;
+    position: absolute;
+    top: -70px;
+    left: 680px;
+    z-index: -10;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project1 .purpleStar img {
+    width: 70px;
+  }
+}
+
 #wrapper main #web .grid .project1 .pro1-box {
   position: relative;
-  width: 100%;
-  height: 45%;
   max-width: 650px;
   max-height: 450px;
   margin: 0 auto;
@@ -1195,6 +1251,12 @@ footer {
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project1 .pro1-box {
     height: 55%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project1 .pro1-box {
+    margin-left: 0;
   }
 }
 
@@ -1212,12 +1274,13 @@ footer {
   top: 1.7%;
   left: 8%;
   overflow: hidden;
-  height: 81.6%;
+  height: 86.5%;
 }
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project1 .pro1-box .pro1-img {
     height: 87.3%;
+    min-height: 393px;
   }
 }
 
@@ -1395,6 +1458,46 @@ footer {
   height: 80vh;
 }
 
+#wrapper main #web .grid .project2 .purpleWave {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .purpleWave {
+    display: block;
+    position: absolute;
+    top: -70px;
+    left: 240px;
+    z-index: -10;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .purpleWave img {
+    width: 80px;
+  }
+}
+
+#wrapper main #web .grid .project2 .purpleSpring2 {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .purpleSpring2 {
+    display: block;
+    position: absolute;
+    top: 490px;
+    right: 260px;
+    z-index: -10;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .purpleSpring2 img {
+    width: 120px;
+  }
+}
+
 #wrapper main #web .grid .project2 .pro2-box {
   position: relative;
   width: 100%;
@@ -1410,6 +1513,12 @@ footer {
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project2 .pro2-box {
     height: 55%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .pro2-box {
+    margin-right: 0;
   }
 }
 
@@ -1563,6 +1672,25 @@ footer {
   height: 80vh;
 }
 
+#wrapper main #web .grid .project3 .purpleTiara {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project3 .purpleTiara {
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 300px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project3 .purpleTiara img {
+    width: 80px;
+  }
+}
+
 #wrapper main #web .grid .project3 .pro3-box {
   position: relative;
   width: 100%;
@@ -1583,8 +1711,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project3 .pro3-box {
-    width: 700px;
-    height: 550px;
+    margin-left: 0;
   }
 }
 
@@ -1742,6 +1869,25 @@ footer {
   height: 80vh;
 }
 
+#wrapper main #web .grid .project4 .flowers {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project4 .flowers {
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project4 .flowers img {
+    width: 100px;
+  }
+}
+
 #wrapper main #web .grid .project4 .pro4-box {
   position: relative;
   width: 100%;
@@ -1759,7 +1905,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project4 .pro4-box {
-    margin-left: 35%;
+    margin-right: 0;
   }
 }
 
@@ -1770,7 +1916,7 @@ footer {
   z-index: -1;
   -webkit-box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.3);
           box-shadow: -7px 5px 7px rgba(0, 0, 0, 0.3);
-  background-color: #ed2024;
+  background-color: #e6363b;
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow {
@@ -1915,108 +2061,6 @@ footer {
   }
 }
 
-#wrapper main #web .grid .emoji2 .purpleStar {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .emoji2 .purpleStar {
-    display: block;
-    position: absolute;
-    top: 4%;
-    right: 22%;
-    z-index: -10;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper main #web .grid .emoji2 .purpleStar img {
-    width: 80%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .emoji2 .purpleStar img {
-    width: 70px;
-  }
-}
-
-#wrapper main #web .grid .emoji2 .purpleWave {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .emoji2 .purpleWave {
-    display: block;
-    position: absolute;
-    top: 27.5%;
-    left: 22%;
-    z-index: -10;
-  }
-}
-
-#wrapper main #web .grid .emoji2 .purpleWave img {
-  width: 80%;
-}
-
-#wrapper main #web .grid .emoji2 .purpleSpring2 {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .emoji2 .purpleSpring2 {
-    display: block;
-    position: absolute;
-    top: 45.5%;
-    right: 30%;
-    z-index: -10;
-  }
-}
-
-#wrapper main #web .grid .emoji2 .purpleSpring2 img {
-  width: 80%;
-}
-
-#wrapper main #web .grid .emoji2 .purpleTiara {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .emoji2 .purpleTiara {
-    display: block;
-    position: absolute;
-    top: 51.5%;
-    left: 45%;
-  }
-}
-
-#wrapper main #web .grid .emoji2 .purpleTiara img {
-  width: 75%;
-}
-
-#wrapper main #web .grid .emoji2 .flowers {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .emoji2 .flowers {
-    display: block;
-    position: absolute;
-    top: 75%;
-    left: 8%;
-  }
-}
-
-#wrapper main #web .grid .emoji2 .flowers img {
-  width: 85%;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .emoji2 .flowers img {
-    width: 100%;
-  }
-}
-
 #wrapper main #skills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2071,16 +2115,27 @@ footer {
   padding: 10% 0;
 }
 
+#wrapper main #skills .grid .skill-box ul li:hover .skill-logo {
+  -webkit-animation: skillLogo 0.6s linear both;
+          animation: skillLogo 0.6s linear both;
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper main #skills .grid .skill-box ul li {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    padding: 25px 0;
+    padding: 20px 0;
   }
 }
 
 #wrapper main #skills .grid .skill-box ul li .skill-logo {
   width: 40%;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #skills .grid .skill-box ul li .skill-logo {
+    width: 32%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -2101,13 +2156,14 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper main #skills .grid .skill-box ul li .gauge-box {
-    margin-top: 5%;
+    width: 58%;
+    margin-top: 3%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #skills .grid .skill-box ul li .gauge-box {
-    width: 55%;
+    width: 50%;
   }
 }
 
@@ -2120,43 +2176,94 @@ footer {
   font-size: 1.3rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   #wrapper main #skills .grid .skill-box ul li .gauge-box .skill-text h3 {
     font-size: 1.5rem;
   }
 }
 
-#wrapper main #skills .grid .skill-box ul li .gauge-box .gaugeBorder {
+#wrapper main #skills .grid .skill-box ul li .gauge-box .gauge-border {
   height: 30%;
+  max-height: 40px;
   margin-top: 7%;
   border: 5px solid #fff;
 }
 
-@media screen and (min-width: 768px) {
-  #wrapper main #skills .grid .skill-box ul li .gauge-box .gaugeBorder {
-    height: 25%;
-  }
-}
-
-#wrapper main #skills .grid .skill-box ul li .gauge-box .gaugeBorder .skillbar {
+#wrapper main #skills .grid .skill-box ul li .gauge-box .gauge-border .skill-bar {
   width: 0;
   height: 100%;
   -webkit-transition: all 1.5s;
   transition: all 1.5s;
-  background-color: #ed2024;
+  background-color: #e6363b;
 }
 
 #wrapper main #skills .grid .skill-box ul li .skill-over-txt {
   position: absolute;
-  top: 30%;
+  top: 16%;
   right: 2%;
   width: 57%;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #skills .grid .skill-box ul li .skill-over-txt {
+    top: 19%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #skills .grid .skill-box ul li .skill-over-txt {
+    top: 12%;
+  }
 }
 
 #wrapper main #skills .grid .skill-box ul li .skill-over-txt p {
   line-height: 1.3rem;
   text-align: justify;
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #skills .grid .skill-box ul li .skill-over-txt p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #skills .grid .skill-box ul li .skill-over-txt p {
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+  }
+}
+
+@-webkit-keyframes skillLogo {
+  0% {
+    -webkit-transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+            transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+  50% {
+    -webkit-transform: scale(1.3) rotate3d(-1, 1, 0, 180deg);
+            transform: scale(1.3) rotate3d(-1, 1, 0, 180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate3d(-1, 1, 0, 360deg);
+            transform: scale(1) rotate3d(-1, 1, 0, 360deg);
+  }
+}
+
+@keyframes skillLogo {
+  0% {
+    -webkit-transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+            transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+  }
+  50% {
+    -webkit-transform: scale(1.3) rotate3d(-1, 1, 0, 180deg);
+            transform: scale(1.3) rotate3d(-1, 1, 0, 180deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate3d(-1, 1, 0, 360deg);
+            transform: scale(1) rotate3d(-1, 1, 0, 360deg);
+  }
 }
 
 #wrapper main #video {
@@ -2178,7 +2285,7 @@ footer {
   margin: 0 auto;
   -webkit-box-shadow: 1px 2px 12px 7px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 2px 12px 7px rgba(0, 0, 0, 0.2);
-  background-color: #ed2024;
+  background-color: #e6363b;
 }
 
 @media screen and (min-width: 768px) {
@@ -2280,7 +2387,7 @@ footer {
 #wrapper footer {
   height: 75px;
   text-align: center;
-  background-color: #ed2024;
+  background-color: #e6363b;
 }
 
 @media screen and (min-width: 1024px) {
@@ -2295,7 +2402,7 @@ footer {
 
 @media screen and (min-width: 768px) {
   #wrapper footer .grid a img {
-    width: 17%;
+    width: 15.5%;
   }
 }
 

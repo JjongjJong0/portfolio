@@ -6,7 +6,6 @@
     <meta name="portfolio" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/jquery.js"></script>
-    <!-- <script src="./js/scrooth.js"></script> -->
     <script src="./js/script.js"></script>
     <title>LEE SEUL</title>
 </head>
@@ -25,7 +24,7 @@
                 </div>
                 
                 <nav>
-                    <ul class="gnbMobile">
+                    <ul id="gnb">
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#web">WEB</a></li>
                         <li><a href="#skills">SKILLS</a></li>
@@ -149,8 +148,13 @@
 
             <div id="modal">
                 <div class="modalUp">
-                    <h3>끊임없이 목표를 향해 달려가다!</h3>
-                    <p></p>
+                    <div class="modal-text">
+                        <h3>끊임없이 목표를 향해 달려가다!</h3>
+                        <p>안녕하세요 웹퍼블리셔라는 새로운 목표를 향해 달려가고 있는 이슬 입니다.<br>
+                        웹퍼블리싱은 생각한것을 바로 웹에 표현할 수 있다는 점이 큰 매력으로 다가왔습니다. 6개월간 학원에서 공부하면서 지치는 날도 많았지만 한번도 즐겁지 않은적이 없었습니다.
+                        지금도 꾸준히 즐겁게 공부를 하고 있고, 더욱더 성장하는 모습 보여드리겠습니다.
+                        </p>
+                    </div>
                     <div class="closeBtn"><img src="./images/close_btn.png" alt="closebutton"></div>
                 </div><!--modalUp-->
             </div><!--modal-->
@@ -159,6 +163,9 @@
                 <div class="grid">
                     <h2>web</h2>
                     <div class="project1 scroll slideLeft">
+                        <div class="purpleStar">
+                            <img src="./images/purple_star.png" alt="purpleStar">
+                        </div>
                         <div class="pro1-box">
                             <div class="box-img">
                                 <img src="./images/pro1_pc.png" alt="pro1-box">
@@ -171,7 +178,7 @@
                                     <p>
                                         해외 브랜드 MIU MIU 홈페이지를 리뉴얼하여 만든 웹사이트입니다.
                                     </p>
-                                    <button class="view"><a href="#" target="_blank">VIEW SITE</a></button>
+                                    <button class="view"><a href="https://seul0.github.io/" target="_blank">VIEW SITE</a></button>
                                     <button class="process"><a href="#">PDF</a></button>
                                 </div><!--pro1-text-->
                             </div> <!--pro1-img-->
@@ -179,6 +186,12 @@
                     </div><!--project1-->
 
                     <div class="project2 scroll slideRight">
+                        <div class="purpleWave">
+                            <img src="./images/purple_wave.png" alt="purpleWave">
+                        </div>
+                        <div class="purpleSpring2">
+                            <img src="./images/purple_spring2.png" alt="purpleSpring2">
+                        </div>
                         <div class="pro2-box">
                             <div class="pro2-img">
                                 <img src="./images/miumiu.png" alt="re_">
@@ -188,13 +201,16 @@
                                     <p>
                                         LA에 위치한 친환경 식료품점 홈페이지를 클론코딩 하였습니다.
                                     </p>
-                                    <button class="view"><a href="#" target="_blank">VIEW SITE</a></button>
+                                    <button class="view"><a href="https://jjongjjong0.github.io/" target="_blank">VIEW SITE</a></button>
                                 </div><!--pro2-text-->
                             </div><!--pro2-img-->
                         </div><!--pro2-box-->
                     </div><!--project2-->
 
                     <div class="project3 scroll slideLeft">
+                        <div class="purpleTiara">
+                            <img src="./images/purple_tiara.png" alt="purpleTiara">
+                        </div>
                         <div class="pro3-box">
                             <div class="pro3-img">
                                 <img src="./images/miumiu.png" alt="LunaBrew">
@@ -212,6 +228,9 @@
                     </div><!--project3-->
 
                     <div class="project4 scroll slideRight">
+                        <div class="flowers">
+                            <img src="./images/flowers2.png" alt="flowers2">
+                        </div>
                         <div class="pro4-box">
                             <div class="pro4-red">
                                 <div class="pro4-yellow">
@@ -231,24 +250,6 @@
                             </div><!--pro4-yellow-->
                         </div><!--pro4-box-->
                     </div><!--project4-->
-
-                    <div class="emoji2">
-                        <div class="purpleStar">
-                            <img src="./images/purple_star.png" alt="purpleStar">
-                        </div>
-                        <div class="purpleWave">
-                            <img src="./images/purple_wave.png" alt="purpleWave">
-                        </div>
-                        <div class="purpleSpring2">
-                            <img src="./images/purple_spring2.png" alt="purpleSpring2">
-                        </div>
-                        <div class="purpleTiara">
-                            <img src="./images/purple_tiara.png" alt="purpleTiara">
-                        </div>
-                        <div class="flowers">
-                            <img src="./images/flowers2.png" alt="flowers2">
-                        </div>
-                    </div><!--emoji2-->
                 </div><!--grid-->
             </section><!--web-->
 
@@ -260,73 +261,81 @@
                             <li class="html">
                                 <div class="skill-logo"><img src="./images/html_logo.png" alt="html"></div>
                                 <div class="gauge-box">
-                                    <div class="skill-text html">
+                                    <div class="skill-text">
                                         <h3>HTML</h3>
                                         <span>90%</span>
                                     </div>
-                                    <div class="gaugeBorder">
-                                        <div class="skillbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="gauge-border">
+                                        <div class="skill-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div><!--gaugeBorder-->
                                 </div><!--gauge-box-->
                                 <div class="skill-over-txt">
                                     <p>시멘틱 태그를 사용하여 자유자재로 구조를 만들 수 있습니다.</p>
-                                </div>
+                                </div><!--skill-over-txt-->
                             </li><!--html-->
 
                             <li class="css">
                                 <div class="skill-logo"><img src="./images/css_logo.png" alt="css"></div>
                                 <div class="gauge-box">
-                                    <div class="skill-text css">
+                                    <div class="skill-text">
                                         <h3>CSS</h3>
                                         <span>90%</span>
-                                        <p>css의 구조와 속성을 이해하고 원하는 스타일과 반응형으로 구현이 가능합니다.</p>
                                     </div>
-                                    <div class="gaugeBorder">
-                                        <div class="skillbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="gauge-border">
+                                        <div class="skill-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div><!--gaugeBorder-->
                                 </div><!--gauge-box-->
+                                <div class="skill-over-txt">
+                                    <p>css의 구조와 속성을 이해하고 원하는 스타일과 반응형으로 구현이 가능합니다.</p>
+                                </div><!--skill-over-txt-->
                             </li><!--css-->
 
                             <li class="sass">
                                 <div class="skill-logo"><img src="./images/sass_logo.png" alt="sass"></div>
-                                <div class="gauge-box sass">
+                                <div class="gauge-box">
                                     <div class="skill-text">
                                         <h3>SASS</h3>
                                         <span>90%</span>
-                                        <p>중복을 최소화하고 믹스인을 적절히 사용해 코드를 간결하게 작성할 수 있습니다.</p>
                                     </div>
-                                    <div class="gaugeBorder">
-                                        <div class="skillbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="gauge-border">
+                                        <div class="skill-bar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div><!--gaugeBorder-->
                                 </div><!--gauge-box-->
+                                <div class="skill-over-txt">
+                                    <p>중복을 최소화하고 믹스인을 적절히 사용해 코드를 간결하게 작성할 수 있습니다.</p>
+                                </div><!--skill-over-txt-->
                             </li><!--sass-->
 
                             <li class="jquery">
                                 <div class="skill-logo"><img src="./images/jquery_logo.png" alt="jquery"></div>
                                 <div class="gauge-box">
-                                    <div class="skill-text jQuery">
+                                    <div class="skill-text">
                                         <h3>jQuery</h3>
                                         <span>70%</span>
-                                        <p>웹퍼블리싱에 필요한 제이쿼리는 대체로 플러그인을 사용하지 않고 구현할 수 있습니다.</p>
                                     </div>
-                                    <div class="gaugeBorder">
-                                        <div class="skillbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="gauge-border">
+                                        <div class="skill-bar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div><!--gaugeBorder-->
                                 </div><!--gauge-box-->
+                                <div class="skill-over-txt">
+                                    <p>웹퍼블리싱에 필요한 제이쿼리는 대체로 플러그인을 사용하지 않고 구현할 수 있습니다.</p>
+                                </div><!--skill-over-txt-->
                             </li><!--jquery-->
 
                             <li class="js">
                                 <div class="skill-logo"><img src="./images/js_logo.png" alt="js"></div>
                                 <div class="gauge-box">
-                                    <div class="skill-text js">
+                                    <div class="skill-text">
                                         <h3>Javascript</h3>
                                         <span>50%</span>
-                                        <p>문법을 이해하고 읽을 줄 알며, 제이쿼리와 병행해서 활용합니다.</p>
                                     </div>
-                                    <div class="gaugeBorder">
-                                        <div class="skillbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="gauge-border">
+                                        <div class="skill-bar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div><!--gaugeBorder-->
                                 </div><!--gauge-box-->
+                                <div class="skill-over-txt">
+                                    <p>문법을 이해하고 읽을 줄 알며, 제이쿼리와 병행해서 활용합니다.</p>
+                                </div><!--skill-over-txt-->
                             </li><!--js-->
                         </ul>
                         
@@ -334,57 +343,65 @@
                             <li class="ps">
                                 <div class="skill-logo"><img src="./images/ps_logo.png" alt="ps"></div>
                                 <div class="gauge-box">
-                                    <div class="skill-text ps">
+                                    <div class="skill-text">
                                         <h3>Photoshop</h3>
                                         <span>80%</span>
-                                        <p>로고 제작, 사진 보정을 능숙하게 할 수 있으며, 웹페이지 제작을 위한 시안 작업이 가능합니다.</p>
                                     </div>
-                                    <div class="gaugeBorder">
-                                        <div class="skillbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="gauge-border">
+                                        <div class="skill-bar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div><!--gaugeBorder-->
                                 </div><!--gauge-box-->
+                                <div class="skill-over-txt">
+                                    <p>로고 제작, 사진 보정을 능숙하게 할 수 있으며, 웹페이지 제작을 위한 시안 작업이 가능합니다.</p>
+                                </div><!--skill-over-txt-->
                             </li><!--ps-->
 
                             <li class="ai">
                                 <div class="skill-logo"><img src="./images/ai_logo.png" alt="ai"></div>
                                 <div class="gauge-box">
-                                    <div class="skill-text ai">
+                                    <div class="skill-text">
                                         <h3>Illustrator </h3>
                                         <span>80%</span>
-                                        <p>로고 제작, 사진 보정을 능숙하게 할 수 있으며, 웹페이지 제작을 위한 시안 작업이 가능합니다.</p>
                                     </div>
-                                    <div class="gaugeBorder">
-                                        <div class="skillbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="gauge-border">
+                                        <div class="skill-bar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div><!--gaugeBorder-->
                                 </div><!--gauge-box-->
+                                <div class="skill-over-txt">
+                                    <p>로고 제작, 사진 보정을 능숙하게 할 수 있으며, 웹페이지 제작을 위한 시안 작업이 가능합니다.</p>
+                                </div><!--skill-over-txt-->
                             </li><!--ai-->
 
                             <li class="pr">
                                 <div class="skill-logo"><img src="./images/pr_logo.png" alt="pr"></div>
                                 <div class="gauge-box">
-                                    <div class="skill-text pr">
+                                    <div class="skill-text">
                                         <h3>Premiere</h3>
                                         <span>70%</span>
-                                        <p>주제와 기획의도를 파악하고 편집 방향을 설정할 수 있으며, 영상에 자막과 도형을 활용할 수 있습니다.</p>
                                     </div>
-                                    <div class="gaugeBorder">
-                                        <div class="skillbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="gauge-border">
+                                        <div class="skill-bar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div><!--gaugeBorder-->
                                 </div><!--gauge-box-->
+                                <div class="skill-over-txt">
+                                    <p>주제와 기획의도를 파악하고 편집 방향을 설정할 수 있으며, 영상에 자막과 도형을 활용할 수 있습니다.</p>
+                                </div><!--skill-over-txt-->
                             </li><!--pr-->
 
                             <li class="ae">
                                 <div class="skill-logo"><img src="./images/ae_logo.png" alt="ae"></div>
                                 <div class="gauge-box">
-                                    <div class="skill-text ae">
+                                    <div class="skill-text">
                                         <h3>AfterEffects</h3>
-                                        <span>80%</span>
-                                        <p>생각한 스토리를 그래픽으로 구현하여 영상으로 제작할 수 있으며, 광고, CG 등 다양한 곳에 적용 및 활용할 수 있습니다.</p>
+                                        <span>75%</span>
                                     </div>
-                                    <div class="gaugeBorder">
-                                        <div class="skillbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="gauge-border">
+                                        <div class="skill-bar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div><!--gaugeBorder-->
                                 </div><!--gauge-box-->
+                                <div class="skill-over-txt">
+                                    <p>생각한 스토리를 그래픽으로 구현하여 영상으로 제작할 수 있으며, 광고, CG 등 다양한 곳에 적용 및 활용할 수 있습니다.</p>
+                                </div><!--skill-over-txt-->
                             </li><!--ae-->
                         </ul>
                     </div><!--skill-box-->
