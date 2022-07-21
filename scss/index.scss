@@ -247,29 +247,11 @@
                                     width: 25%;
                                 }
                                 strong {
-                                    // background: url(../images/text_emoji.png) no-repeat right top;
+                                   
                                     background: url(../images/wave.png) no-repeat right bottom;
                                     background-size: 35%;
                                     color: $red;
                                     font-size: 3.2rem;
-                                }
-                                .txtWave {
-                                    // position: absolute;
-                                    // right: 12%; 
-                                    // bottom: -7%;
-                                    // @include responsive(tablet-screens) {
-                                    //     right: 25%;
-                                    // }
-                                    // @include responsive(pc-screens) {
-                                    //     right: 17%;
-                                    // }
-                                    // img {
-                                    //     width: 100%;
-                                    // }
-                                    &.blur {
-                                        display: none;
-                                        filter: blur(5px);
-                                    }
                                 }
                                 
                                 .txtEmoji {
@@ -692,7 +674,6 @@
                 background-size: cover;
                 @include responsive(tablet-screens) {
                     width: 70%;
-                    height: 45%;
                     max-width: 700px;
                     max-height: 500px;
                 }
@@ -702,26 +683,29 @@
                 .modal-text {
                     text-align: center;
                     margin: 8%;
+                    @include responsive(pc-screens) {
+                        margin: 10%;
+                    }
                     
                     h3 {
                         font: {
                             family: $font-main;
-                            size: 2.5rem;
+                            size: 2.1rem;
                         };
                         @include responsive(pc-screens) {
-                            font-size: 3rem;
+                            font-size: 2.5rem;
                         }
                     }
                     p {
-                        margin-top: 7%;
+                        margin-top: 5%;
                         text-align: justify;
                         font: {
                             family: $font-main;
-                            size: 1.9rem;
+                            size: 1.7rem;
                         };
                        
                         @include responsive(pc-screens) {
-                            font-size: 2.2rem;
+                            font-size: 2rem;
                         }
                     }
                 }
@@ -1608,7 +1592,7 @@
                             }
                             .video-text {
                                 position: absolute;
-                                top: 50%;
+                                top: 54%;
                                 left: 50%;
                                 width: 100%;
                                 transform: translate(-50%, -50%);
@@ -1625,13 +1609,14 @@
                                     }
                                 }
                                 p {
-                                    margin: 7% 10%;
+                                    margin: 7% 10% 0;
                                     font-size: 1rem;
                                     text-align: justify;
                                 }
                                 .view {
+                                    position: relative;
                                     margin-top: 30px;
-                                    padding: 7%;
+                                    padding: 13%;
                                     background: url(../images/red_btn.png) no-repeat center;
                                     background-size: 100%;
                                     a {
@@ -1640,6 +1625,16 @@
                                             weight: bolder;
                                         }
                                         color: $white;
+                                    }
+
+                                    svg {
+                                        position: absolute;
+                                        width: 500%;
+                                        height: 500%;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        z-index: 10;
                                     }
                                 }
                             }

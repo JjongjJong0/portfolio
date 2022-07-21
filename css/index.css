@@ -420,12 +420,6 @@ footer {
   font-size: 3.2rem;
 }
 
-#wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox .txtWave.blur {
-  display: none;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
-}
-
 #wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox .txtEmoji {
   position: absolute;
   right: 5%;
@@ -1036,7 +1030,6 @@ footer {
 @media screen and (min-width: 768px) {
   #wrapper main #modal .modalUp {
     width: 70%;
-    height: 45%;
     max-width: 700px;
     max-height: 500px;
   }
@@ -1053,27 +1046,33 @@ footer {
   margin: 8%;
 }
 
+@media screen and (min-width: 1024px) {
+  #wrapper main #modal .modalUp .modal-text {
+    margin: 10%;
+  }
+}
+
 #wrapper main #modal .modalUp .modal-text h3 {
   font-family: "Nanum Pen";
-  font-size: 2.5rem;
+  font-size: 2.1rem;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #modal .modalUp .modal-text h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
 #wrapper main #modal .modalUp .modal-text p {
-  margin-top: 7%;
+  margin-top: 5%;
   text-align: justify;
   font-family: "Nanum Pen";
-  font-size: 1.9rem;
+  font-size: 1.7rem;
 }
 
 @media screen and (min-width: 1024px) {
   #wrapper main #modal .modalUp .modal-text p {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -2257,7 +2256,7 @@ footer {
 
 #wrapper main #video .grid .video-box .video-red .video-img .video-text {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   width: 100%;
   -webkit-transform: translate(-50%, -50%);
@@ -2282,14 +2281,15 @@ footer {
 }
 
 #wrapper main #video .grid .video-box .video-red .video-img .video-text p {
-  margin: 7% 10%;
+  margin: 7% 10% 0;
   font-size: 1rem;
   text-align: justify;
 }
 
 #wrapper main #video .grid .video-box .video-red .video-img .video-text .view {
+  position: relative;
   margin-top: 30px;
-  padding: 7%;
+  padding: 13%;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
@@ -2298,6 +2298,17 @@ footer {
   font-size: 1.3rem;
   font-weight: bolder;
   color: #fff;
+}
+
+#wrapper main #video .grid .video-box .video-red .video-img .video-text .view svg {
+  position: absolute;
+  width: 500%;
+  height: 500%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 #wrapper main #video .grid .video-box .video-red .video-img:hover .video-text {
