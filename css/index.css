@@ -392,6 +392,9 @@ footer {
   position: relative;
   padding: 1rem;
   background: #fff;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
   -webkit-box-shadow: 0 0.25rem 1rem rgba(25, 25, 25, 0.2);
           box-shadow: 0 0.25rem 1rem rgba(25, 25, 25, 0.2);
 }
@@ -401,6 +404,7 @@ footer {
 }
 
 #wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox {
+  position: relative;
   margin-left: 5%;
   cursor: pointer;
 }
@@ -410,61 +414,41 @@ footer {
 }
 
 #wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox strong {
+  background: url(../images/wave.png) no-repeat right bottom;
+  background-size: 35%;
   color: #e6363b;
   font-size: 3.2rem;
 }
 
-#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave {
-  position: absolute;
-  right: 21%;
-  bottom: 1.5%;
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave {
-    right: 25%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave {
-    right: 17%;
-  }
-}
-
-#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave img {
-  width: 100%;
-}
-
-#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtWave.blur {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox .txtWave.blur {
   display: none;
   -webkit-filter: blur(5px);
           filter: blur(5px);
 }
 
-#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox .txtEmoji {
   position: absolute;
-  right: 15%;
-  bottom: 12%;
+  right: 5%;
+  top: 0;
 }
 
 @media screen and (min-width: 768px) {
-  #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
+  #wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox .txtEmoji {
     right: 20%;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  #wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji {
+  #wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox .txtEmoji {
     right: 11%;
   }
 }
 
-#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji img {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox .txtEmoji img {
   width: 100%;
 }
 
-#wrapper main #about .grid .about-flex .polaroidBox .polaroid .txtEmoji.blur {
+#wrapper main #about .grid .about-flex .polaroidBox .polaroid .textBox .txtEmoji.blur {
   display: none;
   -webkit-filter: blur(5px);
           filter: blur(5px);
@@ -663,8 +647,8 @@ footer {
 
 #wrapper main #about .grid .about-flex .emoji .purpleArrow {
   position: absolute;
-  top: 61%;
-  right: 10%;
+  top: 58.5%;
+  right: 5%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1021,118 +1005,6 @@ footer {
   }
 }
 
-#wrapper main .square .squareImg8 {
-  position: absolute;
-  overflow: hidden;
-  top: 520%;
-  left: -15%;
-  width: 100%;
-  height: 55%;
-  padding-top: 20%;
-  z-index: -10;
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper main .square .squareImg8 {
-    top: 520%;
-    width: 600px;
-    height: 650px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main .square .squareImg8 {
-    top: 5600px;
-    left: -100px;
-    width: 750px;
-    height: 770px;
-    padding-top: 150px;
-  }
-}
-
-#wrapper main .square .squareImg8 img {
-  width: 90%;
-  -webkit-animation: circle 180s linear infinite;
-          animation: circle 180s linear infinite;
-  animation-direction: reverse;
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper main .square .squareImg8 img {
-    width: 80%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main .square .squareImg8 img {
-    width: 650px;
-  }
-}
-
-#wrapper main .square .squareImg9 {
-  position: absolute;
-  overflow: hidden;
-  top: 595%;
-  right: 0;
-  width: 100%;
-  height: 50%;
-  padding-top: 18%;
-  padding-left: 20%;
-  z-index: -10;
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper main .square .squareImg9 {
-    top: 590%;
-    height: 69%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main .square .squareImg9 {
-    top: 6200px;
-    right: 20%;
-    width: 700px;
-    height: 650px;
-    padding-top: 160px;
-    padding-left: 0;
-  }
-}
-
-#wrapper main .square .squareImg9 img {
-  width: 120%;
-  -webkit-animation: circle 200s linear infinite;
-          animation: circle 200s linear infinite;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main .square .squareImg9 img {
-    width: 600px;
-  }
-}
-
-@-webkit-keyframes circle {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes circle {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 #wrapper main #modal {
   display: none;
   position: fixed;
@@ -1222,26 +1094,6 @@ footer {
   margin-top: 20vh;
 }
 
-#wrapper main #web .grid .project1 .purpleStar {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 .purpleStar {
-    display: block;
-    position: absolute;
-    top: -70px;
-    left: 680px;
-    z-index: -10;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 .purpleStar img {
-    width: 70px;
-  }
-}
-
 #wrapper main #web .grid .project1 .pro1-box {
   position: relative;
   max-width: 650px;
@@ -1258,6 +1110,26 @@ footer {
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project1 .pro1-box {
     margin-left: 0;
+  }
+}
+
+#wrapper main #web .grid .project1 .pro1-box .purpleStar {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project1 .pro1-box .purpleStar {
+    display: block;
+    position: absolute;
+    top: -70px;
+    left: 680px;
+    z-index: -10;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project1 .pro1-box .purpleStar img {
+    width: 70px;
   }
 }
 
@@ -1313,8 +1185,12 @@ footer {
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text {
   position: absolute;
-  top: 7%;
-  left: 0;
+  top: 50%;
+  left: 49.5%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 8%;
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -1322,26 +1198,14 @@ footer {
   transition: all 0.3s;
 }
 
-@media screen and (min-width: 768px) {
-  #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text {
-    top: 15%;
-    left: 5%;
-  }
-}
-
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text h3 {
-  margin-bottom: 20px;
+  margin: 5% 0;
+  font-size: 1.8rem;
 }
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text h3 {
-    font-size: 2.3rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text h3 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -1357,8 +1221,8 @@ footer {
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text p {
-  margin: 5% 11% 0;
-  font-size: 1.1rem;
+  margin: 7% 10%;
+  font-size: 1rem;
   text-align: justify;
 }
 
@@ -1376,7 +1240,7 @@ footer {
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .process {
-  padding: 13.2%;
+  padding: 9%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
@@ -1459,46 +1323,6 @@ footer {
   height: 80vh;
 }
 
-#wrapper main #web .grid .project2 .purpleWave {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .purpleWave {
-    display: block;
-    position: absolute;
-    top: -70px;
-    left: 240px;
-    z-index: -10;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .purpleWave img {
-    width: 80px;
-  }
-}
-
-#wrapper main #web .grid .project2 .purpleSpring2 {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .purpleSpring2 {
-    display: block;
-    position: absolute;
-    top: 490px;
-    right: 260px;
-    z-index: -10;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project2 .purpleSpring2 img {
-    width: 120px;
-  }
-}
-
 #wrapper main #web .grid .project2 .pro2-box {
   position: relative;
   width: 100%;
@@ -1520,6 +1344,46 @@ footer {
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project2 .pro2-box {
     margin-right: 0;
+  }
+}
+
+#wrapper main #web .grid .project2 .pro2-box .purpleWave {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .pro2-box .purpleWave {
+    display: block;
+    position: absolute;
+    top: -70px;
+    left: -70px;
+    z-index: -10;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .pro2-box .purpleWave img {
+    width: 80px;
+  }
+}
+
+#wrapper main #web .grid .project2 .pro2-box .purpleSpring2 {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .pro2-box .purpleSpring2 {
+    display: block;
+    position: absolute;
+    top: 460px;
+    right: 260px;
+    z-index: -10;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project2 .pro2-box .purpleSpring2 img {
+    width: 120px;
   }
 }
 
@@ -1559,9 +1423,12 @@ footer {
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text {
   position: absolute;
-  top: 10%;
-  left: 2%;
-  margin: 0 5%;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 10%;
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -1569,21 +1436,14 @@ footer {
   transition: all 0.3s;
 }
 
-@media screen and (min-width: 768px) {
-  #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text {
-    top: 14%;
-    left: 6%;
-  }
-}
-
 #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text h3 {
-  margin-bottom: 20px;
-  font-size: 2.2rem;
+  margin-bottom: 7%;
+  font-size: 1.8rem;
 }
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text h3 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -1600,19 +1460,12 @@ footer {
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text p {
   margin: 7% 12%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: justify;
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text p {
-    margin: 7% 17%;
-  }
 }
 
 #wrapper main #web .grid .project2 .pro2-box .pro2-img .pro2-text .view {
   padding: 7%;
-  margin-right: 15px;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
 }
@@ -1673,25 +1526,6 @@ footer {
   height: 80vh;
 }
 
-#wrapper main #web .grid .project3 .purpleTiara {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project3 .purpleTiara {
-    display: block;
-    position: absolute;
-    top: -60px;
-    left: 300px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project3 .purpleTiara img {
-    width: 80px;
-  }
-}
-
 #wrapper main #web .grid .project3 .pro3-box {
   position: relative;
   width: 100%;
@@ -1713,6 +1547,25 @@ footer {
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project3 .pro3-box {
     margin-left: 0;
+  }
+}
+
+#wrapper main #web .grid .project3 .pro3-box .purpleTiara {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project3 .pro3-box .purpleTiara {
+    display: block;
+    position: absolute;
+    top: -65px;
+    left: 285px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project3 .pro3-box .purpleTiara img {
+    width: 80px;
   }
 }
 
@@ -1758,9 +1611,12 @@ footer {
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text {
   position: absolute;
-  top: 12%;
-  left: 0;
-  margin: 0 15%;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 10%;
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -1768,20 +1624,14 @@ footer {
   transition: all 0.3s;
 }
 
-@media screen and (min-width: 768px) {
-  #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text {
-    top: 14%;
-    left: 3%;
-  }
-}
-
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text h3 {
-  margin-bottom: 20px;
+  margin-bottom: 7%;
+  font-size: 1.8rem;
 }
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text h3 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -1797,15 +1647,9 @@ footer {
 }
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text p {
-  margin: 7% 5%;
-  font-size: 1.1rem;
+  margin: 7% 12%;
+  font-size: 1rem;
   text-align: justify;
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text p {
-    margin: 7% 10%;
-  }
 }
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text .view {
@@ -1822,7 +1666,7 @@ footer {
 }
 
 #wrapper main #web .grid .project3 .pro3-box .pro3-img .pro3-text .process {
-  padding: 15.2%;
+  padding: 9.5%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
@@ -1870,25 +1714,6 @@ footer {
   height: 80vh;
 }
 
-#wrapper main #web .grid .project4 .flowers {
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .flowers {
-    display: block;
-    position: absolute;
-    top: -60px;
-    left: 250px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper main #web .grid .project4 .flowers img {
-    width: 100px;
-  }
-}
-
 #wrapper main #web .grid .project4 .pro4-box {
   position: relative;
   width: 100%;
@@ -1907,6 +1732,25 @@ footer {
 @media screen and (min-width: 1024px) {
   #wrapper main #web .grid .project4 .pro4-box {
     margin-right: 0;
+  }
+}
+
+#wrapper main #web .grid .project4 .pro4-box .flowers {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project4 .pro4-box .flowers {
+    display: block;
+    position: absolute;
+    top: -70px;
+    left: -90px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #web .grid .project4 .pro4-box .flowers img {
+    width: 100px;
   }
 }
 
@@ -1962,8 +1806,12 @@ footer {
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text {
   position: absolute;
-  top: 12%;
-  left: 7%;
+  top: 50%;
+  left: 49.5%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 10%;
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -1971,20 +1819,13 @@ footer {
   transition: all 0.3s;
 }
 
-@media screen and (min-width: 768px) {
-  #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text {
-    top: 16%;
-    left: 16%;
-  }
-}
-
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text h3 {
-  margin-bottom: 20px;
+  margin-bottom: 7%;
 }
 
 @media screen and (min-width: 768px) {
   #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text h3 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -2000,8 +1841,8 @@ footer {
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text p {
-  margin: 5% 16% 0;
-  font-size: 1.1rem;
+  margin: 7% 12%;
+  font-size: 1rem;
   text-align: justify;
 }
 
@@ -2019,7 +1860,7 @@ footer {
 }
 
 #wrapper main #web .grid .project4 .pro4-box .pro4-red .pro4-yellow .pro4-img .pro4-text .process {
-  padding: 15.2%;
+  padding: 9.5%;
   background: url(../images/yellow_btn.png) no-repeat center;
   background-size: 100%;
 }
@@ -2274,7 +2115,87 @@ footer {
 }
 
 #wrapper main #video {
+  position: relative;
   text-align: center;
+}
+
+#wrapper main #video .video-square .squareImg8 {
+  position: absolute;
+  overflow: hidden;
+  top: -70%;
+  left: -25%;
+  width: 100%;
+  height: 60%;
+  z-index: -10;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #video .video-square .squareImg8 {
+    left: -40%;
+  }
+}
+
+#wrapper main #video .video-square .squareImg8 img {
+  width: 90%;
+  max-width: 500px;
+  -webkit-animation: circle 180s linear infinite;
+          animation: circle 180s linear infinite;
+  animation-direction: reverse;
+}
+
+#wrapper main #video .video-square .squareImg9 {
+  position: absolute;
+  overflow: hidden;
+  bottom: 15%;
+  right: 0;
+  width: 100%;
+  height: 70%;
+  max-height: 1000px;
+  padding-top: 18%;
+  z-index: -10;
+}
+
+@media screen and (min-width: 768px) {
+  #wrapper main #video .video-square .squareImg9 {
+    width: 70%;
+    bottom: 15%;
+    padding-top: 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper main #video .video-square .squareImg9 {
+    padding-top: 5%;
+  }
+}
+
+#wrapper main #video .video-square .squareImg9 img {
+  width: 100%;
+  max-width: 550px;
+  -webkit-animation: circle 200s linear infinite;
+          animation: circle 200s linear infinite;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 #wrapper main #video .grid .video-box {
@@ -2336,9 +2257,12 @@ footer {
 
 #wrapper main #video .grid .video-box .video-red .video-img .video-text {
   position: absolute;
-  top: 22%;
-  left: 0;
-  margin: 0 5%;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 10%;
   opacity: 0;
   z-index: 2;
   text-align: center;
@@ -2346,15 +2270,9 @@ footer {
   transition: all 0.3s;
 }
 
-@media screen and (min-width: 768px) {
-  #wrapper main #video .grid .video-box .video-red .video-img .video-text {
-    top: 22%;
-    left: 4%;
-  }
-}
-
 #wrapper main #video .grid .video-box .video-red .video-img .video-text h3 {
-  margin-bottom: 20px;
+  margin: 10px 0 30px;
+  font-size: 1.8rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -2364,18 +2282,13 @@ footer {
 }
 
 #wrapper main #video .grid .video-box .video-red .video-img .video-text p {
-  margin: 5% 18%;
-  font-size: 1.1rem;
+  margin: 7% 10%;
+  font-size: 1rem;
   text-align: justify;
 }
 
-@media screen and (min-width: 768px) {
-  #wrapper main #video .grid .video-box .video-red .video-img .video-text p {
-    margin: 20px 95px;
-  }
-}
-
 #wrapper main #video .grid .video-box .video-red .video-img .video-text .view {
+  margin-top: 30px;
   padding: 7%;
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
@@ -2392,30 +2305,13 @@ footer {
 }
 
 #wrapper footer {
-  height: 75px;
+  width: 100%;
   text-align: center;
   background-color: #e6363b;
 }
 
-@media screen and (min-width: 1024px) {
-  #wrapper footer {
-    height: 80px;
-  }
-}
-
 #wrapper footer .grid a img {
-  width: 23%;
-}
-
-@media screen and (min-width: 768px) {
-  #wrapper footer .grid a img {
-    width: 15.5%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #wrapper footer .grid a img {
-    width: 125px;
-  }
+  width: 25%;
+  max-width: 120px;
 }
 /*# sourceMappingURL=index.css.map */

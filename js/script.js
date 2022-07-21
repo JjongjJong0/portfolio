@@ -1,4 +1,10 @@
 
+window.onload = function() {
+
+     
+}
+
+
 $(window).ready(function() {
      //loading
      // setInterval(function() {
