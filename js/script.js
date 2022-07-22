@@ -16,7 +16,6 @@ $(window).ready(function() {
      });
      
      // 모바일(햄버거) 메뉴
-     // $(".gnbMobile").hide();
      $(".mobileMenu,  #gnb").click(function() {
           $(".mobileMenu").toggleClass("open");
           $("#gnb").toggleClass("show");

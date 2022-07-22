@@ -238,6 +238,8 @@ footer {
 #wrapper header .grid nav #gnb li a {
   font-size: 4rem;
   color: #e6363b;
+  background: url(../images/white_wave.png) no-repeat 100% 100%;
+  background-size: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -254,6 +256,10 @@ footer {
   #wrapper header .grid nav #gnb li a img {
     width: 80%;
   }
+}
+
+#wrapper header .grid nav #gnb li a:hover {
+  background-size: 110%;
 }
 
 #wrapper .loader {
