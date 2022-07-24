@@ -225,6 +225,19 @@ footer {
   right: 0;
 }
 
+#wrapper header .grid nav #gnb li {
+  background: url(../images/white_wave.png) no-repeat 100% 100%;
+  background-size: 0;
+}
+
+#wrapper header .grid nav #gnb li:hover {
+  background-size: 110%;
+}
+
+#wrapper header .grid nav #gnb li:last-child {
+  background: url(none);
+}
+
 @media screen and (min-width: 1024px) {
   #wrapper header .grid nav #gnb li {
     margin-left: 3%;
@@ -238,8 +251,6 @@ footer {
 #wrapper header .grid nav #gnb li a {
   font-size: 4rem;
   color: #e6363b;
-  background: url(../images/white_wave.png) no-repeat 100% 100%;
-  background-size: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -256,10 +267,6 @@ footer {
   #wrapper header .grid nav #gnb li a img {
     width: 80%;
   }
-}
-
-#wrapper header .grid nav #gnb li a:hover {
-  background-size: 110%;
 }
 
 #wrapper .loader {
@@ -1234,14 +1241,23 @@ footer {
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .view {
   padding: 7%;
   margin-right: 4%;
+  background: url(../images/red_border.png) no-repeat center;
+  background-size: 100%;
+}
+
+#wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .view:hover {
   background: url(../images/red_btn.png) no-repeat center;
   background-size: 100%;
+}
+
+#wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .view:hover a {
+  color: #fff;
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .view a {
   font-size: 1.3rem;
   font-weight: bolder;
-  color: #fff;
+  color: #191919;
 }
 
 #wrapper main #web .grid .project1 .pro1-box .pro1-img .pro1-text .process {

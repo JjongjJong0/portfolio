@@ -113,6 +113,14 @@
                     }
 
                     li {
+                        background: url(../images/white_wave.png) no-repeat 100% 100%;
+                        background-size: 0;
+                        &:hover {
+                            background-size: 110%;
+                        }
+                        &:last-child {
+                            background: url(none);
+                        }
                         @include responsive(pc-screens) {
                             margin-left: 3%;
                         }
@@ -122,8 +130,9 @@
                         a {
                             font-size: 4rem;
                             color: $red;
-                            background: url(../images/white_wave.png) no-repeat 100% 100%;
-                            background-size: 0;
+                            &:last-child {
+                                // background: none;
+                            }
                             @include responsive(pc-screens) {
                                 font-size: 2.5rem;
                             }
@@ -132,9 +141,6 @@
                                 @include responsive(pc-screens) {
                                     width: 80%;
                                 }
-                            }
-                            &:hover {
-                                background-size: 110%;
                             }
                         }
                     }
@@ -833,14 +839,26 @@
                                 .view {
                                     padding: 7%;
                                     margin-right: 4%;
-                                    background: url(../images/red_btn.png) no-repeat center;
+                                    background: url(../images/red_border.png) no-repeat center;
                                     background-size: 100%;
+                                    &:hover {
+                                        background: url(../images/red_btn.png) no-repeat center;
+                                        background-size: 100%;
+                                    }
+                                    &:hover a {
+                                        color: $white;
+                                    }
+                                    
                                     a {
+                                        
                                         font: {
                                             size: 1.3rem;
                                             weight: bolder;
                                         }
-                                        color: $white;
+                                        color: $black;
+                                        // &:hover {
+                                        //     color: $white;
+                                        // }
                                     }
                                 }
                                 .process {
