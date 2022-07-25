@@ -131,7 +131,7 @@
                             font-size: 4rem;
                             color: $red;
                             &:last-child {
-                                // background: none;
+                                // filter: brightness(2);
                             }
                             @include responsive(pc-screens) {
                                 font-size: 2.5rem;
@@ -651,15 +651,6 @@
                     }
                 }
             }
-
-            // @keyframes circle {
-            //     0% {
-            //       transform: rotate(0);       
-            //     }
-            //     100% {
-            //       transform: rotate(360deg);
-            //     }
-            // }
         }
         
         #modal {
@@ -672,7 +663,7 @@
             &.on {
                 display: block;
             }
-            .modalUp {
+            .modal-up {
                 margin: 0 auto;
                 width: 95%;
                 height: 40%;
@@ -739,8 +730,6 @@
                     margin-top: 20vh;
                     .pro1-box {
                         position: relative;
-                        // width: 100%;
-                        // height: 45%;
                         max-width: 650px;
                         max-height: 450px;
                         margin: 0 auto;
@@ -803,8 +792,6 @@
                                 width: 98.5%;
                                 max-width: 640px;
                                 animation: imgAnimation 10s linear 0.5s infinite alternate;
-                                @include responsive(pc-screens) {
-                                }
                             }
                             .pro1-text {
                                 position: absolute;
@@ -825,7 +812,7 @@
                                     }
                                 }
                                 strong {
-                                    background: url(../images/red_border.png) no-repeat bottom;
+                                    background: url(../images/strong_border.png) no-repeat bottom;
                                     background-size: 100%;
                                     @include responsive(tablet-screens) {
                                         font-size: 1.2rem;
@@ -839,32 +826,29 @@
                                 .view {
                                     padding: 7%;
                                     margin-right: 4%;
-                                    background: url(../images/red_border.png) no-repeat center;
+                                    background:url(../images/red_btn.png) no-repeat center;
                                     background-size: 100%;
                                     &:hover {
-                                        background: url(../images/red_btn.png) no-repeat center;
-                                        background-size: 100%;
-                                    }
-                                    &:hover a {
-                                        color: $white;
+                                        filter: brightness(1.1);
+                                        transition: all 0.5s;
                                     }
                                     
                                     a {
-                                        
                                         font: {
                                             size: 1.3rem;
                                             weight: bolder;
                                         }
-                                        color: $black;
-                                        // &:hover {
-                                        //     color: $white;
-                                        // }
+                                        color: $white
                                     }
                                 }
                                 .process {
                                     padding: 9%;
                                     background: url(../images/yellow_btn.png) no-repeat center;
                                     background-size: 100%;
+                                    &:hover {
+                                        filter: brightness(1.05);
+                                        transition: all 0.5s;
+                                    }
                                     a {
                                         font: {
                                             size: 1.3rem;
@@ -904,6 +888,127 @@
                           -webkit-transform: translateX(0);
                           transform: translateX(0);
                           opacity: 1;
+                        }
+                    }
+                }
+                
+                .pro1-details {
+                    position: fixed;
+                    left: 0; bottom: 0;
+                    width: 100%; height: 100%;
+                    z-index: 150;
+                    background-color: #f9f9f9; 
+                    overflow: auto;
+                    .details-btn {
+                        position: fixed;
+                        top: 30px;
+                        right: 30px;
+                        z-index: 200;
+                        cursor: pointer;
+                        @include responsive(tablet-screens) {
+                            top: 45px;
+                            right: 45px;
+                        }
+                        span {
+                            display: block;
+                            width: 30px;
+                            height: 3px;
+                            background-color: $black;
+                            transform: rotate(45deg) translate(-3px, 5px);
+                            &:last-child {
+                                transform: rotate(-45deg) translate(-3px, -5px);
+                            }
+                        }
+                        &:hover span{
+                            background-color: lighten($black, 30%);
+                        }
+                    }
+
+                    .details-up {
+                        position: absolute;
+                        left: 0; bottom: 0;
+                        width: 100%; height: 100%;
+                        .grid {
+                            .title {
+                                text-align: center;
+                                img {
+                                    width: 90%;
+                                    max-width: 500px;
+                                }
+                            }
+                            .details-txt {
+                                margin: 5% 0;
+                                border-radius: 8px;
+                                padding: 5%;
+                                background-color: $white;
+                                h2 {
+                                    margin-bottom: 5%;
+                                    font-size: 1.35rem;
+                                    }
+    
+                                p {
+                                    margin-bottom: 5%;
+                                    text-align: left;
+                                    font-size: 1.1rem;
+                                    line-height: 1.7rem;
+                                }
+                                .font {
+                                    img {
+                                        width: 60%;
+                                        max-width: 350px;
+                                        margin-bottom: 5%;
+                                    }
+                                }
+                                .color {
+                                    span {
+                                        display: inline-block;
+                                        width: 100px;
+                                        height: 100px;
+                                        margin-right: 5%;
+                                        border-radius: 100px;
+                                        background-color: #f9f9f9;
+                                        &:nth-child(3) {
+                                            background-color: #a6908f;
+                                        }
+                                        &:nth-child(4) {
+                                            background-color: #a7a7a7;
+                                        }
+                                    }
+                                    p {
+                                        margin-top: 5%;
+                                    }
+                                }
+
+                                .img-box {
+                                    display: none;
+                                    @include responsive(tablet-screens) {
+                                        display: block;
+                                        display: flex;
+                                        width: 100%;
+                                        justify-content: space-between;
+                                    }
+                                    .img-pc {
+                                        @include responsive(tablet-screens) {
+                                            width: 45%;
+                                        }
+                                        img {
+                                            @include responsive(tablet-screens) {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                    .img-mobile {
+                                        @include responsive(tablet-screens) {
+                                            width: 45%;
+                                        }
+                                        img {
+                                            @include responsive(tablet-screens) {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -998,14 +1103,14 @@
                                 transition: all 0.3s;
                                 h3 {
                                     margin-bottom: 7%;
-                                    font-size: 1.8rem;
+                                    font-size: 2.3rem;
                                     @include responsive(tablet-screens) {
-                                        font-size: 2.4rem;
+                                        font-size: 2.7rem;
                                     }
                                    
                                 }
                                 strong {
-                                    background: url(../images/red_border.png) no-repeat bottom;
+                                    background: url(../images/strong_border.png) no-repeat bottom;
                                     background-size: 100%;
                                     @include responsive(tablet-screens) {
                                         font-size: 1.2rem;
@@ -1021,6 +1126,11 @@
                                     padding: 7%;
                                     background: url(../images/red_btn.png) no-repeat center;
                                     background-size: 100%;
+                                    &:hover {
+                                        filter: brightness(1.1);
+                                        transition: all 0.5s;
+                                    }
+
                                     a {
                                         font: {
                                             size: 1.3rem;
@@ -1143,7 +1253,7 @@
                                     
                                 }
                                 strong {
-                                    background: url(../images/red_border.png) no-repeat bottom;
+                                    background: url(../images/strong_border.png) no-repeat bottom;
                                     background-size: 100%;
                                     @include responsive(tablet-screens) {
                                         font-size: 1.2rem;
@@ -1159,6 +1269,10 @@
                                     margin-right: 4%;
                                     background: url(../images/red_btn.png) no-repeat center;
                                     background-size: 100%;
+                                    &:hover {
+                                        filter: brightness(1.1);
+                                        transition: all 0.5s;
+                                    }
                                     a {
                                         font: {
                                             size: 1.3rem;
@@ -1171,6 +1285,10 @@
                                     padding: 9.5%;
                                     background: url(../images/yellow_btn.png) no-repeat center;
                                     background-size: 100%;
+                                    &:hover {
+                                        filter: brightness(1.05);
+                                        transition: all 0.5s;
+                                    }
                                     a {
                                         font: {
                                             size: 1.3rem;
@@ -1302,7 +1420,7 @@
                                             
                                         }
                                         strong {
-                                            background: url(../images/red_border.png) no-repeat bottom;
+                                            background: url(../images/strong_border.png) no-repeat bottom;
                                             background-size: 100%;
                                             @include responsive(tablet-screens) {
                                                 font-size: 1.2rem;
@@ -1315,21 +1433,12 @@
                                         }
                                         .view {
                                             padding: 7%;
-                                            margin-right: 4%;
                                             background: url(../images/red_btn.png) no-repeat center;
                                             background-size: 100%;
-                                            a {
-                                                font: {
-                                                    size: 1.3rem;
-                                                    weight: bolder;
-                                                }
-                                                color: $white;
+                                            &:hover {
+                                                filter: brightness(1.1);
+                                                transition: all 0.5s;
                                             }
-                                        }
-                                        .process {
-                                            padding: 9.5%;
-                                            background: url(../images/yellow_btn.png) no-repeat center;
-                                            background-size: 100%;
                                             a {
                                                 font: {
                                                     size: 1.3rem;

@@ -21,6 +21,17 @@ $(window).ready(function() {
           $("#gnb").toggleClass("show");
      });
 
+     // 메뉴바
+     $("#gnb > li").last().each(function() {
+          const name = $(this).find("img").attr("src");
+          const src = name.substring(0, name.lastIndexOf('.'));
+
+          $(this).hover(function() {
+               $(this).find("img").attr("src", src + "_on." + /[^.]+$/ .exec(name));}, function() {
+               $(this).find("img").attr("src", src + "." + /[^.]+$/ .exec(name));
+          });
+     });
+
      //emoji
      $(".polaroidBox").hover(function() {
           $(".tape").css("z-index", "-1");
@@ -36,7 +47,7 @@ $(window).ready(function() {
      $(".textBox > strong").click(function() {
           $("#modal").addClass("on");
      });
-     $("#modal > .modalUp > .closeBtn").click(function() {
+     $("#modal > .modal-up > .closeBtn").click(function() {
           $("#modal").removeClass("on");
      });
 
@@ -78,6 +89,18 @@ $(window).ready(function() {
           }else {
                $(".project4").removeClass("scrolled");
           }
+     });
+
+     // project details
+     $(".pro1-details").hide();
+     $(".process").click(function(e) {
+          e.preventDefault();
+          $(".pro1-details").show();
+          $("html").css({"overflow-y":'hidden'})
+     });
+     $(".details-btn").click(function() {
+          $(".pro1-details").hide();
+          $("html").css({"overflow-y":'scroll'})
      });
 
      // img-animation
