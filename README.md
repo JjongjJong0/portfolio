@@ -1,6 +1,5 @@
 # Portfolio
 
----
 
 프로젝트들을 전시할 목적으로 만든 웹사이트입니다.
 
@@ -13,7 +12,7 @@
 - 제작 기간 : 4주
 
 - 사용 언어 및 기술 : HTML5 / SASS / jQuery
----
+
 
 ## | Font
 
@@ -22,7 +21,7 @@
 - DK Leftover Crayon
 
 - Noto Sans KR
----
+
 
 ## | Color
 
@@ -31,3 +30,10 @@
 - ffe554
 
 - ad62a6
+
+
+## | PC
+![포트폴리오PC](./images/portfolio.png)
+
+## | Mobile
+![포트폴리오Mobile](./images/portfolio_mobile.png)
