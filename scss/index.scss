@@ -1583,17 +1583,15 @@
                                     top: 10%;
                                 }
                                 p {
-                                    line-height: 1.3rem;
                                     text-align: justify;
-                                    color: $white;
-                                    // text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+                                    line-height: 1.3rem;
+                                    font-weight: bold;
+                                    color: $black;
                                     @include responsive(tablet-screens) {
                                         font-size: 1.1rem;
                                         line-height: 1.4rem;
                                     }
                                     @include responsive(pc-screens) {
-                                        // font-family: $font-main;
-                                        // font-weight: bold;
                                         font-size: 1.25rem;
                                         line-height: 1.6rem;
                                     }

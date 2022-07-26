@@ -47,7 +47,7 @@ $(window).ready(function() {
      $(".textBox > strong").click(function() {
           $("#modal").addClass("on");
      });
-     $("#modal > .modal-up > .closeBtn").click(function() {
+     $(".modal-up > .closeBtn").click(function() {
           $("#modal").removeClass("on");
      });
 
@@ -93,14 +93,14 @@ $(window).ready(function() {
 
      // project details
      $(".pro1-details").hide();
-     $(".process").click(function(e) {
+     $(".pro1-text > .process").click(function(e) {
           e.preventDefault();
-          $(".pro1-details").show();
+          $(".pro1-details").slideDown(300);
           $("html").css({"overflow-y":'hidden'})
      });
      $(".details-btn").click(function() {
-          $(".pro1-details").hide();
           $("html").css({"overflow-y":'scroll'})
+          $(".pro1-details").slideUp(300);
      });
 
      // img-animation
